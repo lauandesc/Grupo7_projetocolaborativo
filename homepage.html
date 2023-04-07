@@ -1,49 +1,73 @@
 <!DOCTYPE html!>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projeto G7 livraria</title>
-  </head>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto G7 livraria</title>
+</head>
 
 
-  <body>
-    <header>
-      <img src="img_livraria/logo cabeçalho.jpeg" alt="logo livraria" />
-      <nav>
-        <ul>
-        <li><h2> LIVROS NOVOS</h2></li>
-        <li><h2>LIVROS DIGITAIS</h2></li>
-        <li><h2>SEBO</h2></li>
-        <li><h2> DOAR</h2></li>
-        <li><h2>PAPELARIA</h2></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div>
+<body>
+  <header>
+    <img src="img_livraria/logobanner.jpeg" alt="logo livraria" />
+    <form action="/search" method="get">
+      <label for="search-box"></label>
+      <input type="text" id="search-box" name="q" placeholder="Digite sua pesquisa aqui">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <nav>
+      <ul>
+        <li><a href="#"><h2>LIVROS NOVOS</h2></a></li>
+        <li><a href="#"><h2>LIVROS DIGITAIS</h2></a></li>
+        <li><a href="#"><h2>SEBO</h2></a></li>
+        <li><a href="formularioDoacao.html"><h2>DOAR</h2></a></li>
+        <li><a href="#"><h2>PAPELARIA</h2></a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr>
+
+  <main>
+    <div>
       <aside>
         <ul>
-          <li><h3>Literatura de ficção</h3> <p>xxx</p><p>xxx</p></li>
+          <li><h3>Literatura de ficção</h3><p>xxx</p><p>xxx</p></li>
           <li><h3>Autoajuda</h3><p>xxx</p><p>xxx</p></li>
           <li><h3>Historia em quadrinho</h3><p>xxx</p><p>xxx</p></li>
           <li><h3>Científicos ou de não-ficçao</h3><p>xxx</p><p>xxx</p></li>
-          <li><h3>Religião</h3><p>xxx</p><p>xxx</p><p></p></li>
+          <li><h3>Religião</h3><p>xxx</p><p>xxx</p><p>xxxx</p></li>
         </ul>
       </aside>
     </div>
-    </main>
-    
-  </body>
-  <footer>
-    <nav>
-      <ul>
-        <h1></h1>
-        <li><h3>Serviços:<p>Encadernação</p><p>Restauração</p><p>Vendas</p></h3></li>
-        <li><h3>Perguntas Frequentes:<p>Quem somos?</p><p>Como doar livros</p></h3></li>
-        <li><h3>Horário de Funcionamento:<p>Segunda a Sexta</p><p>8h às 12 - 14h às 18h</p></h3></li>
-        <li><h3>contato:<p>(00) 00000-0000</p><p>instagram</p><p>Facebook</p></h3></li>
-      </ul>
-    </nav>
-  </footer>
+    <div>
+      <aside>
+        <ul>
+          <li><H1>VITRINE</H1></li>
+        </ul>
+    </div>
+    </aside>
+  </main>
+</body>
+
+<footer>
+  <hr>
+  <nav>
+    <ul>
+      <li><h3>Serviços:<p>Encadernação</p><p>Restauração</p><p>Vendas</p></h3></li>
+      <li><h3>Perguntas Frequentes:<a href="#"><p>Quem somos?</a></p><a href="#"><p>Como doar livros</p></a></h3></li>
+      <li><h3>Horário de Funcionamento:<p>Segunda a Sexta</p><p>8h às 12 - 14h às 18h</p></h3></li>
+      <li><h3>contato:<p>(00) 00000-0000</p><p><a href="#">Instagram</a></p><p><a href="#">Facebook</a></p></h3></li>
+    </ul>
+  </nav>
+  <section>
+    <address>
+      LivrariaBook<br>
+      Avenida São Paulo, 0000
+      São Paulo-SP, CEP: 00000-0000
+    </address>
+  </section>
+</footer>
+
 </html>
