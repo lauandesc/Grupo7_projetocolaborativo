@@ -6,73 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formuário de Doação de Livros</title>
 </head>
-<header>
-<img src="logo cabeçalho.jpeg" alt="logo livraria" />
 <body>
+<header>
+    <img src="./img_livraria/logobanner.jpeg" alt="logo livraria" />
     <h2>Formulário de Doação de Livros</h2>
     <p>Complete suas informações</p>
     <br>
-        <fieldset>
-        <form>
-            <label>Nome do doador</label>
+      <fieldset>
+        <form action="">
+            <label for="nome">Nome do doador</label>
             <br>
-            <input type="text">
+            <input type="text" name="nome" id="nome">
             <br>
-            <label>Telefone</label>
+            <label for="telefone">Telefone</label>
             <br>
-            <input type="tel">
+            <input type="tel" name="telefone" id="telefone">
             <br>
-            <label>Quantidade</label>
+            <label for="qtde">Quantidade</label>
             <br>
-            <input type="number">
+            <input type="number" name="qtde" id="qtde">
             <br>
-            <label>E-mail</label>
+            <label for="email">E-mail</label>
             <br>
-            <input type="email">
+            <input type="email" name="email" id="email">
             <br>
+            <section>
+              <p>Tipo</p>
+              <input type="radio" name="tipodacao" id="livros" value="livros">
+              <label for="livros">Livros</label>
+              <input type="radio" name="tipodacao" id="revista" value="revista">
+              <label for="revista">Revista</label>
+            </section>
             <br>
-            <input type="radio">Livros
-            <input type="radio">Revista
-            <br>
-            <br>
-            <label>Tipo</label>
-            <select>
-                
-                <option value="Novo">Novo</option>
-                <option value="Seminovo">Seminovo</option>
-                <option value="Usado">Usado</option>
-            </select>
-            <br>
-            <br>
-            <label>Titulo</label>
-            <input type="text">
-            <br>
-            <br>
-            <label>Autor(a)</label>
-            <input type="text">
+            <section>
+              <p>Conservação</p>
+              <select name="convervacao" required="required">
+                  <option value="Novo" id="novo" >Novo</option>
+                  <option value="Seminovo" id="seminovo" >Seminovo</option>
+                  <option value="Usado" id="usado" >Usado</option>
+              </select>
+            </section>
             <br>
             <br>
-            <label>Editora</label>
-            <input type="text">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
+            <br>
+            <br>
+            <label for="autor">Autor(a)</label>
+            <input type="text" name="autor" id="autor">
+            <br>
+            <br>
+            <label  for="editora">Editora</label>
+            <input type="text" name="editora" id="editora">
             <br>
             
             <br>
             <br>
-            <label>Estado de conservação</label>
-            <input type="file"> 
+            <label for="estconservacao">Estado de conservação</label>
+            <input type="file" name="estconservacao" id="estconservacao"> 
             <br>
             <br>
             <button type="submit">Enviar</button>
         </form>
-    </fieldset>
-</header>
-
+      </fieldset>
+  </header>
 </body>
 <footer>
-    <nav>
-      <ul>
-        <li>Serviços:<p>Encadernação</p><p>Restauração</p><p>Vendas</p></li>
-      </ul>
-    </nav>
+  <nav>
+    <dl>
+      <dt>Serviços:</dt>
+      <dd>1. Encadernação</dd>
+      <dd>2. Restauração</dd>
+      <dd>3. Vendas</dd>
+    </dl>
+    <dl>
+      <dt>Perguntas frequentes:</dt>
+      <dd>Quem somos?</dd>
+      <dd>Como doar livros?</dd>
+    </dl>
+    <dl>
+      <dt>Horário de funcionamento:</dt>
+      <dd>Segunda a sexta-feira</dd>
+      <dd>8h às 12h - 14h às 18h</dd>
+    </dl>
+    <dl>
+      <dt>Contato:</dt>
+      <dd>(00) 00000-0000</dd>
+      <dd>[Instagram] livrariabook</dd>
+      <dd>[facebook] livrariabook</dd>
+    </dl>
+  </nav>
   </footer>
 </html>
