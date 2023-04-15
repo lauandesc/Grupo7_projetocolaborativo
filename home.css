@@ -1,0 +1,55 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        
+    }
+    
+    header img{
+        max-width: auto;
+        max-height: auto;
+    }
+    
+    nav{
+        margin: auto;
+        padding: 40px;
+        background-color: #69B1E0
+                    
+    }
+
+    ul{
+        display: flex;
+    }
+
+    nav ul li{
+        list-style-type: none;
+        margin: auto;
+        margin-right: auto;
+        background-color: yellow;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    footer nav {
+        background-color: white;
+        
+          
+    }
+
+    footer ul li{
+        display: flex;
+        margin: auto;
+        padding: 20px;
+        background-color: #69B1E0
+    }
+    address{
+        padding: auto;
+        background-color: #12CDD4;       
+    }
