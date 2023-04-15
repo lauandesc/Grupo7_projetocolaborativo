@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Gravitas+One&family=Open+Sans&family=Roboto:ital,wght@0,400;1,500&display=swap');
 *{
     
     margin: 0;
     padding: 0;
 }
+
     header{
         display: flex;
         justify-content: space-between;
@@ -14,29 +16,96 @@
     }
     
     header img{
-        max-width: auto;
-        max-height: auto;
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    header input{
+        width: 20%;
+        height: 20%;
+        margin: auto;
+        margin-right: auto;
+        margin-left: 10%;
+        padding: 5px;
+        border-color: black;
+        border-radius: 20px;
     }
     
+samp{
+    text-decoration: none;    
+    margin: auto;
+    margin-right: 20px;
+    margin-left: auto;
+    background-color: #E1D243;
+    padding: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 200%;
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+     
+    }
+    body header samp a{
+        text-decoration: none;
+        color: black;
+    }
+
     nav{
+        align-items: center;
         margin: auto;
-        padding: 40px;
+        padding: 25px;
         background-color: #69B1E0
+
                     
     }
 
     ul{
         display: flex;
+       justify-content: space-between;
     }
 
     nav ul li{
         list-style-type: none;
-        margin: auto;
-        margin-right: auto;
-        background-color: yellow;
-        padding: 20px;
-        border-radius: 20px;
+        background-color: #E1D243;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 1em;
+
     }
+
+    nav ul li:nth-child(3){
+        width: 100px;
+
+    } 
+
+    nav ul li:nth-child(4){
+        width: 100px;
+    }
+
+    
+
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-weight: bolder
+        
+    }
+
+    nav ul li:nth-child(3) a{
+        margin-left: 30px;
+    }
+
+    nav ul li:nth-child(4) a{
+        margin-left: 30px;
+    }
+
+
+
+
+
     footer nav {
         background-color: white;
         
