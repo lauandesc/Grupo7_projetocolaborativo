@@ -8,6 +8,7 @@ body div.bordapagina {
     border: 5px solid #69B1E1;
     margin: 10px;
     padding: 10px;
+    /* height: 100vh; */
 }
 
 header {
@@ -47,7 +48,7 @@ header div:last-of-type nav ul {
 }
 
 header div:last-of-type nav ul li {
-    padding: 15px;
+    padding: 15px 40px;
     border-radius: 8px;
     list-style-type: none;
     background-color: #FEF445;
@@ -60,9 +61,69 @@ header div:last-of-type nav ul li a {
 }
 
 /* 
-    o conteudo principal vem aqui 
+    o header termina aqui 
 */
 
-footer {
-    margin-top: 10px;
+/* 
+    o main começa aqui 
+*/
+
+body div.main {
+    display: flex;
+    justify-content: center;
+    color: black;
+    /* width: 1200px; */
+    margin: 0 auto; /* o valor auto deixou o main no centro da página */
+}
+
+body div.linhaverticalnomeio {
+    height: 25vh;
+    background-color: #69B1E1;
+    padding: 0.5px;
+    margin: 90px 200px;
+}
+
+body section:first-of-type {
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+body section:last-of-type {
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+/*
+    o footer começa aqui 
+*/
+
+footer div.linhafooter {
+    width: 100%;
+    padding: 1px;
+    background-color: #69B1E1;
+    margin: 15px 0;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: white;
+}
+
+footer nav dl {
+    display: block;
+    background-color: #69B1E1;
+    padding: 25px 90px;
+    border-radius: 20px;
+    height: 150px;
+}
+
+footer nav dl dt {
+    font-weight: bold;
+}
+
+footer nav dl dt, dd {
+    color: white;
+    padding: 10px 0px;
 }
