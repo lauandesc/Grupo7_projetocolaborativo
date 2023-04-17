@@ -18,11 +18,12 @@ header {
   margin-bottom: 10px;
 }
 
-header div:first-of-type {
+header div.primeiraheader {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+  height: 100%;
 }
 
 header div img {
@@ -38,32 +39,32 @@ header div.buscador input {
   font-size: 1.2rem;
 }
 
-header div:last-of-type nav {
+header div.segundaheader nav {
   background-color: #69b1e1;
   height: 70px;
 }
 
-header div:last-of-type nav ul {
+header div.segundaheader nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
 
-header div:last-of-type nav ul li {
+header div.segundaheader nav ul li {
   padding: 15px 40px;
   border-radius: 8px;
   list-style-type: none;
   background-color: #fef445;
 }
 
-header div:last-of-type nav ul li a {
+header div.segundaheader nav ul li a {
   font-weight: bold;
   color: black;
   text-decoration: none;
 }
 
-header div:last-of-type nav ul li a:hover {
+header div.segundaheader nav ul li a:hover {
   color: #537b9d
 }
 
@@ -171,6 +172,7 @@ footer nav {
   justify-content: space-around;
   align-items: flex-end;
   background-color: white;
+  height: 100%;
 }
 
 footer nav dl {
@@ -189,4 +191,45 @@ footer nav dl dt,
 dd {
   color: white;
   padding: 0.6vh 0px;
+}
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+
+  header div.buscador {
+    margin: 0;
+  }
+
+  header div.buscador input {
+    font-size: 0.6rem;
+  }
+
+  header div.segundaheader nav ul li {
+    padding: 2vh;
+  }
+
+  footer nav dl {
+    padding: 1vh 1vw;
+  }
+
+  footer nav dl dt, dd {
+    font-size: 0.7rem;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
+  }
+
+  fieldset small {
+    font-size: 0.6rem;
+  }
+
+  fieldset label {
+    font-size: 0.8rem;
+  }
 }
