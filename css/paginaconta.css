@@ -1,63 +1,66 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 body div.bordapagina {
-    border: 5px solid #69B1E1;
-    margin: 10px;
-    padding: 10px;
-    /* height: 100vh; */
+  border: 5px solid #69b1e1;
+  margin: 10px;
+  padding: 10px;
 }
 
 header {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 header div:first-of-type {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 header div img {
-    border-radius: 40px;
-    width: 1000px;
+  border-radius: 40px;
+  width: 50vw;
 }
 
-header div.buscador input{
-    border-radius: 30px;
-    width: 400px;
-    height: 50px;
-    padding: 20px;
-    font-size: 20px;
+header div.buscador input {
+  border-radius: 30px;
+  width: 20vw;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
 }
 
 header div:last-of-type nav {
-    background-color: #69B1E1;
-    height: 70px;
+  background-color: #69b1e1;
+  height: 70px;
 }
 
 header div:last-of-type nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 header div:last-of-type nav ul li {
-    padding: 15px 40px;
-    border-radius: 8px;
-    list-style-type: none;
-    background-color: #FEF445;
+  padding: 15px 40px;
+  border-radius: 8px;
+  list-style-type: none;
+  background-color: #fef445;
 }
 
 header div:last-of-type nav ul li a {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+header div:last-of-type nav ul li a:hover {
+  color: #537b9d
 }
 
 /* 
@@ -69,28 +72,82 @@ header div:last-of-type nav ul li a {
 */
 
 body div.main {
-    display: flex;
-    justify-content: center;
-    color: black;
-    /* width: 1200px; */
-    margin: 0 auto; /* o valor auto deixou o main no centro da página */
+  display: flex;
+  justify-content: center;
+  color: black;
+  /* width: 1200px; */
+  margin: 0 auto; /* o valor auto deixou o main no centro da página */
+}
+
+body h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 body div.linhaverticalnomeio {
-    height: 25vh;
-    background-color: #69B1E1;
-    padding: 0.5px;
-    margin: 90px 200px;
+  height: 25vh;
+  background-color: #69b1e1;
+  padding: 0.5px;
+  margin: 90px 8vw;
 }
 
-body section:first-of-type {
-    padding: 10px;
-    background-color: aliceblue;
+body section {
+  padding: 20px;
+  /* background-color: aliceblue; */
+  border-radius: 20px;
+  width: 450px;
 }
 
-body section:last-of-type {
-    padding: 10px;
-    background-color: aliceblue;
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+fieldset label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+fieldset small {
+    margin-top: 5px;
+    font-size: small;
+}
+
+fieldset input[type="text"], input[type="email"], input[type="password"] {
+    padding: 5px;
+    border-radius: 5px;
+    /* border: thin 1px; */
+}
+
+fieldset input[type="submit"] {
+  background-color: #2D9BF0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+fieldset input[type="submit"]:hover {
+    background-color: #0f78c8;
+    transition-duration: 0.4s;
+}
+
+/* fieldset input[type="checkbox"] {
+  display: none;
+} */
+
+/* fieldset input[type="checkbox"]:checked + field label {
+  background: #f00;
+} */
+
+.alinharcheckboxbotao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
 }
 
 /*
@@ -98,32 +155,33 @@ body section:last-of-type {
 */
 
 footer div.linhafooter {
-    width: 100%;
-    padding: 1px;
-    background-color: #69B1E1;
-    margin: 15px 0;
+  width: 100%;
+  padding: 1px;
+  background-color: #69b1e1;
+  margin: 15px 0;
 }
 
 footer nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white;
 }
 
 footer nav dl {
-    display: block;
-    background-color: #69B1E1;
-    padding: 25px 90px;
-    border-radius: 20px;
-    height: 150px;
+  display: block;
+  background-color: #69b1e1;
+  padding: 1vh 4vw;
+  border-radius: 20px;
+  height: 15vh;
 }
 
 footer nav dl dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-footer nav dl dt, dd {
-    color: white;
-    padding: 10px 0px;
+footer nav dl dt,
+dd {
+  color: white;
+  padding: 0.6vh 0px;
 }

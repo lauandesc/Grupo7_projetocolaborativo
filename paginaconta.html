@@ -49,25 +49,27 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Seu e-mail"
-              /><br /><br />
+              />
               <label for="senha">Senha:</label>
               <input
                 type="password"
                 id="senha"
                 name="senha"
-                placeholder="Senha"
-              /><br /><br />
-              <input
-                type="checkbox"
-                id="conectado"
-                name="conectado"
-                value="conectado"
               />
-              <label for="conectado"
-                >Continuar conectado neste computador.</label
-              >
-              <input type="submit" value="Entrar" />
+              <div class="alinharcheckboxbotao">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="conectado"
+                    name="conectado"
+                    value="conectado"
+                  />
+                  <label for="conectado"
+                    >Continuar conectado neste computador.</label
+                  >
+                </div>
+                <input type="submit" value="Entrar" />
+              </div>
             </fieldset>
           </form>
         </section>
@@ -78,27 +80,26 @@
           <form action="" autocomplete="on">
             <fieldset>
               <label for="nomecompleto">Nome completo:</label>
-              <input type="text" id="nomecompleto" name="nome" /><br /><br />
+              <input type="text" id="nomecompleto" name="nome" />
               <label for="emailcadastro">E-mail:</label>
-              <input type="email" id="emailcadastro" name="email" /><br /><br />
+              <input type="email" id="emailcadastro" name="email" />
               <label for="senhacadastro">Senha:</label>
-              <input
-                type="password"
-                id="senhacadastro"
-                name="senha"
-              /><br /><br />
-              <small>Nunca vamos compartilhar seus dados, com ninguém.</small
-              ><br /><br />
-              <input
-                type="checkbox"
-                id="infoprom"
-                name="infoprom"
-                value="sim"
-              />
-              <label for="infoprom"
-                >Desejo receber informativos e promoções.</label
-              >
-              <input type="submit" value="Criar conta" />
+              <input type="password" id="senhacadastro" name="senha" />
+              <small>Nunca vamos compartilhar seus dados, com ninguém.</small>
+              <div class="alinharcheckboxbotao">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="infoprom"
+                    name="infoprom"
+                    value="sim"
+                  />
+                  <label for="infoprom"
+                    >Desejo receber informativos e promoções.</label
+                  >
+                </div>
+                <input type="submit" value="Criar conta" />
+              </div>
             </fieldset>
           </form>
         </section>
@@ -126,7 +127,7 @@
             <dt>Contato:</dt>
             <dd>(00) 00000-0000</dd>
             <dd>[Instagram] livrariabook</dd>
-            <dd>[facebook] livrariabook</dd>
+            <dd>[Facebook] livrariabook</dd>
           </dl>
         </nav>
       </footer>
