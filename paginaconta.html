@@ -3,116 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/paginaconta.css" />
+
     <title>Página de Conta</title>
   </head>
   <body>
-    <h1>Página de Conta do Usuário</h1>
-    <header>
-      <h3>Header</h3>
-      <img style="width: 60%;"
-        src="./img_livraria/logobanner.jpeg"
-        nome="logobanner"
-        alt="logo livraria"
-      />
-      <div>
-        <input
-          type="search"
-          placeholder="Pesquisa livrariabook"
-          name="busca"
-          id="busca"
-          alt="buscador do site"
-        />
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li>LIVROS NOVOS</li>
-            <li>LIVROS DIGITAIS</li>
-            <li>SEBO</li>
-            <li>QUERO DOAR</li>
-            <li>PAPELARIA</li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <h3>Seção 1</h3>
-    <!-- esta section foi utilizada para manter a semântica do objeto formulário -->
-    <section>
-      <h2>Acesse sua conta</h2>
-      <form action="" autocomplete="on">
-        <fieldset>
-          <label for="email">E-mail:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Seu e-mail"
-          /><br /><br />
-          <label for="senha">Senha:</label>
-          <input
-            type="password"
-            id="senha"
-            name="senha"
-            placeholder="Senha"
-          /><br /><br />
-          <input
-            type="checkbox"
-            id="conectado"
-            name="conectado"
-            value="conectado"
+    <div class="bordapagina">
+      <header>
+        <div>
+          <img
+            src="./img_livraria/logobanner.jpeg"
+            nome="logobanner"
+            alt="logo livraria"
           />
-          <label for="conectado">Continuar conectado neste computador.</label>
-          <input type="submit" value="Entrar" />
-        </fieldset>
-      </form>
-    </section>
-    <h3>Seção 2</h3>
-    <!-- esta section foi utilizada para seguir com a semântica do objeto formulário -->
-    <section>
-      <h2>Crie sua conta</h2>
-      <form action="" autocomplete="on">
-        <fieldset>
-          <label for="nomecompleto">Nome completo:</label>
-          <input type="text" id="nomecompleto" name="nome" /><br /><br />
-          <label for="emailcadastro">E-mail:</label>
-          <input type="email" id="emailcadastro" name="email" /><br /><br />
-          <label for="senhacadastro">Senha:</label>
-          <input type="password" id="senhacadastro" name="senha" /><br /><br />
-          <small>Nunca vamos compartilhar seus dados, com ninguém.</small
-          ><br /><br />
-          <input type="checkbox" id="infoprom" name="infoprom" value="sim" />
-          <label for="infoprom">Desejo receber informativos e promoções.</label>
-          <input type="submit" value="Criar conta" />
-        </fieldset>
-      </form>
-    </section>
-
-    <footer>
-      <h3>Footer</h3>
-      <nav>
-        <dl>
-          <dt>Serviços:</dt>
-          <dd>1. Encadernação</dd>
-          <dd>2. Restauração</dd>
-          <dd>3. Vendas</dd>
-        </dl>
-        <dl>
-          <dt>Perguntas frequentes:</dt>
-          <dd>Quem somos?</dd>
-          <dd>Como doar livros?</dd>
-        </dl>
-        <dl>
-          <dt>Horário de funcionamento:</dt>
-          <dd>Segunda a sexta-feira</dd>
-          <dd>8h às 12h - 14h às 18h</dd>
-        </dl>
-        <dl>
-          <dt>Contato:</dt>
-          <dd>(00) 00000-0000</dd>
-          <dd>[Instagram] livrariabook</dd>
-          <dd>[facebook] livrariabook</dd>
-        </dl>
-      </nav>
-    </footer>
+          <div class="buscador">
+            <input
+              type="search"
+              placeholder="Pesquisa livrariabook"
+              name="busca"
+              id="busca"
+              alt="buscador do site"
+            />
+          </div>
+        </div>
+        <div>
+          <nav>
+            <ul>
+              <li><a href="#">LIVROS NOVOS</a></li>
+              <li><a href="#">LIVROS DIGITAIS</a></li>
+              <li><a href="#">SEBO</a></li>
+              <li><a href="#">QUERO DOAR</a></li>
+              <li><a href="#">PAPELARIA</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <!-- esta section foi utilizada para manter a semântica do objeto formulário -->
+        <section>
+          <h2>Acesse sua conta</h2>
+          <form action="" autocomplete="on">
+            <fieldset>
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+              />
+              <label for="senha">Senha:</label>
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+              />
+              <div class="alinharcheckboxbotao">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="conectado"
+                    name="conectado"
+                    value="conectado"
+                  />
+                  <label for="conectado"
+                    >Continuar conectado neste computador.</label
+                  >
+                </div>
+                <input type="submit" value="Entrar" />
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <div class="linhaverticalnomeio"></div>
+        <!-- esta section foi utilizada para seguir com a semântica do objeto formulário -->
+        <section>
+          <h2>Crie sua conta</h2>
+          <form action="" autocomplete="on">
+            <fieldset>
+              <label for="nomecompleto">Nome completo:</label>
+              <input type="text" id="nomecompleto" name="nome" />
+              <label for="emailcadastro">E-mail:</label>
+              <input type="email" id="emailcadastro" name="email" />
+              <label for="senhacadastro">Senha:</label>
+              <input type="password" id="senhacadastro" name="senha" />
+              <small>Nunca vamos compartilhar seus dados, com ninguém.</small>
+              <div class="alinharcheckboxbotao">
+                <div>
+                  <input
+                    type="checkbox"
+                    id="infoprom"
+                    name="infoprom"
+                    value="sim"
+                  />
+                  <label for="infoprom"
+                    >Desejo receber informativos e promoções.</label
+                  >
+                </div>
+                <input type="submit" value="Criar conta" />
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+      <footer>
+        <div class="linhafooter"></div>
+        <nav>
+          <dl>
+            <dt>Serviços:</dt>
+            <dd>1. Encadernação</dd>
+            <dd>2. Restauração</dd>
+            <dd>3. Vendas</dd>
+          </dl>
+          <dl>
+            <dt>Perguntas frequentes:</dt>
+            <dd>Quem somos?</dd>
+            <dd>Como doar livros?</dd>
+          </dl>
+          <dl>
+            <dt>Horário de funcionamento:</dt>
+            <dd>Segunda a sexta-feira</dd>
+            <dd>8h às 12h - 14h às 18h</dd>
+          </dl>
+          <dl>
+            <dt>Contato:</dt>
+            <dd>(00) 00000-0000</dd>
+            <dd>[Instagram] livrariabook</dd>
+            <dd>[Facebook] livrariabook</dd>
+          </dl>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>

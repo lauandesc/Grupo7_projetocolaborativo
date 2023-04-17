@@ -117,4 +117,9 @@ Regra de negócio: https://docs.google.com/document/d/1I04-eaZo0NNnOgRcvPWUE1lXI
 
 Interfaces do projeto via Miro: https://miro.com/app/board/uXjVMXxgvzg=/?share_link_id=142301735069
 
+<<<<<<< HEAD
 Link da board de gerenciamento de tarefas: https://docs.google.com/document/d/19q33lWnZXr3maqxUyMX4M--6ITDrbSlX72L4UIwDIg8/edit?usp=sharing
+=======
+Link da board de gerenciamento de tarefas: https://docs.google.com/document/d/19q33lWnZXr3maqxUyMX4M--6ITDrbSlX72L4UIwDIg8/edit?usp=sharing
+
+>>>>>>> paginacarrinho
