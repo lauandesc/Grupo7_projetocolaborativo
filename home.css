@@ -4,7 +4,17 @@
     margin: 0;
     padding: 0;
 }
+html body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
 
+html{
+    border-color: solid #12CDD4;
+    border-width: 5px;
+}
     header{
         display: flex;
         justify-content: space-between;
@@ -55,8 +65,9 @@ samp{
     nav{
         align-items: center;
         margin: auto;
-        padding: 15px;
+        padding: 20px;
         background-color: #69B1E0
+        
 
                     
     }
@@ -108,6 +119,8 @@ samp{
 
     footer nav {
         background-color: white;
+        border-top: solid #12CDD4;
+        border-width: 2px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -146,15 +159,49 @@ samp{
         margin-left: 20px;
     }
 
-   
- 
-
-
+    
     dd{
         
         width: max-content;
+        margin-left: 38px;
     }
 
+
+    dl:nth-child(1) dd:nth-last-child(1){
+        margin-left: 63px;
+    }
+
+    dl:nth-child(1) dd:nth-last-child(2){
+        margin-left: 45px;
+    }
+
+    dl:nth-child(2) dd:nth-last-child(2){
+        margin-left: 49px;
+    }
+
+    dl:nth-child(2) dd:nth-last-child(1){
+        margin-left: 35px;
+    }
+
+    dl:nth-child(3) dd:nth-last-child(2){
+        margin-left: 20px;
+    }
+
+    dl:nth-child(3) dd:nth-last-child(1){
+        margin-left: 18px;
+    }
+
+    dl:nth-child(4) dd:nth-last-child(3){
+        margin-left: 28px;
+    }
+
+    dl:nth-child(4) dd:nth-last-child(2){
+        margin-left: 50px;
+    }
+
+    dl:nth-child(4) dd:nth-last-child(1){
+        margin-left: 50px;
+    }
 
 
 
