@@ -4,17 +4,7 @@
     margin: 0;
     padding: 0;
 }
-html body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    
-}
 
-html{
-    border-color: solid #12CDD4;
-    border-width: 5px;
-}
     header{
         display: flex;
         justify-content: space-between;
@@ -80,7 +70,7 @@ samp{
     nav ul li{
         list-style-type: none;
         background-color: #E1D243;
-        padding: 15px;
+        padding: 18px;
         border-radius: 10px;
         font-family: 'Fredoka', sans-serif;
         font-size: 1em;
@@ -88,7 +78,7 @@ samp{
     }
 
     nav ul li:nth-child(3){
-        width: 100px;
+        width: 115px;
 
     } 
 
@@ -106,7 +96,7 @@ samp{
     }
 
     nav ul li:nth-child(3) a{
-        margin-left: 30px;
+        margin-left: 35px;
     }
 
     nav ul li:nth-child(4) a{
@@ -201,6 +191,11 @@ samp{
 
     dl:nth-child(4) dd:nth-last-child(1){
         margin-left: 50px;
+    }
+
+    nav dl dd a{
+        text-decoration: none;
+        color: white;
     }
 
 
