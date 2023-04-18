@@ -108,16 +108,57 @@ samp{
 
     footer nav {
         background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
         
           
     }
 
-    footer ul li{
-        display: flex;
-        margin: auto;
-        padding: 20px;
-        background-color: #69B1E0
+    footer dl{
+        background-color: #69B1E0;
+        justify-content: space-around;
+        border-radius: 20px;
+        height: 80px;
+        width: 190px;
+        padding: 25px 100px 25px 100px;
+        
+               
     }
+     
+    dt{
+        width: max-content;
+             
+    }
+
+    footer nav dl:nth-child(1) dt:nth-last-child(4){
+        margin-left: 59px;
+    }
+
+    footer nav dl:nth-child(4) dt:nth-last-child(4){
+        margin-left: 60px;
+    }
+
+    footer nav dl:nth-child(2) dt:nth-last-child(3){
+        margin-left: 20px;
+    }
+
+   
+ 
+
+
+    dd{
+        
+        width: max-content;
+    }
+
+
+
+
+    
     address{
         padding: auto;
         background-color: #12CDD4;       
