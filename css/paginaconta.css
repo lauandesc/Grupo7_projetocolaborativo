@@ -120,7 +120,7 @@ fieldset small {
     font-size: small;
 }
 
-.alinharcheckboxbotao {
+fieldset div.alinharcheckboxbotao {
   display: flex;
   justify-content: space-between;
   align-items: center;
