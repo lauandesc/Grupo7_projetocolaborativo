@@ -103,8 +103,18 @@ samp{
         margin-left: 5px;
     }
 
+    div ul{
+        display: block;
+        background-color: aqua;
 
+        margin: 20px 60% 20px 50px;
+        padding: 50px;
+       
+       
 
+    }
+
+    
 
 
     footer nav {
