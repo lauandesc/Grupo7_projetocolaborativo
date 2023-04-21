@@ -1,153 +1,229 @@
 * {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+:root {
+  --faixasdapagina: #69b1e1;
+  --botoesmenu: #fef445;
+  --corfontemenu: black;
+  --corfontefooter: white;
+  --fontesizeh1: 2rem;
+  --fontesizeh2: 1.5rem;
+  --fontesizeh3: 1.2rem;
+}
+
+body div.bordapagina {
+border: 5px solid var(--faixasdapagina);
+margin: 10px;
+padding: 10px;
+}
+
+/* 
+    acima estão as configurações da página inteira  
+*/
+
+header {
+  margin-bottom: 10px;
+}
+
+header div.primeiraheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+header div img {
+  border-radius: 40px;
+  width: 50vw;
+}
+
+header div.buscador input {
+  border-radius: 30px;
+  width: 20vw;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+header div.segundaheader nav {
+  background-color: var(--faixasdapagina);
+  height: 70px;
+}
+
+header div.segundaheader nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+header div.segundaheader nav ul li {
+  padding: 15px 40px;
+  border-radius: 8px;
+  list-style-type: none;
+  background-color: var(--botoesmenu);
+}
+
+header div.segundaheader nav ul li a {
+  font-weight: bold;
+  color: var(--corfontemenu);
+  text-decoration: none;
+}
+
+header div.segundaheader nav ul li a:hover {
+  color: #537b9d;
+}
+
+/* 
+    o header termina aqui 
+*/
+
+/* 
+    conteúdo principal começa aqui 
+*/
+
+section.main {
+  margin: 0 auto;
+  padding: 3% 5%;
+  /* border: 1px solid salmon; */
+}
+
+section.main h1 {
+  position: relative; /* relativo à main */
+  top: 0; /* encostado no topo */
+  margin-bottom: 10px;
+  font-size: var(--fontesizeh1);
+}
+
+section.main div.carrinho h2 {
+  font-size: var(--fontesizeh2);
+  margin-bottom: 10px;
+}
+
+section.main div.carrinho h3 {
+  font-size: var(--fontesizeh3);
+}
+
+section.main div.carrinho {
+  /* border: 1px solid salmon; */
+  margin: 20px;
+  padding: 10px;
+}
+
+section.main div.celimagem {
+  border: 1px solid salmon;
+}
+
+section.main div.celimagem img {
+  position: relative;
+  /* width: 187px; */
+  height: 120px;
+  /* offset: 270px 100px; */
+}
+
+section.main div.carrinhoflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3%;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 45px -30px #6b6b6b;
+}
+
+section.main div.totalcarrinho {
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* lindo isso */
+  align-items: flex-end; /* isso lindo */
+}
+
+section.main div.totalcarrinhoflex {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25%;
+}
+
+section.main div#botaocomprar {
+  margin-top: 5px;
+}
+
+/*
+    o footer começa aqui 
+*/
+
+footer div.linhafooter {
+  width: 100%;
+  padding: 1px;
+  background-color: var(--faixasdapagina);
+  margin: 15px 0;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white;
+  height: 100%;
+}
+
+footer nav dl {
+  display: block;
+  background-color: var(--faixasdapagina);
+  padding: 1vh 4vw;
+  border-radius: 20px;
+  height: 15vh;
+}
+
+footer nav dl dt, dd {
+  color: var(--corfontefooter);
+  padding: 0.6vh 0px;
+}
+
+footer nav dl dt {
+  /* width: 100%; */
+  font-weight: bold;
+}
+
+footer nav dl dd {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+
+  header div.buscador {
     margin: 0;
-    padding: 0;
-    font-size: 16px;
   }
-  
-  body div.bordapagina {
-    border: 5px solid #69b1e1;
-    margin: 10px;
-    padding: 10px;
-  }
-  
-  /* 
-      acima estão as configurações da página inteira  
-  */
-  
-  header {
-    margin-bottom: 10px;
-  }
-  
-  header div.primeiraheader {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-    height: 100%;
-  }
-  
-  header div img {
-    border-radius: 40px;
-    width: 50vw;
-  }
-  
+
   header div.buscador input {
-    border-radius: 30px;
-    width: 20vw;
-    height: 50px;
-    padding: 20px;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
   }
-  
-  header div.segundaheader nav {
-    background-color: #69b1e1;
-    height: 70px;
-  }
-  
-  header div.segundaheader nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-  }
-  
+
   header div.segundaheader nav ul li {
-    padding: 15px 40px;
-    border-radius: 8px;
-    list-style-type: none;
-    background-color: #fef445;
+    padding: 2vh;
   }
-  
-  header div.segundaheader nav ul li a {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-  }
-  
-  header div.segundaheader nav ul li a:hover {
-    color: #537b9d
-  }
-  
-  /* 
-      o header termina aqui 
-  */
-  
-  /* 
-      conteúdo principal começa aqui 
-  */
- 
-  /*
-      o footer começa aqui 
-  */
-  
-  footer div.linhafooter {
-    width: 100%;
-    padding: 1px;
-    background-color: #69b1e1;
-    margin: 15px 0;
-  }
-  
-  footer nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    background-color: white;
-    height: 100%;
-  }
-  
+
   footer nav dl {
-    display: block;
-    background-color: #69b1e1;
-    padding: 1vh 4vw;
-    border-radius: 20px;
-    height: 15vh;
+    padding: 1vh 1vw;
   }
-  
+
   footer nav dl dt, dd {
-    color: white;
-    padding: 0.6vh 0px;
+    font-size: 0.7rem;  
   }
-  
-  footer nav dl dt {
-    /* width: 100%; */
-    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
   }
-  
-  footer nav dl dd {
-    text-align: left;
-    font-size: 14px;
-  }
-  
-  /* 
-    responsividade
-    https://youtu.be/pt1ztJcHoFQ?t=205 
-  */
-  
-  @media screen and (max-width: 1024px) {
-  
-    header div.buscador {
-      margin: 0;
-    }
-  
-    header div.buscador input {
-      font-size: 0.6rem;
-    }
-  
-    header div.segundaheader nav ul li {
-      padding: 2vh;
-    }
-  
-    footer nav dl {
-      padding: 1vh 1vw;
-    }
-  
-    footer nav dl dt, dd {
-      font-size: 0.7rem;  
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    header div.segundaheader nav ul li {
-      padding: 1vh;
-    }
-  }
+}
