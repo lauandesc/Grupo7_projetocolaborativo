@@ -88,7 +88,7 @@ header div.segundaheader nav ul li a:hover {
 
 section.main {
   margin: 0 auto;
-  padding: 3% 5%;
+  padding: 2% 3%;
   /* border: 1px solid salmon; */
 }
 
@@ -132,7 +132,18 @@ section.main div.carrinhoflex {
   gap: 3%;
   border-radius: 5px;
   padding: 10px;
+  margin: 20px 0;
   box-shadow: 0px 0px 45px -30px #6b6b6b;
+}
+
+section.main div.alteravalor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  gap: 33.33%;
+  border: 1px solid salmon;
 }
 
 section.main div.totalcarrinho {
@@ -151,7 +162,7 @@ section.main div.totalcarrinhoflex {
   background-color: #e8f1fe;
 }
 
-section.main div.totalcarrinhoflex .coluna1 p, .coluna2 p {
+section.main div.totalcarrinhoflex .colunalabels p, .colunaprecos p {
   margin: 10px 0;
   font-size: 1.2rem;
 }
