@@ -14,12 +14,13 @@
         margin-left: 5px;
         
     }
-    
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO  */    
     header img{
         max-width: 50%;
         max-height: 50%;
+        border-radius: 40px;
     }
-
+/* BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR */
     header input{
         width: 20%;
         height: 20%;
@@ -30,7 +31,7 @@
         border-color: black;
         border-radius: 20px;
     }
-    
+/* USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO */    
 samp{
     text-decoration: none;    
     margin: auto;
@@ -52,6 +53,7 @@ samp{
         color: black;
     }
 
+/* PRIMEIRA NAV APÓS O HEADER  PRIMEIRA NAV APÓS O HEADER    PRIMEIRA NAV APÓS O HEADER     PRIMEIRA NAV APÓS O HEADER   PRIMEIRA NAV APÓS O HEADER*/    
     nav{
         align-items: center;
         margin: auto;
@@ -103,20 +105,40 @@ samp{
         margin-left: 5px;
     }
 
-    div ul{
-        display: block;
-        background-color: aqua;
-
-        margin: 20px 60% 20px 50px;
-        padding: 50px;
-       
-       
+/* PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPALPRINCIPAL */
+  
+main{
+        display: flex;
 
     }
 
+
+    div ul{
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+        width: 500px;
+        height: 300px;
+        padding: 50px;
+        margin: 20px 0 0 50px;
+      
+       
+            
+    }
+
+    main img{
+        max-width: 300%;
+        max-height: 300%;
+        margin: 30px 0 0 50%;
+
+
+    }
+
+   
+
     
-
-
+/* RODAPÉ RODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉ */
+    
     footer nav {
         background-color: white;
         border-top: solid #12CDD4;
@@ -127,6 +149,7 @@ samp{
         color: white;
         font-family: 'Open Sans', sans-serif;
         font-weight: bolder;
+        margin-top: 10px;
         
           
     }
@@ -209,9 +232,11 @@ samp{
     }
 
 
-
+/* ENDEREÇO NO FINAL DA PÁGINA */
     
-    address{
-        padding: auto;
-        background-color: #12CDD4;       
+    footer address{
+       background-color: #E1D243;   
+       padding: 12px;
+       border: solid #69B1E0;;  
+      
     }
