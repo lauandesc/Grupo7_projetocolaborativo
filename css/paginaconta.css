@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body div.bordapagina {
+  border: 5px solid #69b1e1;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* 
+    acima estão as configurações da página inteira  
+*/
+
+header {
+  margin-bottom: 10px;
+}
+
+header div.primeiraheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+header div img {
+  border-radius: 40px;
+  width: 50vw;
+}
+
+header div.buscador input {
+  border-radius: 30px;
+  width: 20vw;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+header div.segundaheader nav {
+  background-color: #69b1e1;
+  height: 70px;
+}
+
+header div.segundaheader nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+header div.segundaheader nav ul li {
+  padding: 15px 40px;
+  border-radius: 8px;
+  list-style-type: none;
+  background-color: #fef445;
+}
+
+header div.segundaheader nav ul li a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+header div.segundaheader nav ul li a:hover {
+  color: #537b9d
+}
+
+/* 
+    o header termina aqui 
+*/
+
+/* 
+    o main começa aqui 
+*/
+
+body div.main {
+  display: flex;
+  justify-content: center;
+  color: black;
+  /* width: 1300px; */
+  margin: 0 auto; /* o valor auto deixou o main no centro da página */
+}
+
+body h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+body div.linhaverticalnomeio {
+  height: 25vh;
+  background-color: #69b1e1;
+  padding: 0.5px;
+  margin: 90px 8vw;
+}
+
+body section {
+  padding: 20px;
+  /* background-color: aliceblue; */
+  /* border-radius: 20px; */
+  width: 450px;
+  box-shadow: 0px 2px 5px 0px #C2C4C2;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+fieldset label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+fieldset small {
+    margin-top: 5px;
+    font-size: small;
+}
+
+fieldset div.alinharcheckboxbotao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+fieldset input[type="text"], input[type="email"], input[type="password"] {
+    padding: 5px;
+    border-radius: 5px;
+    /* border: thin 1px; */
+}
+
+fieldset input[type="submit"] {
+  background-color: #2D9BF0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+fieldset input[type="submit"]:hover {
+  background-color: #0f78c8;
+  transition-duration: 0.4s;
+}
+
+fieldset input[type="submit"].submit-criarconta, 
+input[type="checkbox"].chkbox-criarconta:checked {
+  background-color: #626465;
+}
+
+fieldset input[type="submit"].submit-criarconta:hover {
+  background-color: #3f4244;
+  transition-duration: 0.4s;
+}
+
+/* checkbox totalmente reestilizado */
+
+fieldset input[type="checkbox"] {
+  all: unset;
+  border: 1px solid black;
+  width: 13px;
+  height: 13px;
+  display: inline-block; /* deixa o checkbox ao lado do label */
+}
+
+fieldset input[type="checkbox"]:checked {
+  background-color: #2D9BF0;
+}
+
+/* checkbox totalmente reestilizado */
+
+/*
+    o footer começa aqui 
+*/
+
+footer div.linhafooter {
+  width: 100%;
+  padding: 1px;
+  background-color: #69b1e1;
+  margin: 15px 0;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white;
+  height: 100%;
+}
+
+footer nav dl {
+  display: block;
+  background-color: #69b1e1;
+  padding: 1vh 4vw;
+  border-radius: 20px;
+  height: 15vh;
+}
+
+footer nav dl dt, dd {
+  color: white;
+  padding: 0.6vh 0px;
+}
+
+footer nav dl dt {
+  /* width: 100%; */
+  font-weight: bold;
+}
+
+footer nav dl dd {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+
+  header div.buscador {
+    margin: 0;
+  }
+
+  header div.buscador input {
+    font-size: 0.6rem;
+  }
+
+  header div.segundaheader nav ul li {
+    padding: 2vh;
+  }
+
+  footer nav dl {
+    padding: 1vh 1vw;
+  }
+
+  footer nav dl dt, dd {
+    font-size: 0.7rem;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
+  }
+
+  fieldset small {
+    font-size: 0.6rem;
+  }
+
+  fieldset label {
+    font-size: 0.8rem;
+  }
+}

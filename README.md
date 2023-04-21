@@ -112,3 +112,9 @@ Qualquer API que venha a ser utilizada no projeto precisa ser gratuita e dispon√
 <img width="436" alt="image" src="https://user-images.githubusercontent.com/128855021/230237888-b26e729e-c501-43d3-897e-29b87196f975.png">
 <img width="445" alt="image" src="https://user-images.githubusercontent.com/128855021/230237915-1f1f76ed-c077-4d6c-b467-154dcc5164f1.png">
 <img width="352" alt="image" src="https://user-images.githubusercontent.com/128855021/230237963-db32aeae-21ea-4510-a770-ce1d1c063cb7.png">
+
+Regra de neg√≥cio: https://docs.google.com/document/d/1I04-eaZo0NNnOgRcvPWUE1lXIkYO5eEmltPg4d0XVdg/edit?usp=sharing
+
+Interfaces do projeto via Miro: https://miro.com/app/board/uXjVMXxgvzg=/?share_link_id=142301735069
+
+Link da board de gerenciamento de tarefas: https://docs.google.com/document/d/19q33lWnZXr3maqxUyMX4M--6ITDrbSlX72L4UIwDIg8/edit?usp=sharing
