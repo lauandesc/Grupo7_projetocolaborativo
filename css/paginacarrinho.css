@@ -12,6 +12,7 @@
   --fontesizeh1: 2rem;
   --fontesizeh2: 1.5rem;
   --fontesizeh3: 1.2rem;
+  --fonttextocupom: 0.9rem;
 }
 
 body div.bordapagina {
@@ -114,17 +115,6 @@ section.main div.carrinho {
   padding: 10px;
 }
 
-section.main div.celimagem {
-  border: 1px solid salmon;
-}
-
-section.main div.celimagem img {
-  position: relative;
-  /* width: 187px; */
-  height: 120px;
-  /* offset: 270px 100px; */
-}
-
 section.main div.carrinhoflex {
   display: flex;
   justify-content: space-between;
@@ -136,14 +126,44 @@ section.main div.carrinhoflex {
   box-shadow: 0px 0px 45px -30px #6b6b6b;
 }
 
+section.main div.descricaoproduto {
+  display: flex;
+  align-items: center;
+}
+
+section.main div.celimagem {
+  border: 1px solid salmon;
+}
+
+section.main div.celimagem img {
+  position: relative;
+  /* width: 187px; */
+  height: 120px;
+  /* offset: 270px 100px; */
+}
+
+section.main div.descricao {
+  margin-left: 20px;
+}
+
+section.main div.descricao p {
+  margin-top: 5px;
+}
+
 section.main div.alteravalor {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 80px;
-  gap: 33.33%;
-  border: 1px solid salmon;
+  gap: 25%;
+  /* border: 1px solid salmon; */
+}
+
+section.main div.alteravalor a.cupom {
+  text-decoration: none;
+  color: #6b6b6b;
+  font-size: var(--fonttextocupom);
 }
 
 section.main div.totalcarrinho {
