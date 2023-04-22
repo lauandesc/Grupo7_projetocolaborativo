@@ -202,9 +202,12 @@ section.main div.totalcarrinho {
   display: flex;
   flex-direction: column; /* lindo isso */
   align-items: flex-end; /* isso lindo */
+  gap: 25px;
+  height: 100%;
+  width: 100%;
 }
 
-section.main div.totalcarrinhoflex {
+section.main div.tabelatotalcarrinho {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -213,13 +216,26 @@ section.main div.totalcarrinhoflex {
   background-color: var(--corfundovalortotal);
 }
 
-section.main div.totalcarrinhoflex .colunalabels p, .colunaprecos p {
+section.main div.tabelatotalcarrinho .colunalabels p, .colunaprecos p {
   margin: 10px 0;
   font-size: 1.2rem;
 }
 
-section.main div#botaocomprar {
-  margin-top: 5px;
+section.main div.botaocomprar a {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #2D9BF0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+section.main div.botaocomprar a:hover {
+  background-color: #0f78c8;
+  transition-duration: 0.4s;
 }
 
 /*
