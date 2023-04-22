@@ -7,8 +7,10 @@
 :root {
   --faixasdapagina: #69b1e1;
   --botoesmenu: #fef445;
+  --corvalortotal: #e8f1fe;
   --corfontemenu: black;
   --corfontefooter: white;
+  --corfontecupom: #6b6b6b;
   --fontesizeh1: 2rem;
   --fontesizeh2: 1.5rem;
   --fontesizeh3: 1.2rem;
@@ -89,8 +91,9 @@ header div.segundaheader nav ul li a:hover {
 
 section.main {
   margin: 0 auto;
-  padding: 2% 3%;
+  padding: 2% 20%;
   /* border: 1px solid salmon; */
+  box-shadow: 0px 0px 45px -30px #6b6b6b;
 }
 
 section.main h1 {
@@ -110,17 +113,54 @@ section.main div.carrinho h3 {
 }
 
 section.main div.carrinho {
-  /* border: 1px solid salmon; */
-  margin: 20px;
-  padding: 10px;
+  margin: 20px 0;
 }
 
-section.main div.carrinhoflex {
-  display: flex;
+section.main div.gridcarrinho {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 0;
   padding: 10px;
+  border-radius: 4px;
   box-shadow: 0px 0px 45px -30px #6b6b6b;
+}
+
+section.main div.gridcarrinho div.quantidadeprod {
+  /* text-align: center; */
+}
+
+section.main div.gridcarrinho div.quantidadeprod p {
+  margin: 5px 0;
+}
+
+section.main div.gridcarrinho div.botoesquantidade {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  border: 1px solid #cbcccd;
+  border-radius: 4px;
+}
+
+section.main div.gridcarrinho div.botoesquantidade a {
+  color: black;
+  padding: 2px 15px;
+  text-decoration: none;
+  transition: background-color .3s;
+  /* border: 1px solid #ddd; */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+section.main div.gridcarrinho div.botoesquantidade a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.botoesquantidade span {
+  position: relative;
+  margin: 0 10px;
 }
 
 section.main div.descricaoproduto {
@@ -128,43 +168,57 @@ section.main div.descricaoproduto {
   align-items: center;
 }
 
-section.main div.celimagem {
-  border: 1px solid salmon;
-}
-
-section.main div.celimagem img {
+section.main div.descricaoproduto img {
   position: relative;
-  /* width: 187px; */
   height: 120px;
-  /* offset: 270px 100px; */
 }
 
-section.main div.descricao {
+section.main div.descricaotitulo {
   margin-left: 20px;
 }
 
-section.main div.descricao p {
+section.main div.descricaotitulo p {
   margin-top: 5px;
 }
 
-section.main div.alteravalor {
+section.main div.complementocarrinho {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  margin: 0 10px;
   height: 80px;
   gap: 25%;
   /* border: 1px solid salmon; */
 }
 
-section.main div.alteravalor a.cupom {
+/* 
+
+implementação achada no stackoverflow
+
+div.complementocarrinho #quant {
+  font-size: 20px;
+  padding: 6px;
+}
+
+div.complementocarrinho #quant[type="number"]::-webkit-inner-spin-button { 
+  all: unset; 
+  min-width: 21px;
+  min-height: 45px;
+  margin: 17px;
+  padding: 0px;
+  transform: rotate(90deg) scale(0.8, 0.9);
+  cursor:pointer;
+} 
+*/
+
+section.main div.complementocarrinho a.cupom {
   text-decoration: none;
-  color: #6b6b6b;
+  color: var(--corfontecupom);
   font-size: var(--fonttextocupom);
 }
 
 section.main div.totalcarrinho {
-  margin: 15px 0;
   display: flex;
   flex-direction: column; /* lindo isso */
   align-items: flex-end; /* isso lindo */
@@ -176,7 +230,7 @@ section.main div.totalcarrinhoflex {
   gap: 20px;
   padding: 10px;
   border-radius: 4px;
-  background-color: #e8f1fe;
+  background-color: var(--corvalortotal);
 }
 
 section.main div.totalcarrinhoflex .colunalabels p, .colunaprecos p {
