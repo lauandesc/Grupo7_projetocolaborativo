@@ -6,9 +6,13 @@
 
 :root {
   --faixasdapagina: #69b1e1;
-  --botoesmenu: #fef445;
+  /* --botoesmenu: #fef445; */
+  --botoesmenu: #E3D654;
   --corfundovalortotal: #f1f7ff;
-  --corfontemenu: black;
+  /* --corfontemenu: black; */
+  --corfontemenu: #4b471a;
+  /* --corfontemenuhover: #537b9d; */
+  --corfontemenuhover: black;
   --corfontefooter: white;
   --corfontecupom: #6b6b6b;
   --fontesizeh1: 2rem;
@@ -78,7 +82,7 @@ header div.segundaheader nav ul li a {
 }
 
 header div.segundaheader nav ul li a:hover {
-  color: #537b9d;
+  color: var(--corfontemenuhover);
 }
 
 /* 
