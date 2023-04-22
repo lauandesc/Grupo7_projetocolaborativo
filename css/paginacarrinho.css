@@ -116,7 +116,7 @@ section.main div.carrinho {
 
 section.main div.gridcarrinho {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 430px auto auto;
   gap: 5px;
   justify-content: space-between;
   align-items: center;
