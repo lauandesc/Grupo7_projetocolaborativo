@@ -123,6 +123,7 @@ section.main div.gridcarrinho {
   margin: 20px 0;
   padding: 10px;
   border-radius: 4px;
+  height: 130px;
   /* box-shadow: 0px 0px 45px -30px #6b6b6b; */
   box-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
@@ -153,59 +154,39 @@ section.main div.gridcarrinho div.botoesquantidade a:hover:not(.active) {
   background-color: #ddd;
 }
 
-.botoesquantidade span {
+section.main div.gridcarrinho div.botoesquantidade span {
   position: relative;
   margin: 0 10px;
 }
 
-section.main div.descricaoproduto {
+section.main div.gridcarrinho div.descricaoproduto {
   display: flex;
   align-items: center;
 }
 
-section.main div.descricaoproduto img {
+section.main div.gridcarrinho div.descricaoproduto img {
   position: relative;
   height: 120px;
 }
 
-section.main div.descricaotitulo {
+section.main div.gridcarrinho div.descricaotitulo {
   margin-left: 20px;
 }
 
-section.main div.descricaotitulo p {
+section.main div.gridcarrinho div.descricaotitulo p {
   margin-top: 5px;
 }
 
 section.main div.complementocarrinho {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  margin: 0 10px;
+  gap: 5px;
+  margin: 20px 10px;
   height: 80px;
-  gap: 25%;
   /* border: 1px solid salmon; */
 }
-
-/* 
-
-implementação achada no stackoverflow
-
-div.complementocarrinho #quant {
-  font-size: 20px;
-  padding: 6px;
-}
-
-div.complementocarrinho #quant[type="number"]::-webkit-inner-spin-button { 
-  all: unset; 
-  min-width: 21px;
-  min-height: 45px;
-  margin: 17px;
-  padding: 0px;
-  transform: rotate(90deg) scale(0.8, 0.9);
-  cursor:pointer;
-} 
-*/
 
 section.main div.complementocarrinho a.cupom {
   text-decoration: none;

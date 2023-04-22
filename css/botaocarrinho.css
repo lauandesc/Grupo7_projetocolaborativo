@@ -1,3 +1,10 @@
+:root {
+  --corbotaoquantidade: #cbcecf;
+  --corbotaoquantidadehover: #aeb1b2;
+  --corfontebotaoquantidade: black;
+  --corbordacampoquantidade: #ccc;
+}
+
 .botoesquantidadeb {
   display: flex;
   align-items: center;
@@ -9,20 +16,20 @@
   text-align: center;
   width: 20px;
   height: 20px;
-  background-color: #cbcecf;
+  background-color: var(--corbotaoquantidade);
   /* border: 1px solid #cbcecf; */
   border-radius: 4px;
   /* font-size: 12px; */
   font-weight: bold;
   /* line-height: 20px; */
-  color: black;
+  color: var(--corfontebotaoquantidade);
   text-decoration: none;
   margin: 0 5px;
   cursor: pointer;
 }
 
 .botoesquantidadeb a:hover {
-  background-color: #aeb1b2;
+  background-color: var(--corbotaoquantidadehover);
   transition: 0.4s;
 }
 
@@ -31,15 +38,9 @@
   height: 20px;
   font-size: 14px;
   padding: 2px 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--corbordacampoquantidade);
   border-radius: 3px;
   text-align: center;
-}
-
-.botoesquantidadeb .quantidade-label {
-  margin-left: 5px;
-  font-size: 14px;
-  color: #666;
 }
 
 /* explicação no w3schools -https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
