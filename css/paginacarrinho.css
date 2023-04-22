@@ -7,14 +7,14 @@
 :root {
   --faixasdapagina: #69b1e1;
   --botoesmenu: #fef445;
-  --corvalortotal: #e8f1fe;
+  --corfundovalortotal: #f1f7ff;
   --corfontemenu: black;
   --corfontefooter: white;
   --corfontecupom: #6b6b6b;
   --fontesizeh1: 2rem;
   --fontesizeh2: 1.5rem;
   --fontesizeh3: 1.2rem;
-  --fonttextocupom: 0.9rem;
+  --fontetextocupom: 0.9rem;
 }
 
 body div.bordapagina {
@@ -92,8 +92,6 @@ header div.segundaheader nav ul li a:hover {
 section.main {
   margin: 0 auto;
   padding: 2% 20%;
-  /* border: 1px solid salmon; */
-  box-shadow: 0px 0px 45px -30px #6b6b6b;
 }
 
 section.main h1 {
@@ -125,11 +123,8 @@ section.main div.gridcarrinho {
   margin: 20px 0;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0px 0px 45px -30px #6b6b6b;
-}
-
-section.main div.gridcarrinho div.quantidadeprod {
-  /* text-align: center; */
+  /* box-shadow: 0px 0px 45px -30px #6b6b6b; */
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
 
 section.main div.gridcarrinho div.quantidadeprod p {
@@ -215,7 +210,7 @@ div.complementocarrinho #quant[type="number"]::-webkit-inner-spin-button {
 section.main div.complementocarrinho a.cupom {
   text-decoration: none;
   color: var(--corfontecupom);
-  font-size: var(--fonttextocupom);
+  font-size: var(--fontetextocupom);
 }
 
 section.main div.totalcarrinho {
@@ -230,7 +225,7 @@ section.main div.totalcarrinhoflex {
   gap: 20px;
   padding: 10px;
   border-radius: 4px;
-  background-color: var(--corvalortotal);
+  background-color: var(--corfundovalortotal);
 }
 
 section.main div.totalcarrinhoflex .colunalabels p, .colunaprecos p {
