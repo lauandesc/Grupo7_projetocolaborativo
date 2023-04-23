@@ -41,13 +41,17 @@ background - #E0DF53
   --corfontemenu: #345D77;
   /* --corfontemenuhover: #537b9d; */
   --corfontemenuhover: #261D01;
-  --corfontefooter: white;
+  --corbotaoquantidade: #cbcecf;
+  --corbotaoquantidadehover: #aeb1b2;
+  --corfontebotaoquantidade: black;
+  --corbordacampoquantidade: #ccc;
   --corfontelabelfretecupom: #6b6b6b;
   --corbotaofretecupom: #69b1e1;
   --corbotaofretecupomhover: #376F94;
   /* --corbotaocompra: #376F94; */
   --corbotaocompra: #69b1e1;
   --corbotaocomprahover: #376F94;
+  --corfontefooter: white;
   --fontesizeh1: 2rem;
   --fontesizeh2: 1.5rem;
   --fontesizeh3: 1.2rem;
@@ -182,10 +186,6 @@ section.main div.gridcarrinho {
   box-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
 
-section.main div.gridcarrinho div.quantidadeproduto {
-  text-align: center;
-}
-
 section.main div.gridcarrinho div.quantidadeproduto p {
   margin: 5px 0;
 }
@@ -195,33 +195,63 @@ section.main div.gridcarrinho div.quantidadeproduto p a {
   color: #6b6b6b;
 }
 
-/*
-section.main div.gridcarrinho div.botoesquantidade {
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a {
   display: inline-flex;
-  align-items: baseline;
-  gap: 10px;
-  border: 1px solid #cbcccd;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--corbotaoquantidade);
+  /* border: 1px solid #cbcecf; */
   border-radius: 4px;
-}
-
-section.main div.gridcarrinho div.botoesquantidade a {
-  color: black;
-  padding: 2px 15px;
-  text-decoration: none;
-  transition: background-color .3s;
-  font-size: 1.2rem;
+  /* font-size: 12px; */
   font-weight: bold;
+  /* line-height: 20px; */
+  color: var(--corfontebotaoquantidade);
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-section.main div.gridcarrinho div.botoesquantidade a:hover:not(.active) {
-  background-color: #ddd;
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a:hover {
+  background-color: var(--corbotaoquantidadehover);
+  transition: 0.4s;
 }
 
-section.main div.gridcarrinho div.botoesquantidade span {
-  position: relative;
-  margin: 0 10px;
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input {
+  width: 50px;
+  height: 30px;
+  font-size: 14px;
+  padding: 2px 5px;
+  border: 1px solid var(--corbordacampoquantidade);
+  border-radius: 3px;
+  text-align: center;
+  /* outline: 1px solid black; */
 }
-*/
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input:focus {
+  outline: 1px solid black;
+}
+
+/* explicação no w3schools -https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+.botoesquantidade input[type=number]::-webkit-inner-spin-button,
+.botoesquantidade input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.botoesquantidade input[type=number] {
+  -moz-appearance: textfield;
+}
 
 section.main div.gridcarrinho div.descricaoproduto {
   display: flex;
