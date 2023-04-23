@@ -5,11 +5,11 @@
   --corbordacampoquantidade: #ccc;
 }
 
-.botoesquantidadeb {
+.botoesquantidade {
   display: flex;
   align-items: center;
 }
-.botoesquantidadeb a {
+.botoesquantidade a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -28,12 +28,12 @@
   cursor: pointer;
 }
 
-.botoesquantidadeb a:hover {
+.botoesquantidade a:hover {
   background-color: var(--corbotaoquantidadehover);
   transition: 0.4s;
 }
 
-.botoesquantidadeb input {
+.botoesquantidade input {
   width: 50px;
   height: 20px;
   font-size: 14px;
@@ -45,13 +45,13 @@
 
 /* explicação no w3schools -https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 /* Chrome, Safari, Edge, Opera */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.botoesquantidade input[type=number]::-webkit-inner-spin-button,
+.botoesquantidade input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
+.botoesquantidade input[type=number] {
   -moz-appearance: textfield;
 }

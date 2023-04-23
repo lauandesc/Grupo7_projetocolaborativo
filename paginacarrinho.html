@@ -57,11 +57,13 @@
                 <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente vai ter esse erro :) -->
               </div>
             </div>
-            <div class="quantidadeprod">
+            <div class="quantidadeproduto">
               <div class="botoesquantidade">
-                <a href="#">-</a>
-                <span>1</span>
-                <a href="#">+</a>
+                <a href="#" class="btn-menos">-</a>
+                <div class="quantidade-wrapper">
+                  <input type="number" class="quantidade" value="1" min="1" />
+                </div>
+                <a href="#" class="btn-mais">+</a>
               </div>
               <p><a href="#">Remover este item</a></p>
             </div>
@@ -76,14 +78,14 @@
                 alt="Imagem da capa do livro escolhido para compra."
               />
               <div class="descricaotitulo">
-                <h3>A guerra dos tronos</h3>
+                <h3>A Guerra dos Tronos</h3>
                 <p>Ano: 2023</p>
                 <p>Peso: 260kg</p>
                 <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente vai ter esse erro :) -->
               </div>
             </div>
-            <div class="quantidadeprod">
-              <div class="botoesquantidadeb">
+            <div class="quantidadeproduto">
+              <div class="botoesquantidade">
                 <a href="#" class="btn-menos">-</a>
                 <div class="quantidade-wrapper">
                   <input type="number" class="quantidade" value="1" min="1" />
@@ -98,11 +100,15 @@
           </div>
           <div class="complementocarrinho">
             <div>Compre Também</div>
-            <div>Frete</div>
-            <div>
-              <p>
-                <a href="#" class="cupom"> Adicionar cupom de desconto </a>
-              </p>
+            <div class="frete">
+              <p><label for="frete">Frete e Prazo:</label></p>
+              <input class="campofrete" type="text" name="frete" id="frete" placeholder="CEP" autocomplete="off">
+              <input class="botaofrete" type="button" value="Calcular">
+            </div>
+            <div class="cupom">
+              <p><label for="cupom">Cupom de desconto:</label></p>
+              <input class="campocupom" type="text" name="cupom" id="cupom" placeholder="Código" autocomplete="off">
+              <input class="botaocupom" type="button" value="Adicionar">
             </div>
           </div>
           <div class="totalcarrinho">
