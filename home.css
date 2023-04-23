@@ -127,9 +127,19 @@ samp{
   
 main{
         display: flex;
-
     }
+    main a{
+        text-decoration: none;
+    }
+h2{
+    background-color: #E1D243;
+    margin: 10px 0 0 200px;
+    padding: 5px;
+    width: 230px;
+    border-radius: 10px;
+    font-family: 'Fredoka', sans-serif;
 
+}
 
     div ul{
         display: flex;
@@ -139,9 +149,16 @@ main{
         height: 300px;
         padding: 50px;
         margin: 20px 0 0 50px;
-      
-       
-            
+        justify-content: space-between;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    main section div ul li{
+        background-color: pink;
+        list-style-type: none;
+        padding: 10px;  
+        margin: 5px;
     }
 
     main img{
