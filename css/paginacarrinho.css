@@ -248,6 +248,10 @@ section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input:focu
   margin: 0;
 }
 
+/* 
+investigar depois a mensagem 
+"Também defina a propriedade padrão 'appearance' para compatibilidade"
+*/
 /* Firefox */
 .botoesquantidade input[type=number] {
   -moz-appearance: textfield;
