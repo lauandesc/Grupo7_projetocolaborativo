@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 /* #66ADD9 #F2E744 #D9C043 #F2F2F2 #262626 */
@@ -80,12 +81,29 @@ header div img {
   width: 25vw;
 }
 
-header div.buscador input {
-  border-radius: 30px;
-  width: 20vw;
+header div.buscador {
+  width: 300px;
   height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
   padding: 20px;
-  font-size: 1.2rem;
+  border: 0.1px solid #777;
+}
+
+header div.buscador > i {
+  font-size: 20px;
+  color: #777;
+}
+
+header div.buscador > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-right: 10px;
 }
 
 header div.segundaheader nav {
@@ -159,9 +177,13 @@ section.main div.gridcarrinho {
   margin: 20px 0;
   padding: 10px;
   border-radius: 4px;
-  height: 130px;
+  height: 150px;
   /* box-shadow: 0px 0px 45px -30px #6b6b6b; */
   box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+section.main div.gridcarrinho div.quantidadeproduto {
+  text-align: center;
 }
 
 section.main div.gridcarrinho div.quantidadeproduto p {
@@ -242,7 +264,7 @@ section.main div.complementocarrinho .frete p {
 section.main div.complementocarrinho .frete .campofrete {
   border-radius: 4px;
   width: 7vw;
-  height: 10px;
+  height: 35px;
   padding: 10px;
   font-size: 0.8rem;
   border: 1px solid #6b6b6b;
@@ -261,10 +283,17 @@ section.main div.complementocarrinho .cupom p {
 section.main div.complementocarrinho .cupom .campocupom {
   border-radius: 4px;
   width: 7vw;
-  height: 10px;
+  height: 35px;
   padding: 10px;
   font-size: 0.8rem;
   border: 1px solid #6b6b6b;
+}
+
+/* remoção do sublinhado que destaca a borda do campo */
+/* isso é chamado de outline de focus (:focus) */
+section.main div.complementocarrinho div.frete > input,
+section.main div.complementocarrinho div.cupom > input {
+  outline: none;
 }
 
 .frete input[type=button],
@@ -276,8 +305,9 @@ section.main div.complementocarrinho .cupom .campocupom {
   background-color: var(--corbotaofretecupom);
   color: white;
   border-radius: 4px;
-  border: none; /* borda */
-  box-shadow: none; /* sombra */
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .frete input[type=button]:hover,
