@@ -110,6 +110,38 @@ header div.buscador > input {
   padding-right: 10px;
 }
 
+/* 
+  Importante deixar esse nome material-symbols-outlined pois é parte do Material Symbols do Google.
+  Esse ícone é do google materials.
+*/
+header div.primeiraheader .material-symbols-outlined {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+header div.primeiraheader .contadoriconecarrinho {
+  position: absolute;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: red; */
+  background-color: #E08180;
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+header div.primeiraheader .contadoriconecarrinho > span {
+  font-size: 0.9rem;
+}
+
+header div.primeiraheader .linkmenucarrinho {
+  text-decoration: none;
+  color: black;
+}
+
 header div.segundaheader nav {
   background-color: var(--faixasdapagina);
   height: 60px;
