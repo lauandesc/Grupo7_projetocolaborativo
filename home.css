@@ -130,35 +130,42 @@ main{
     }
     main a{
         text-decoration: none;
+        color: black;
+         font-size: 1.5rem;
     }
 h2{
     background-color: #E1D243;
-    margin: 10px 0 0 200px;
+    margin: 10px 0 0 50px;
     padding: 5px;
-    width: 230px;
-    border-radius: 10px;
+    border-radius: 1px;
     font-family: 'Fredoka', sans-serif;
-
+    display: flex;
+    justify-content: center;
+    
 }
 
     div ul{
         display: flex;
         flex-direction: column;
-        background-color: aqua;
+        background-color: #69B1E0;
         width: 500px;
         height: 300px;
         padding: 50px;
-        margin: 20px 0 0 50px;
+        margin: 0 0 0 50px;
         justify-content: space-between;
         overflow: hidden;
         overflow-y: scroll;
     }
 
+    
     main section div ul li{
-        background-color: pink;
+        background-color: #E1D243;
         list-style-type: none;
         padding: 10px;  
         margin: 5px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
     }
 
     main img{
