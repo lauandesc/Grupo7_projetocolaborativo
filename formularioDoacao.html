@@ -4,74 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/formdoacao.css" />
     <title>Formuário de Doação de Livros</title>
 </head>
 <body>
 <header>
-    <img style="width: 60%;" src="./img_livraria/logobanner.jpeg" alt="logo livraria" />
-    <h2>Formulário de Doação de Livros</h2>
+  <div class="bordapagina">
+    <header>
+      <div class="primeiraheader">
+        <img
+          src="./img_livraria/logobanner.jpeg"
+          nome="logobanner"
+          alt="logo livraria"
+        />
+        <div class="buscador">
+          <input
+            type="search"
+            placeholder="Pesquisa livrariabook"
+            name="busca"
+            id="busca"
+            alt="buscador do site"
+          />
+        </div>
+      </div>
+      <div class="segundaheader">
+        <nav>
+          <ul>
+            <li><a href="#">LIVROS NOVOS</a></li>
+            <li><a href="#">LIVROS DIGITAIS</a></li>
+            <li><a href="#">SEBO</a></li>
+            <li><a href="#">QUERO DOAR</a></li>
+            <li><a href="#">PAPELARIA</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+
+
+    <div class="main">
+      <section>
+      <h2>Formulário de Doação de Livros</h2>
     <p>Complete suas informações</p>
     <br>
-      <fieldset>
+     
         <form action="">
+          <fieldset>
             <label for="nome">Nome do doador</label>
-            <br>
-            <input type="text" name="nome" id="nome">
-            <br>
+            <input type="text" name="nome" id="nome"><br>
             <label for="telefone">Telefone</label>
-            <br>
-            <input type="tel" name="telefone" id="telefone">
-            <br>
+            <input type="tel" name="telefone" id="telefone"><br>
             <label for="qtde">Quantidade</label>
-            <br>
-            <input type="number" name="qtde" id="qtde">
-            <br>
+            <input type="number" name="qtde" id="qtde"><br>
             <label for="email">E-mail</label>
-            <br>
-            <input type="email" name="email" id="email">
-            <br>
-            <section>
+            <input type="email" name="email" id="email"><br>
+            <div class="alinharRadio">
               <p>Tipo</p>
               <input type="radio" name="tipodacao" id="livros" value="livros">
               <label for="livros">Livros</label>
               <input type="radio" name="tipodacao" id="revista" value="revista">
               <label for="revista">Revista</label>
-            </section>
+            </div>
             <br>
-            <section>
+            <div class="alinharSelect">
               <p>Conservação</p>
               <select name="convervacao" required="required">
                   <option value="Novo" id="novo" >Novo</option>
                   <option value="Seminovo" id="seminovo" >Seminovo</option>
                   <option value="Usado" id="usado" >Usado</option>
               </select>
-            </section>
+            </div>
             <br>
             <br>
             <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo">
-            <br>
-            <br>
+            <input type="text" name="titulo" id="titulo"><br>
             <label for="autor">Autor(a)</label>
-            <input type="text" name="autor" id="autor">
-            <br>
-            <br>
+            <input type="text" name="autor" id="autor"><br>
             <label  for="editora">Editora</label>
-            <input type="text" name="editora" id="editora">
-            <br>
-            
-            <br>
-            <br>
+            <input type="text" name="editora" id="editora"><br>
             <label for="estconservacao">Estado de conservação</label>
-            <input type="file" name="estconservacao" id="estconservacao"> 
-            <br>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
-      </fieldset>
-  </header>
-</body>
+            <input type="file" name="estconservacao" id="estconservacao"> <br>
+            <input type="submit" value="Enviar" />
+          </fieldset>
+          </form>
+      
+    </section>
+    </div>
+
 <footer>
+  <div class="linhafooter"></div>
   <nav>
     <dl>
       <dt>Serviços:</dt>
@@ -93,8 +114,9 @@
       <dt>Contato:</dt>
       <dd>(00) 00000-0000</dd>
       <dd>[Instagram] livrariabook</dd>
-      <dd>[facebook] livrariabook</dd>
+      <dd>[Facebook] livrariabook</dd>
     </dl>
   </nav>
   </footer>
+</body>
 </html>
