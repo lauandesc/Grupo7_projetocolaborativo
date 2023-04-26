@@ -20,11 +20,10 @@
         max-height: 50%;
         border-radius: 40px;
     }
-/* BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR */
-    header div{
-        margin-left: 250px;
-    }
+/* BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR BUSCADOR */
+    
 .buscador{
+margin-left: 250px;    
 border: solid #E1D243;
 border-width: 1.5px;
 height: 35px;
@@ -49,7 +48,7 @@ align-items: center;
 }
 
 
-/* USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO */    
+/* USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO USUÁRIO BOTAO */    
 samp{
     text-decoration: none;    
     margin: auto;
@@ -71,15 +70,13 @@ samp{
         color: black;
     }
 
-/* PRIMEIRA NAV APÓS O HEADER  PRIMEIRA NAV APÓS O HEADER    PRIMEIRA NAV APÓS O HEADER     PRIMEIRA NAV APÓS O HEADER   PRIMEIRA NAV APÓS O HEADER*/    
+/* NAVEGADOR PRINCIPAL NAVEGADOR PRINCIPAL NAVEGADOR PRINCIPALNAVEGADOR PRINCIPALNAVEGADOR PRINCIPAL*/    
     nav{
         align-items: center;
         margin: auto;
         padding: 20px;
         background-color: #69B1E0;
-        
-
-                    
+                           
     }
 
     ul{
@@ -107,7 +104,6 @@ samp{
     }
 
     
-
     nav ul li a{
         text-decoration: none;
         color: black;
@@ -168,15 +164,64 @@ h2{
         border-radius: 10px;
     }
 
-    main img{
-        max-width: 300%;
-        max-height: 300%;
-        margin: 30px 0 0 50%;
+    
+/* slides slides slides slides slides slides slides slides slides slides slides  */    
 
+.conteiner{
+    display: flex;
+    height: 420px;
+    width: 800px;
+    overflow: hidden;
+    margin: 10px 0 0 250px;
+    border-radius: 10px;
+    
+}
 
-    }
+.navegacao{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.botoes{
+    display: flex;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    width: 6px;
+    height: 6px;
+    border: solid yellow;
+    margin: 380px 0 0 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
 
-   
+.botoes:hover{
+    background-color: aqua;
+}
+
+section div input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 100px;
+}
+
+.slide{
+    width: 800px;
+    align-items: center;
+}
+
+#slide1:checked ~ .primeiro{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .primeiro{
+    margin-left: -800%;
+}
+
 
     
 /* RODAPÉ RODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉ */
