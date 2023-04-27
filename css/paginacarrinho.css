@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* #66ADD9 #F2E744 #D9C043 #F2F2F2 #262626 */
+
+/*
+  tema escuro bem legal também
+  #66ADD9
+  #403501
+  #D9C043
+  #261D01
+  #F2F2F2
+*/
+
+/*
+Tríade - color.adobe.com
+#69B1E1
+#376F94
+#E08180
+#E0DF53
+#94933E
+*/
+
+/*
+fonte + background
+fonte - #345D77
+background - #E0DF53
+*/
+
+:root {
+  --faixasdapagina: #69b1e1;
+  /* --botoesmenu: #fef445; */
+  --botoesmenu: #E0DF53;
+  --corfundovalortotal: #f1f7ff;
+  /* --corfontemenu: black; */
+  /* --corfontemenu: #4b471a; */
+  --corfontemenu: #345D77;
+  /* --corfontemenuhover: #537b9d; */
+  --corfontemenuhover: #261D01;
+  --corbotaoquantidade: #cbcecf;
+  --corbotaoquantidadehover: #aeb1b2;
+  --corfontebotaoquantidade: black;
+  --corbordacampoquantidade: #ccc;
+  --corfontelabelfretecupom: #6b6b6b;
+  --corbotaofretecupom: #69b1e1;
+  --corbotaofretecupomhover: #376F94;
+  /* --corbotaocompra: #376F94; */
+  --corbotaocompra: #69b1e1;
+  --corbotaocomprahover: #376F94;
+  --corfontefooter: white;
+  --fontesizeh1: 2rem;
+  --fontesizeh2: 1.5rem;
+  --fontesizeh3: 1.2rem;
+  --fontelabelfretecupom: 0.9rem;
+}
+
+body div.bordapagina {
+border: 5px solid var(--faixasdapagina);
+margin: 10px;
+padding: 10px;
+}
+
+/* 
+    acima estão as configurações da página inteira  
+*/
+
+header {
+  margin-bottom: 10px;
+}
+
+header div.primeiraheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+header div img {
+  border-radius: 40px;
+  width: 25vw;
+}
+
+header div.buscador {
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 0.1px solid #777;
+}
+
+header div.buscador > i {
+  font-size: 20px;
+  color: #777;
+}
+
+header div.buscador > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+/* 
+  Importante deixar esse nome material-symbols-outlined pois é parte do Material Symbols do Google.
+  Esse ícone é do google materials.
+*/
+header div.primeiraheader .material-symbols-outlined {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+header div.primeiraheader .contadoriconecarrinho {
+  position: absolute;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: red; */
+  background-color: #E08180;
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+header div.primeiraheader .contadoriconecarrinho > span {
+  font-size: 0.9rem;
+}
+
+header div.primeiraheader .linkmenucarrinho {
+  text-decoration: none;
+  color: black;
+}
+
+header div.segundaheader nav {
+  background-color: var(--faixasdapagina);
+  height: 60px;
+}
+
+header div.segundaheader nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+header div.segundaheader nav ul li {
+  padding: 14px 32px;
+  border-radius: 8px;
+  list-style-type: none;
+  background-color: var(--botoesmenu);
+}
+
+header div.segundaheader nav ul li a {
+  font-weight: bold;
+  color: var(--corfontemenu);
+  text-decoration: none;
+}
+
+header div.segundaheader nav ul li a:hover {
+  color: var(--corfontemenuhover);
+}
+
+/* 
+    o header termina aqui 
+*/
+
+/* 
+    conteúdo principal começa aqui 
+*/
+
+section.main {
+  margin: 0 auto;
+  padding: 2% 20%;
+}
+
+section.main h1 {
+  position: relative; /* relativo à main */
+  top: 0; /* encostado no topo */
+  margin-bottom: 10px;
+  font-size: var(--fontesizeh1);
+}
+
+section.main div.carrinho h2 {
+  font-size: var(--fontesizeh2);
+  margin-bottom: 10px;
+}
+
+section.main div.carrinho h3 {
+  font-size: var(--fontesizeh3);
+}
+
+section.main div.carrinho {
+  margin: 20px 0;
+}
+
+section.main div.gridcarrinho {
+  display: grid;
+  grid-template-columns: 430px auto auto;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 4px;
+  height: 150px;
+  /* box-shadow: 0px 0px 45px -30px #6b6b6b; */
+  box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+section.main div.gridcarrinho div.quantidadeproduto p {
+  margin: 5px 0;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto p a {
+  text-decoration-line: none;
+  color: #6b6b6b;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--corbotaoquantidade);
+  /* border: 1px solid #cbcecf; */
+  border-radius: 4px;
+  /* font-size: 12px; */
+  font-weight: bold;
+  /* line-height: 20px; */
+  color: var(--corfontebotaoquantidade);
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a:hover {
+  background-color: var(--corbotaoquantidadehover);
+  transition: 0.4s;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input {
+  width: 50px;
+  height: 30px;
+  font-size: 14px;
+  padding: 2px 5px;
+  border: 1px solid var(--corbordacampoquantidade);
+  border-radius: 3px;
+  text-align: center;
+  /* outline: 1px solid black; */
+}
+
+section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input:focus {
+  outline: 1px solid black;
+}
+
+/* explicação no w3schools -https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+.botoesquantidade input[type=number]::-webkit-inner-spin-button,
+.botoesquantidade input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+investigar depois a mensagem 
+"Também defina a propriedade padrão 'appearance' para compatibilidade"
+*/
+/* Firefox */
+.botoesquantidade input[type=number] {
+  -moz-appearance: textfield;
+}
+
+section.main div.gridcarrinho div.descricaoproduto {
+  display: flex;
+  align-items: center;
+}
+
+section.main div.gridcarrinho div.descricaoproduto img {
+  position: relative;
+  height: 120px;
+}
+
+section.main div.gridcarrinho div.descricaotitulo {
+  margin-left: 20px;
+}
+
+section.main div.gridcarrinho div.descricaotitulo p {
+  margin-top: 5px;
+}
+
+section.main div.complementocarrinho {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin: 20px 0;
+  height: 80px;
+}
+
+section.main div.complementocarrinho .frete {
+  display: block;
+}
+
+section.main div.complementocarrinho .frete p {
+  color: var(--corfontelabelfretecupom);
+  font-size: var(--fontetextolabelfretecupom);
+  margin-bottom: 5px;
+}
+
+section.main div.complementocarrinho .frete .campofrete {
+  border-radius: 4px;
+  width: 7vw;
+  height: 35px;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: 1px solid #6b6b6b;
+}
+
+section.main div.complementocarrinho .cupom {
+  display: block;
+}
+
+section.main div.complementocarrinho .cupom p {
+  color: var(--corfontelabelfretecupom);
+  font-size: var(--fontetextolabelfretecupom);
+  margin-bottom: 5px;
+}
+
+section.main div.complementocarrinho .cupom .campocupom {
+  border-radius: 4px;
+  width: 7vw;
+  height: 35px;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: 1px solid #6b6b6b;
+}
+
+/* remoção do sublinhado que destaca a borda do campo */
+/* isso é chamado de outline de focus (:focus) */
+section.main div.complementocarrinho div.frete > input,
+section.main div.complementocarrinho div.cupom > input {
+  outline: none;
+}
+
+.frete input[type=button],
+.cupom input[type=button] {
+  height: 35px;
+  width: 80px;
+  font-size: 0.8rem;
+  /* background-color: #03A9F4; */
+  background-color: var(--corbotaofretecupom);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.frete input[type=button]:hover,
+.cupom input[type=button]:hover {
+  /* background-color: #1976D2; */
+  background-color: var(--corbotaofretecupomhover);
+  color: white;
+  transition: 0.4s;
+}
+
+section.main div.totalcarrinho {
+  display: flex;
+  flex-direction: column; /* lindo isso */
+  align-items: flex-end; /* isso lindo */
+  gap: 40px;
+  height: 100%;
+  width: 100%;
+}
+
+section.main div.tabelatotalcarrinho {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: var(--corfundovalortotal);
+}
+
+section.main div.tabelatotalcarrinho .colunalabels p, 
+section.main div.tabelatotalcarrinho .colunaprecos p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+section.main div.botaocomprar a {
+  padding: 15px 25px; /* tamanho do botão */
+  font-size: 1.2rem;
+  border-radius: 4px;
+  /* background-color: #2D9BF0; */
+  /* background-color: #03A9F4; */
+  background-color: var(--corbotaocompra);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+section.main div.botaocomprar a:hover {
+  /* background-color: #0f78c8; */
+  /* background-color: #1976D2; */
+  background-color: var(--corbotaocomprahover);
+  transition-duration: 0.4s;
+}
+
+/*
+    o footer começa aqui 
+*/
+
+footer div.linhafooter {
+  width: 100%;
+  padding: 1px;
+  background-color: var(--faixasdapagina);
+  margin: 15px 0;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white;
+  height: 100%;
+}
+
+footer nav dl {
+  display: block;
+  background-color: var(--faixasdapagina);
+  padding: 1vh 4vw;
+  border-radius: 4px;
+  height: 15vh;
+}
+
+footer nav dl dt, 
+footer nav dl dd {
+  color: var(--corfontefooter);
+  padding: 0.6vh 0px;
+}
+
+footer nav dl dt {
+  /* width: 100%; */
+  font-weight: bold;
+}
+
+footer nav dl dd {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+
+  header div.buscador {
+    margin: 0;
+  }
+
+  header div.buscador input {
+    font-size: 0.6rem;
+  }
+
+  header div.segundaheader nav ul li {
+    padding: 2vh;
+  }
+
+  footer nav dl {
+    padding: 1vh 1vw;
+  }
+
+  footer nav dl dt, dd {
+    font-size: 0.7rem;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
+  }
+}

@@ -1,0 +1,186 @@
+* {
+  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+}
+div.bordapagina {
+  border: 3px solid #69b1e1;
+  margin: 10px;
+  padding: 1px;
+}
+
+/* acima estão as configurações da página inteira  */
+
+div.img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 100%;
+  margin: 15px auto;
+}
+
+div img {
+  border-radius: 40px;
+  width: 30vw;
+}
+
+div.buscador input {
+  border-radius: 30px;
+  width: 20vw;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+div.menu nav {
+  background-color: #69b1e1;
+  height: 70px;
+}
+
+div.menu nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+div.menu nav ul li {
+  padding: 15px 40px;
+  border-radius: 8px;
+  list-style-type: none;
+  background-color: #fef445;
+}
+
+div.menu nav ul li a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+div.menu nav ul li a:hover {
+  color: #537b9d;
+}
+
+/* Inicio estilização form */
+
+/* Elementos com o ID "titulo" */
+#titulo {
+  display: flex;
+  margin-top: 1%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  color: #030303;
+  font-size: 44px;
+  /* margin-left: 36%;*/
+}
+
+.imgDoar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 100%;
+  margin: 15px auto;
+}
+
+/*Inicio css fieldset*/
+
+/* Elementos de tag <fieldset> global do formulario*/
+fieldset.fdoar {
+  display: block;
+  position: center;
+  margin: 10px auto;
+  max-width: 600px;
+  /*border-radius: 10px;
+  /*box-shadow: 0px 2px 5px 0px #030303;*/
+  border: 0;
+}
+
+fieldset.fdoar p {
+  text-align: justify;
+}
+
+/*Final css fieldset*/
+
+/*    o footer começa aqui */
+footer div.linhafooter {
+  width: 100%;
+  padding: 1px;
+  background-color: #69b1e1;
+  margin: 15px 0;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: white;
+  height: 100%;
+}
+
+footer nav dl {
+  display: block;
+  background-color: #69b1e1;
+  padding: 1vh 4vw;
+  border-radius: 20px;
+  height: 15vh;
+}
+
+footer nav dl dt,
+dd {
+  color: white;
+  padding: 0.6vh 0px;
+}
+
+footer nav dl dt {
+  /* width: 100%; */
+  font-weight: bold;
+}
+
+footer nav dl dd {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+  header div.buscador {
+    margin: 0;
+  }
+
+  header div.buscador input {
+    font-size: 0.6rem;
+  }
+
+  header div.segundaheader nav ul li {
+    padding: 2vh;
+  }
+
+  footer nav dl {
+    padding: 1vh 1vw;
+  }
+
+  footer nav dl dt,
+  dd {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
+  }
+
+  fieldset small {
+    font-size: 0.6rem;
+  }
+
+  fieldset label {
+    font-size: 0.8rem;
+  }
+}
