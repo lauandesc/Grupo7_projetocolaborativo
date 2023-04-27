@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/formdoacao.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/formdoacao.css"
+      media="screen"
+    />
     <title>Formuário de Doação de Livros</title>
-</head>
-<body>
-<header>
-  <div class="bordapagina">
-    <header>
-      <div class="primeiraheader">
+  </head>
+
+  <body>
+    <!--Cabeçalho-->
+    <div class="bordapagina">
+      <div class="img">
         <img
           src="./img_livraria/logobanner.jpeg"
           nome="logobanner"
           alt="logo livraria"
         />
+
         <div class="buscador">
           <input
             type="search"
@@ -27,96 +48,142 @@
           />
         </div>
       </div>
-      <div class="segundaheader">
+      <div class="menu">
         <nav>
           <ul>
             <li><a href="#">LIVROS NOVOS</a></li>
             <li><a href="#">LIVROS DIGITAIS</a></li>
             <li><a href="#">SEBO</a></li>
-            <li><a href="#">QUERO DOAR</a></li>
+            <li><a href="./formularioDoacao.html">QUERO DOAR</a></li>
             <li><a href="#">PAPELARIA</a></li>
           </ul>
         </nav>
       </div>
-    </header>
-  
 
+      <!-- Inicio fildset Global -->
+      <fieldset class="global">
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo e subtitulo") -->
+        <div>
+          <h1 id="titulo">Doação de Livros</h1>
+          <p id="subtitulo">Complete suas informações</p>
+          <br />
+        </div>
 
-    <div class="main">
-      <section>
-      <h2>Formulário de Doação de Livros</h2>
-    <p>Complete suas informações</p>
-    <br>
-     
-        <form action="">
-          <fieldset>
-            <label for="nome">Nome do doador</label>
-            <input type="text" name="nome" id="nome"><br>
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone"><br>
-            <label for="qtde">Quantidade</label>
-            <input type="number" name="qtde" id="qtde"><br>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email"><br>
-            <div class="alinharRadio">
-              <p>Tipo</p>
-              <input type="radio" name="tipodacao" id="livros" value="livros">
-              <label for="livros">Livros</label>
-              <input type="radio" name="tipodacao" id="revista" value="revista">
-              <label for="revista">Revista</label>
+        <!-- Início do formulário -->
+        <form id="formAlinharCentro">
+          <fieldset class="grpnome">
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+            <div class="campo">
+              <label for="nome"><strong>Nome do doador</strong></label>
+              <input type="text" name="nome" id="nome" required />
             </div>
-            <br>
-            <div class="alinharSelect">
-              <p>Conservação</p>
-              <select name="convervacao" required="required">
-                  <option value="Novo" id="novo" >Novo</option>
-                  <option value="Seminovo" id="seminovo" >Seminovo</option>
-                  <option value="Usado" id="usado" >Usado</option>
+          </fieldset>
+
+          <fieldset class="grpTelQtde">
+            <!-- Campo do telefone com legenda "telefone" e css de classe "campo" -->
+            <div class="campo">
+              <label for="telefone"><strong>Telefone</strong></label>
+              <input type="text" name="telefone" id="telefone" required />
+            </div>
+            <!-- Campo de quantidade com legenda "quantidade" e css de classe "campo" -->
+            <div class="campo">
+              <label for="qtde"><strong>Quantidade</strong></label>
+              <input type="text" name="qtde" id="qtde" required />
+            </div>
+          </fieldset>
+          <!-- Campo de email com-->
+          <fieldset class="grpemail">
+            <div class="campo">
+              <label for="email"><strong>Email</strong></label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </fieldset>
+          <!-- Campo radio com 2 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+          <fieldset class="grptipo">
+            <div class="campo">
+              <label><strong>Tipos:</strong></label>
+              <label>
+                <input type="radio" name="livro" value="tlivro" checked />Livros
+              </label>
+              <label>
+                <input type="radio" name="revista" value="trevista" />Revista
+              </label>
+            </div>
+          </fieldset>
+          <!-- Campo de conservacao com 3 opções para escolha (select option) e css de classe "campo" -->
+          <fieldset class="grpconserv">
+            <div class="campo">
+              <label for="conserv"><strong>Conservação</strong></label>
+              <select id="conserv" required>
+                <option selected disabled value="">Selecione</option>
+                <option>Novo</option>
+                <option>Usado</option>
+                <option>Seminovo</option>
               </select>
             </div>
-            <br>
-            <br>
-            <label for="titulo">Titulo</label>
-            <input type="text" name="titulo" id="titulo"><br>
-            <label for="autor">Autor(a)</label>
-            <input type="text" name="autor" id="autor"><br>
-            <label  for="editora">Editora</label>
-            <input type="text" name="editora" id="editora"><br>
-            <label for="estconservacao">Estado de conservação</label>
-            <input type="file" name="estconservacao" id="estconservacao"> <br>
-            <input type="submit" value="Enviar" />
           </fieldset>
-          </form>
-      
-    </section>
+          <fieldset class="grpAutEdiTitulo">
+            <!-- Campo do Titulo com legenda "titulo" e css de classe "campo" -->
+            <div class="campo">
+              <label for="ftitulo"><strong>Titulo</strong></label>
+              <input type="text" name="ftitulo" id="ftitulo" />
+            </div>
+            <!-- Campo do autor com legenda "autor" e css de classe "campo" -->
+            <div class="campo">
+              <label for="autor"><strong>Autor</strong></label>
+              <input type="text" name="autor" id="autor" />
+            </div>
+            <!-- Campo da editora com legenda "editora" e css de classe "campo" -->
+            <div class="campo">
+              <label for="editora"><strong>Editora</strong></label>
+              <input type="text" name="editora" id="editora" />
+            </div>
+          </fieldset>
+          <!-- Campo file para enviar arquivos e css de classe "campo" -->
+          <fieldset class="grpimgconserv">
+            <div class="campo">
+              <br />
+              <label for="estconservacao"
+                ><strong>Imagem do estado de conservação</strong></label
+              >
+              <input type="file" name="estconservacao" id="estconservacao" />
+            </div>
+          </fieldset>
+          <fieldset class="fbotao">
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Enviar</button>
+          </fieldset>
+        </form>
+      </fieldset>
+      <!-- Inicio footer -->
+      <footer>
+        <div class="linhafooter"></div>
+        <nav>
+          <dl>
+            <dt>Serviços:</dt>
+            <dd>1. Encadernação</dd>
+            <dd>2. Restauração</dd>
+            <dd>3. Vendas</dd>
+          </dl>
+          <dl>
+            <dt>Perguntas frequentes:</dt>
+            <dd>Quem somos?</dd>
+            <dd>Como doar livros?</dd>
+          </dl>
+          <dl>
+            <dt>Horário de funcionamento:</dt>
+            <dd>Segunda a sexta-feira</dd>
+            <dd>8h às 12h - 14h às 18h</dd>
+          </dl>
+          <dl>
+            <dt>Contato:</dt>
+            <dd>(00) 00000-0000</dd>
+            <dd>[Instagram] livrariabook</dd>
+            <dd>[Facebook] livrariabook</dd>
+          </dl>
+        </nav>
+      </footer>
     </div>
-
-<footer>
-  <div class="linhafooter"></div>
-  <nav>
-    <dl>
-      <dt>Serviços:</dt>
-      <dd>1. Encadernação</dd>
-      <dd>2. Restauração</dd>
-      <dd>3. Vendas</dd>
-    </dl>
-    <dl>
-      <dt>Perguntas frequentes:</dt>
-      <dd>Quem somos?</dd>
-      <dd>Como doar livros?</dd>
-    </dl>
-    <dl>
-      <dt>Horário de funcionamento:</dt>
-      <dd>Segunda a sexta-feira</dd>
-      <dd>8h às 12h - 14h às 18h</dd>
-    </dl>
-    <dl>
-      <dt>Contato:</dt>
-      <dd>(00) 00000-0000</dd>
-      <dd>[Instagram] livrariabook</dd>
-      <dd>[Facebook] livrariabook</dd>
-    </dl>
-  </nav>
-  </footer>
-</body>
+    <!--fim Cabeçalho-->
+  </body>
 </html>

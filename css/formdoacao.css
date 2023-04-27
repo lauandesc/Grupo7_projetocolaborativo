@@ -1,37 +1,30 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
+  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
 }
-
-body div.bordapagina {
-  border: 5px solid #69b1e1;
+div.bordapagina {
+  border: 3px solid #69b1e1;
   margin: 10px;
-  padding: 10px;
+  padding: 1px;
 }
 
-/* 
-    acima estão as configurações da página inteira  
-*/
+/* acima estão as configurações da página inteira  */
 
-header {
-  margin-bottom: 10px;
-}
-
-header div.primeiraheader {
+div.img {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
   height: 100%;
+  margin: 15px auto;
 }
 
-header div img {
+div img {
   border-radius: 40px;
-  width: 50vw;
+  width: 30vw;
 }
 
-header div.buscador input {
+div.buscador input {
   border-radius: 30px;
   width: 20vw;
   height: 50px;
@@ -39,171 +32,242 @@ header div.buscador input {
   font-size: 1.2rem;
 }
 
-header div.segundaheader nav {
+div.menu nav {
   background-color: #69b1e1;
   height: 70px;
 }
 
-header div.segundaheader nav ul {
+div.menu nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
 
-header div.segundaheader nav ul li {
+div.menu nav ul li {
   padding: 15px 40px;
   border-radius: 8px;
   list-style-type: none;
   background-color: #fef445;
 }
 
-header div.segundaheader nav ul li a {
+div.menu nav ul li a {
   font-weight: bold;
   color: black;
   text-decoration: none;
 }
 
-header div.segundaheader nav ul li a:hover {
+div.menu nav ul li a:hover {
   color: #537b9d;
 }
 
-/* 
-    o header termina aqui 
-*/
+/* Inicio estilização form */
 
-/* 
-    o main começa aqui 
-*/
-
-body div.main {
+/* Elementos com o ID "titulo" */
+#titulo {
   display: flex;
+  margin-top: 1%;
   justify-content: center;
-  color: black;
-  /* width: 1300px; */
-  margin: 0 auto; /* o valor auto deixou o main no centro da página */
-}
-
-body h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/*
-body div.linhaverticalnomeio {
-  height: 25vh;
-  background-color: #69b1e1;
-  padding: 0.5px;
-  margin: 90px 8vw;
-}
-*/
-
-body section {
-  padding: 20px;
-  /* background-color: aliceblue; */
-  /* border-radius: 20px; */
-  width: 800px;
-  box-shadow: 0px 2px 5px 0px #c2c4c2;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  border: none;
-}
-
-fieldset label {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-fieldset small {
-  display: flex;
-  margin-top: 5px;
-  font-size: small;
-}
-
-/*
-fieldset div.alinharcheckboxbotao {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  font-family: "Dancing Script", cursive;
+  color: #030303;
+  font-size: 44px;
+  /* margin-left: 36%;*/
 }
-*/
 
-fieldset div.alinharRadio {
+/* Elementos com o ID "subtitulo" */
+#subtitulo {
   display: flex;
-  justify-content: space-between;
+  margin-top: 2%;
+  justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #030303;
+  font-size: 15px;
 }
 
-fieldset div.alinharSelect {
-  display: flex;
-  justify-content: first baseline;
-  align-items: start;
-}
-
-fieldset input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"] {
-  padding: 5px;
+/* Elementos de tags <body>, <input>, <Select>, <button> <label>*/
+input,
+select,
+label,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #030303;
   border-radius: 5px;
-  /* border: thin 1px; */
 }
 
-fieldset input[type="submit"] {
-  background-color: #2d9bf0;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 4px;
+/* Elementos de classe "campo" */
+.campo {
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+  margin-bottom: 0.1em;
+  color: #030303;
+  display: block;
+}
+
+/*Inicio css fieldset*/
+
+/* Elementos de tag <fieldset> <form> do formulario*/
+fieldset.global form {
+  display: block;
+  margin-left: 3%;
+}
+
+/* Elementos de tag <fieldset> global do formulario*/
+fieldset.global {
+  display: block;
+  position: center;
+  margin: 15px auto;
+  background-color: #f8fafc;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px #030303;
+}
+
+/* Elementos de fieldset grupos */
+fieldset.grpnome {
+  display: inline;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+
+fieldset.grpTelQtde {
+  display: flex;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+fieldset.grpemail {
+  display: flex;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+
+fieldset.grptipo {
+  display: inline;
+  float: left;
+  border: 0;
+  padding: 2px;
+}
+fieldset.grpconserv {
+  display: inline;
+  position: relative; /*adicionando o grupo5 mais para a direito para alinhamento*/
+  float: none;
+  width: 100px;
+  height: 70px;
+  left: 210px; /*adicionando o grupo5 mais para a direito para alinhamento*/
+  border: 0;
+  padding: 2px;
+}
+
+fieldset.grpAutEdiTitulo {
+  display: inline;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+fieldset.grpimgconserv {
+  display: flex;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+fieldset.fbotao {
+  display: flex;
+  border: 0;
+  padding: 2px;
+  margin: 0;
+}
+/*Final css fieldset*/
+
+/*inicio inputs*/
+.grpnome input {
+  width: 550px;
+}
+
+.grpTelQtde input {
+  width: 265px;
+  float: left;
+  margin-right: 1em;
+}
+
+.grpemail input {
+  width: 550px;
+}
+
+.grptipo option {
+  float: left;
+  margin-right: 100em;
+}
+
+.grpAutEdiTitulo input {
+  width: 550px;
+}
+/*final inputs*/
+
+/* Elementos de classe "campo" das tags <input> com atributo, adicionando configuração*/
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="number"],
+.campo input[type="file"],
+.campo button[type="submit"] .campo select,
+.campo textarea {
+  padding: 0.2em;
+  border: 1px solid #030303;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+  padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> <button> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus,
+.campo select:focus,
+.campo button:focus {
+  background: #cae2f1;
+}
+
+/* Elemento de classe "botao" */
+.botao {
+  font-size: 1.2em;
+  background: #69b1e1;
+  border: 0;
+  margin-bottom: 1em;
+  color: #ffffff;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  /*position: absolute;*/
+  /*top: 100%;*/
+  /*left: 50%;*/
+  /*margin-right: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+  background: #034672;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao,
+select {
   cursor: pointer;
 }
 
-fieldset input[type="submit"]:hover {
-  background-color: #0f78c8;
-  transition-duration: 0.4s;
-}
-
-/*
-fieldset input[type="submit"].submit-criarconta,
-input[type="checkbox"].chkbox-criarconta:checked {
-  background-color: #626465;
-}
-
-fieldset input[type="submit"].submit-criarconta:hover {
-  background-color: #3f4244;
-  transition-duration: 0.4s;
-}
-*/
-
-/* checkbox totalmente reestilizado 
-
-fieldset input[type="checkbox"] {
-  all: unset;
-  border: 1px solid black;
-  width: 13px;
-  height: 13px;
-  display: inline-block; /* deixa o checkbox ao lado do label */
-
-/*
-
-fieldset input[type="checkbox"]:checked {
-  background-color: #2d9bf0;
-}
-
-checkbox totalmente reestilizado 
-*/
-
-/*
-    o footer começa aqui 
-*/
-
+/*    o footer começa aqui */
 footer div.linhafooter {
   width: 100%;
   padding: 1px;
