@@ -227,6 +227,7 @@ section div input{
 /* RODAPÉ RODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉRODAPÉ */
     
     footer nav {
+        display: flex;
         background-color: white;
         border-top: solid #12CDD4;
         border-width: 2px;
@@ -242,6 +243,8 @@ section div input{
     }
 
     footer dl{
+        display: flex;
+        flex-direction: column;
         background-color: #69B1E0;
         justify-content: space-around;
         border-radius: 20px;
@@ -316,6 +319,27 @@ section div input{
     nav dl dd a{
         text-decoration: none;
         color: white;
+    }
+
+    .icones{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 64%;
+    }
+
+    #whatsapp{
+        position: relative;
+        margin: 0 0 20px 20px;
+    }
+    #facebook{
+        position: absolute;
+        margin: 22px 0 0 40px;
+    }
+
+    #instagram{
+        position: absolute;
+        margin: 45px 0 0 40px;
     }
 
 
