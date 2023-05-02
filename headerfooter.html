@@ -2,14 +2,15 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/paginaconta.css" />
-    <link rel="stylesheet" href="./css/headerfooter.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>Página de Conta</title>
+    <link rel="stylesheet" href="./css/paginapagamento.css" />
+    <link rel="stylesheet" href="./css/headerfootercustom.css" />
+    <title>Header e Footer</title>
   </head>
   <body>
     <header>
@@ -68,73 +69,6 @@
         </nav>
       </div>
     </header>
-    <div class="main">
-      <!-- esta section foi utilizada para manter a semântica do objeto formulário -->
-      <section>
-        <h2>Acesse sua conta</h2>
-        <form action="" autocomplete="on">
-          <fieldset>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" />
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" />
-            <div class="checkboxbotaoflex">
-              <!-- objeto flex utilizado para espaçar o checkbox, label e botão -->
-              <div class="checkboxlabelflex">
-                <!-- agrupamento checkbox com o label -->
-                <input
-                  type="checkbox"
-                  id="conectado"
-                  name="conectado"
-                  value="conectado"
-                />
-                <label for="conectado">
-                  Continuar conectado neste computador.
-                </label>
-              </div>
-              <input type="submit" value="Entrar" />
-            </div>
-          </fieldset>
-        </form>
-      </section>
-      <div class="linhaverticalnomeio"></div>
-      <!-- esta section foi utilizada para seguir com a semântica do objeto formulário -->
-      <section>
-        <h2>Crie sua conta</h2>
-        <form action="" autocomplete="on">
-          <fieldset>
-            <label for="nomecompleto">Nome completo:</label>
-            <input type="text" id="nomecompleto" name="nome" />
-            <label for="emailcadastro">E-mail:</label>
-            <input type="email" id="emailcadastro" name="email" />
-            <label for="senhacadastro">Senha:</label>
-            <input type="password" id="senhacadastro" name="senha" />
-            <small>Nunca vamos compartilhar seus dados, com ninguém.</small>
-            <div class="checkboxbotaoflex">
-              <!-- objeto flex utilizado para espaçar o checkbox, label e botão -->
-              <div class="checkboxlabelflex">
-                <!-- agrupamento checkbox com o label -->
-                <input
-                  class="chkbox-criarconta"
-                  type="checkbox"
-                  id="infoprom"
-                  name="infoprom"
-                  value="sim"
-                />
-                <label for="infoprom"
-                  >Desejo receber informativos e promoções.</label
-                >
-              </div>
-              <input
-                class="submit-criarconta"
-                type="submit"
-                value="Criar conta"
-              />
-            </div>
-          </fieldset>
-        </form>
-      </section>
-    </div>
     <footer>
       <!-- inicio footer -->
       <nav>
@@ -184,8 +118,9 @@
       </nav>
       <div class="linhaaddress"></div>
       <address>
-        LivrariaBook<br />
-        Avenida São Paulo, 0000 São Paulo-SP, CEP: 00000-0000
+        LivrariaBook<br>
+        Avenida São Paulo, 0000
+        São Paulo-SP, CEP: 00000-0000
       </address>
     </footer>
   </body>

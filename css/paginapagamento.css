@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --corbackgroundsecoes: #f1f7ff;
+  --corbotaopagamento: #69b1e0;
+  --corbotaopagamentohover: #277EB6;
+  --fontesizeh1: 2.5rem;
+  --fontesizeh2: 1.5rem;
+}
+
+/* Configurações da página inteira */
+
+/* main */
+
+.main {
+  margin: 0 auto;
+  padding: 35px 250px;
+}
+
+.main h1 {
+  position: relative; /* relativo à main */
+  top: 0; /* encostado no topo */
+  margin-bottom: 20px;
+  font-size: var(--fontesizeh1);
+}
+
+.main h2 {
+  font-size: var(--fontesizeh2);
+}
+
+/* sticky */
+
+/* sticky foi pensado primeiro dentro da section .produtospagamentoflex, mas não correria até o final da página */
+.main .sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 35%;
+  height: 660px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #69b1e0;
+  /* border: 1px solid #69b1e0; */
+}
+
+.main .sticky .endereco {
+  background-color: #f1f7ff;
+  border: 1px solid #69b1e0;
+  height: 170px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.main .sticky .endereco .enderecocontainer {
+  height: 120px;
+  padding: 10px 0 10px 0;
+}
+
+.main .sticky .entrega {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* background-color: #b2bec3; */
+  background-color: #f1f7ff;
+  border: 1px solid #69b1e0;
+}
+
+.main .sticky .entrega .entregaflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 160px;
+  /* gap: 10px; */
+}
+
+/* div filha recebe o flex */
+.main .sticky .entregaflex > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0 10px 0;
+}
+
+.main .sticky .entregaflex .tipoentregagrid {
+  display: grid;
+  grid-template-columns: 10px 50px auto auto;
+}
+
+/* .main .sticky .entregaflex .tipoentregagrid input[type="radio"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+} */
+
+/* input radio customizado */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%;
+  border: 2px solid #69b1e0;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"]:checked {
+  background-color: #69b1e0;
+}
+
+.sticky .resumo {
+  padding: 20px;
+  border-radius: 10px;
+  /* background-color: #b2bec3; */
+  background-color: #f1f7ff;
+  border: 1px solid #69b1e0;
+}
+
+.sticky .resumo .resumoconteiner {
+  height: 110px;
+  padding-top: 10px;
+}
+
+.sticky .resumo .resumoconteiner .resumoflex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 120px;
+  height: 100%;
+  width: 100%;
+}
+
+.resumoflex .colunalabels > div, .resumoflex .colunaprecos > div {
+  margin-bottom: 20px;
+}
+
+/* produto */
+
+.main .produto {
+  width: 63%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--corbackgroundsecoes);
+  border: 1px solid #69b1e0;
+}
+
+.main .produto .produtospagamentoflex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0 10px 0;
+}
+
+.main .produto .descricaoprodutogrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  /* background-color: antiquewhite; */
+}
+
+.main .produto .descricaoprodutogrid img {
+  width: 80px;
+  vertical-align: middle;
+}
+
+/* pagamento */
+
+.main .pagamento {
+  margin-top: 20px;
+  width: 63%;
+  height: 900px;
+  background-color: #f1f7ff;
+  border: 1px solid #69b1e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* pagamento com pix */
+
+.main .pagamento .pagamentopix {
+  display: flex;
+  flex-direction: column;
+  /* height: 200px; */
+  gap: 20px; /* padrão entre os títulos */
+}
+
+.main .pagamento .pagamentopix .pagamentopixflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagamentopixflex img {
+  width: 250px;
+}
+
+/* pagamento com cartao de credito */
+
+.main .pagamento .cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0 0 0;
+}
+
+.cartao .dadoscartao {
+  position: relative;
+  height: 54px;
+  /* width: 250px; */
+  border: 1px solid #69b1e0;
+  border-radius: 10px;
+}
+
+.cartao .dadoscartao input {
+  width: 100%;
+  padding: 20px 0 0 6px;
+  font-size: 16px;
+  /* color: #000; */
+  /* margin-bottom: 30px; */
+  border: none;
+  /* border-bottom: 1px solid black; */
+  outline: none;
+  background: transparent;
+}
+
+.cartao .dadoscartao label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px 0 0 6px;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.cartao .dadoscartao input:focus ~ label,
+.cartao .dadoscartao input:valid ~ label {
+  top: -15px;
+  left: 0;
+  /* color: #277EB6; */
+  font-size: 12px;
+}
+
+.cartao .validade > label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cartao .validade > select {
+  border: 2px solid #69b1e0;
+  /* background-color: #f1f7ff; */
+  background: transparent;
+}
+
+.cartao .parcelamento > label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cartao .parcelamento > select {
+  border: 2px solid #69b1e0;
+  background: transparent;
+}
+
+.cartao .pagamentocartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.cartao .cartoesflex {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  height: 50px;
+}
+
+/* .cartao .botaopagamentocartao {
+  float: right;
+} */
+
+.cartao .botaopagamentocartao a {
+  padding: 15px 25px; /* tamanho do botão */
+  font-size: 1.2rem;
+  border-radius: 4px;
+  background-color: var(--corbotaopagamento);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.cartao .botaopagamentocartao a:hover {
+  background-color: var(--corbotaopagamentohover);
+  transition-duration: 0.4s;
+}
+
+
+/* @media screen and (min-width: 1300px) {
+  .main {
+    margin: 0 auto;
+    padding: 30px 20%;
+  }
+} */

@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Gravitas+One&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/*
+
+Copiar isso para a página css individual, façam as alterações devidas.
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*/
+
+:root {
+  --fredoka: "Fredoka", sans-serif;
+  --gravitasone: "Gravitas One", cursive;
+  --opensans: "Open Sans", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --fonteheadermenu: var(--fredoka);
+  --fontefooter: var(--opensans);
+  --fontemenucarrinho: var(--roboto);
+  /* --corprimeiraheader: #e1d243; */
+  --corprimeiraheader: #F3CB45;
+  --corfaixaazul: #69b1e0;
+  /* --corbotoesmenuheader: #e1d243; */
+  --corbotoesmenuheader: #F3CB45;
+  --corfontebotoesmenuheader: black;
+  --cormenuusuario: #D5B022;
+  --corbalaocontadorcarrinho: #e08180;
+  /* --corlinhafooter: #12CDD4; */
+  /* --corbackgroundfooter: #ADA134; */
+  /* --corbackgroundfooter: #e1d243; */
+  /* --corbackgroundfooter: #69b1e0; */
+  --corbackgroundfooter: #69b1e0;
+  --corfooteraddress: #4C4B16;
+  --tamanhofontecontadorcarrinho: 0.9rem;
+  --tamanhofontebotoesmenuheader: 1rem;
+  --borderradius: 10px;
+}
+
+/*
+  <header>
+*/
+
+header .primeiraheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  height: 110px;
+  background-color: var(--corprimeiraheader);
+}
+
+/* classe da imagem */
+header .primeiraheader .imagembanner {
+  width: 250px;
+}
+
+header .primeiraheader .buscadorflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid #e1d243; */
+  /* border: 2px solid gray; */
+  padding: 10px;
+  border-radius: var(--borderradius);
+  background-color: white;
+}
+
+/* esse é o campo de busca */
+header .primeiraheader .campo-busca {
+  border: none;
+  background: none;
+  outline: none;
+  width: 450px; /* para alterar o comprimento do campo de busca */
+  height: 35px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+/* vinculado ao seletor anterior header input.campo-busca */
+/* muito cuidado com esse tipo de alteração pois nem todos os navegadores suportam */
+header
+  .primeiraheader
+  .buscadorflex
+  input[type="search"]::-webkit-input-placeholder {
+  color: black;
+}
+
+/* vinculado ao seletor anterior header input.campo-busca */
+/* muito cuidado com esse tipo de alteração pois nem todos os navegadores suportam */
+header
+  .primeiraheader
+  .buscadorflex
+  input[type="search"]::-webkit-search-cancel-button {
+  margin: 0 8px; /* leve espaçamento dos lados do X que apaga o texto */
+}
+
+header .primeiraheader .buscadorflex .lupa-buscador {
+  width: 20px;
+  height: 18px;
+}
+
+header .primeiraheader .usuarioflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #e1d243; */
+  background-color: var(--cormenuusuario);
+  width: 70px;
+  height: 65px;
+  border-radius: 50%;
+  /* border: 2px solid black ; */
+}
+
+header .primeiraheader .usuarioflex img {
+  width: 30px;
+}
+
+header .primeiraheader .menucarrinho .linkmenucarrinho {
+  text-decoration: none;
+  color: black;
+}
+
+header .menucarrinho .linkmenucarrinho .material-symbols-outlined {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.material-symbols-outlined .contadoriconecarrinho {
+  position: absolute;
+  font-family: var(--fontemenucarrinho);
+  background-color: #e08180;
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: var(--borderradius);
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.contadoriconecarrinho > span {
+  font-size: var(--tamanhofontecontadorcarrinho);
+}
+
+/*
+    Segunda header começa aqui
+*/
+
+.segundaheader nav {
+  border-top: 1px solid black; /* linha separadora do primeiro para o segundo */
+  padding: 12px;
+  background-color: var(--corfaixaazul);
+}
+
+.segundaheader nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.segundaheader nav ul li {
+  padding: 12px 18px; /*quando realizar alterações aqui, também faça no nav ul li:nth-child(3) */
+  list-style-type: none;
+  background-color: var(--corbotoesmenuheader);
+  border-radius: var(--borderradius);
+}
+
+.segundaheader nav ul li:nth-child(3) {
+  padding: 12px 53px;
+}
+
+.segundaheader nav ul li a {
+  text-decoration: none;
+  color: var(--corfontebotoesmenuheader);
+  font-weight: 600;
+  font-size: var(--tamanhofontebotoesmenuheader);
+  font-family: var(--fonteheadermenu);
+}
+
+/*
+  </header>
+*/
+
+/*
+  <footer>
+*/
+
+footer {
+  background-color: var(--corbackgroundfooter);
+  margin-top: 10px;
+  padding-top: 25px;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+footer nav dl {
+  display: block;
+  font-family: var(--fontefooter);
+  padding: 0 40px;
+  height: 200px;
+  width: 310px;
+}
+
+footer nav dl dt {
+  color: var(--corfontefooter);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+footer nav dl dd {
+  font-size: 14px;
+  margin: 0.8px;
+}
+
+footer nav dl dd a {
+  text-decoration: none;
+  color: black;
+}
+
+.iconesocialflex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+footer img.icones {
+  width: 20px;
+}
+
+.iconesocialflex p {
+  text-align: center;
+}
+
+footer .linhaaddress {
+  margin: 0 auto;
+  padding: 0.5px;
+  width: 600px; /* comprimento da linha */
+  background-color: black;
+}
+
+footer address {
+  /* background-color: var(--corfooteraddress); */
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*
+  </footer>
+*/
+
+/*
+  responsividade da página: menu do <header>
+*/
+
+@media screen and (max-width: 1125px) {
+  .segundaheader nav ul {
+    gap: 50px;
+  }
+}

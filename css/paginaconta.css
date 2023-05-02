@@ -2,74 +2,19 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
-body div.bordapagina {
-  border: 5px solid #69b1e1;
-  margin: 10px;
-  padding: 10px;
+:root {
+  --corlinhaverticalnomeio: #69b1e0;
+  --corbotãoacessarconta: #69b1e0;
+  --corbotãoacessarcontahover: #277EB6;
+  --corbotãocrieconta: #626465;
+  --corbotãocriecontahover: #3f4244;
 }
 
 /* 
     acima estão as configurações da página inteira  
-*/
-
-header {
-  margin-bottom: 10px;
-}
-
-header div.primeiraheader {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 10px;
-  height: 100%;
-}
-
-header div img {
-  border-radius: 40px;
-  width: 50vw;
-}
-
-header div.buscador input {
-  border-radius: 30px;
-  width: 20vw;
-  height: 50px;
-  padding: 20px;
-  font-size: 1.2rem;
-}
-
-header div.segundaheader nav {
-  background-color: #69b1e1;
-  height: 70px;
-}
-
-header div.segundaheader nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-}
-
-header div.segundaheader nav ul li {
-  padding: 15px 40px;
-  border-radius: 8px;
-  list-style-type: none;
-  background-color: #fef445;
-}
-
-header div.segundaheader nav ul li a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
-
-header div.segundaheader nav ul li a:hover {
-  color: #537b9d
-}
-
-/* 
-    o header termina aqui 
 */
 
 /* 
@@ -81,7 +26,7 @@ body div.main {
   justify-content: center;
   color: black;
   /* width: 1300px; */
-  margin: 0 auto; /* o valor auto deixou o main no centro da página */
+  margin: 100px auto; /* o valor auto deixou o main no centro da página */
 }
 
 body h2 {
@@ -91,7 +36,8 @@ body h2 {
 
 body div.linhaverticalnomeio {
   height: 25vh;
-  background-color: #69b1e1;
+  /* background-color: #69b1e1; */
+  background-color: var(--corlinhaverticalnomeio);
   padding: 0.5px;
   margin: 90px 8vw;
 }
@@ -100,7 +46,7 @@ body section {
   padding: 20px;
   /* background-color: aliceblue; */
   /* border-radius: 20px; */
-  width: 450px;
+  width: 500px;
   box-shadow: 0px 2px 5px 0px #C2C4C2;
 }
 
@@ -120,12 +66,17 @@ fieldset small {
     font-size: small;
 }
 
-fieldset div.alinharcheckboxbotao {
+fieldset div.checkboxbotaoflex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
 }
+
+/* fieldset div.checkboxlabelflex {
+  display: flex;
+  justify-content: center;
+} */
 
 fieldset input[type="text"], input[type="email"], input[type="password"] {
     padding: 5px;
@@ -133,8 +84,11 @@ fieldset input[type="text"], input[type="email"], input[type="password"] {
     /* border: thin 1px; */
 }
 
+/* botão acessar sua conta */
+
 fieldset input[type="submit"] {
-  background-color: #2D9BF0;
+  /* background-color: #2D9BF0; */
+  background-color: var(--corbotãoacessarconta);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -144,77 +98,39 @@ fieldset input[type="submit"] {
 }
 
 fieldset input[type="submit"]:hover {
-  background-color: #0f78c8;
+  /* background-color: #0f78c8; */
+  background-color: var(--corbotãoacessarcontahover);
   transition-duration: 0.4s;
 }
 
+/* botão crie sua conta */
+/* checkbox criarconta  e o botão criarconta recebem a mesma cor */
 fieldset input[type="submit"].submit-criarconta, 
 input[type="checkbox"].chkbox-criarconta:checked {
-  background-color: #626465;
+  background-color: var(--corbotãocrieconta);
 }
 
 fieldset input[type="submit"].submit-criarconta:hover {
-  background-color: #3f4244;
+  background-color: var(--corbotãocriecontahover);
   transition-duration: 0.4s;
 }
 
-/* checkbox totalmente reestilizado */
-
+/* checkbox totalmente reestilizado inicio */
+/* checkbox acessarpagina */
 fieldset input[type="checkbox"] {
   all: unset;
   border: 1px solid black;
   width: 13px;
   height: 13px;
   display: inline-block; /* deixa o checkbox ao lado do label */
+  vertical-align: text-top; /* alinha ao centro com o label */
 }
 
 fieldset input[type="checkbox"]:checked {
   background-color: #2D9BF0;
 }
 
-/* checkbox totalmente reestilizado */
-
-/*
-    o footer começa aqui 
-*/
-
-footer div.linhafooter {
-  width: 100%;
-  padding: 1px;
-  background-color: #69b1e1;
-  margin: 15px 0;
-}
-
-footer nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: white;
-  height: 100%;
-}
-
-footer nav dl {
-  display: block;
-  background-color: #69b1e1;
-  padding: 1vh 4vw;
-  border-radius: 20px;
-  height: 15vh;
-}
-
-footer nav dl dt, dd {
-  color: white;
-  padding: 0.6vh 0px;
-}
-
-footer nav dl dt {
-  /* width: 100%; */
-  font-weight: bold;
-}
-
-footer nav dl dd {
-  text-align: left;
-  font-size: 14px;
-}
+/* checkbox totalmente reestilizado fim */
 
 /* 
   responsividade
