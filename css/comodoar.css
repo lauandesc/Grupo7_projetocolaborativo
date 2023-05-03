@@ -1,67 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Gravitas+One&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
 * {
-  font-family: "Dancing Script", cursive;
-  font-family: "Poppins", sans-serif;
-}
-div.bordapagina {
-  border: 3px solid #69b1e1;
-  margin: 10px;
-  padding: 1px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-/* acima estão as configurações da página inteira  */
-
-div.img {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 10px;
-  height: 100%;
-  margin: 15px auto;
+:root {
+  /* --botoesmenu: #fef445; */
+  --roboto: "Roboto", sans-serif;
+  --gravitasone: "Gravitas One", cursive;
+  --fontemain: var(--roboto);
+  --botoesmenu: #e0df53;
+  --corfundovalortotal: #f1f7ff;
+  --corbotaoquantidade: #cbcecf;
+  --corbotaoquantidadehover: #aeb1b2;
+  --corfontebotaoquantidade: black;
+  --corbordacampoquantidade: #ccc;
+  --corfontelabelfretecupom: #6b6b6b;
+  --corbotaofretecupom: #69b1e0;
+  --corbotaofretecupomhover: #277eb6;
+  /* --corbotaocompra: #376F94; */
+  --corbotaocompra: #69b1e0;
+  --corbotaocomprahover: #277eb6;
+  --fontesizeh1: 2.5rem;
+  --fontesizeh2: 1.5rem;
+  --fontesizeh3: 1.2rem;
+  --fontelabelfretecupom: 0.9rem;
 }
-
-div img {
-  border-radius: 40px;
-  width: 30vw;
-}
-
-div.buscador input {
-  border-radius: 30px;
-  width: 20vw;
-  height: 50px;
-  padding: 20px;
-  font-size: 1.2rem;
-}
-
-div.menu nav {
-  background-color: #69b1e1;
-  height: 70px;
-}
-
-div.menu nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-}
-
-div.menu nav ul li {
-  padding: 15px 40px;
-  border-radius: 8px;
-  list-style-type: none;
-  background-color: #fef445;
-}
-
-div.menu nav ul li a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
-
-div.menu nav ul li a:hover {
-  color: #537b9d;
-}
-
-/* Inicio estilização form */
 
 /* Elementos com o ID "titulo" */
 #titulo {
@@ -69,9 +35,9 @@ div.menu nav ul li a:hover {
   margin-top: 1%;
   justify-content: center;
   align-items: center;
-  font-family: "Dancing Script", cursive;
   color: #030303;
-  font-size: 44px;
+  font-size: 35px;
+  font-family: var(--fontemain);
   /* margin-left: 36%;*/
 }
 
@@ -80,8 +46,8 @@ div.menu nav ul li a:hover {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
-  height: 100%;
   margin: 15px auto;
+  max-width: 600px;
 }
 
 /*Inicio css fieldset*/
@@ -102,85 +68,3 @@ fieldset.fdoar p {
 }
 
 /*Final css fieldset*/
-
-/*    o footer começa aqui */
-footer div.linhafooter {
-  width: 100%;
-  padding: 1px;
-  background-color: #69b1e1;
-  margin: 15px 0;
-}
-
-footer nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: white;
-  height: 100%;
-}
-
-footer nav dl {
-  display: block;
-  background-color: #69b1e1;
-  padding: 1vh 4vw;
-  border-radius: 20px;
-  height: 15vh;
-}
-
-footer nav dl dt,
-dd {
-  color: white;
-  padding: 0.6vh 0px;
-}
-
-footer nav dl dt {
-  /* width: 100%; */
-  font-weight: bold;
-}
-
-footer nav dl dd {
-  text-align: left;
-  font-size: 14px;
-}
-
-/* 
-  responsividade
-  https://youtu.be/pt1ztJcHoFQ?t=205 
-*/
-
-@media screen and (max-width: 1024px) {
-  header div.buscador {
-    margin: 0;
-  }
-
-  header div.buscador input {
-    font-size: 0.6rem;
-  }
-
-  header div.segundaheader nav ul li {
-    padding: 2vh;
-  }
-
-  footer nav dl {
-    padding: 1vh 1vw;
-  }
-
-  footer nav dl dt,
-  dd {
-    font-size: 0.7rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header div.segundaheader nav ul li {
-    padding: 1vh;
-  }
-
-  fieldset small {
-    font-size: 0.6rem;
-  }
-
-  fieldset label {
-    font-size: 0.8rem;
-  }
-}
