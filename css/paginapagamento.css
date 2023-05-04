@@ -42,7 +42,7 @@
   top: 0;
   float: right;
   width: 35%;
-  height: 660px;
+  height: 655px;
   border-radius: 10px;
   padding: 20px;
   background-color: #69b1e0;
@@ -60,7 +60,7 @@
 
 .main .sticky .endereco .enderecocontainer {
   height: 120px;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 
 .main .sticky .entrega {
@@ -76,27 +76,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 160px;
-  /* gap: 10px; */
-}
-
-/* div filha recebe o flex */
-.main .sticky .entregaflex > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 10px 0 10px 0;
+  margin: 20px 0 10px 0;
+  gap: 20px;
 }
 
 .main .sticky .entregaflex .tipoentregaflex {
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 10px;
 }
 
 .tipoentregaflex p:first-of-type {
-  width: 70px;
+  width: 60px;
 }
 
 /* .main .sticky .entregaflex .tipoentregagrid {
@@ -134,7 +125,7 @@ input[type="radio"]:checked {
 
 .sticky .resumo .resumoconteiner {
   height: 110px;
-  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .sticky .resumo .resumoconteiner .resumoflex {
@@ -164,7 +155,7 @@ input[type="radio"]:checked {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 
 .main .produto .descricaoprodutogrid {
@@ -172,7 +163,7 @@ input[type="radio"]:checked {
   grid-template-columns: auto auto;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   /* background-color: antiquewhite; */
 }
 
@@ -186,7 +177,7 @@ input[type="radio"]:checked {
 .main .pagamento {
   margin-top: 20px;
   width: 63%;
-  height: 900px;
+  height: 860px;
   background-color: #f1f7ff;
   border: 1px solid #69b1e0;
   padding: 20px;
@@ -302,7 +293,7 @@ input[type="radio"]:checked {
 .cartao .botaopagamentocartao a {
   padding: 15px 25px; /* tamanho do botão */
   font-size: 1.2rem;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: var(--corbotaopagamento);
   color: #fff;
   border: none;
