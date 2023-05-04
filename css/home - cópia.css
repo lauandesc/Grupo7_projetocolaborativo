@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Gravitas+One&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPALPRINCIPAL */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  /* width: 1300px; */
+  margin: 50px; /* o valor auto deixou o main no centro da página */
+}
+
+main a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+main .categorias {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 425px;
+}
+
+main .categorias h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+}
+
+main .categorias .categoriasheader {
+  text-align: center;
+  padding: 5px;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+  background-color: #F3CB45;
+}
+
+main .categorias .categoriasoverflow {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+main section div ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #69b1e0;
+}
+
+main section div ul li {
+  display: flex;
+  justify-content: center;
+  background-color: #F3CB45;
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+/* slides slides slides slides slides slides slides slides slides slides slides  */
+
+.conteiner {
+  display: flex;
+  height: 425px;
+  width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.botoes {
+  display: flex;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border: solid #F3CB45;
+  margin: 380px 0 0 100px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.botoes:hover {
+  background-color: aqua;
+}
+
+section div input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 100px;
+}
+
+.slide {
+  width: 800px;
+  align-items: center;
+}
+
+#slide1:checked ~ .primeiro {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .primeiro {
+  margin-left: -800%;
+}
