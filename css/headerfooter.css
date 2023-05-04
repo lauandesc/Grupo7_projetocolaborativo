@@ -45,6 +45,20 @@ Copiar isso para a página css individual, façam as alterações devidas.
   <header>
 */
 
+/* header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+} */
+
+header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
 header .primeiraheader {
   display: flex;
   justify-content: center;
@@ -53,6 +67,7 @@ header .primeiraheader {
   padding: 20px;
   height: 110px;
   background-color: var(--corprimeiraheader);
+  vertical-align: middle;
 }
 
 /* classe da imagem */
@@ -114,16 +129,15 @@ header .primeiraheader .usuarioflex {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #e1d243; */
   background-color: var(--cormenuusuario);
   width: 70px;
   height: 65px;
   border-radius: 50%;
-  /* border: 2px solid black ; */
 }
 
 header .primeiraheader .usuarioflex img {
   width: 30px;
+  vertical-align: middle;
 }
 
 header .primeiraheader .menucarrinho .linkmenucarrinho {
@@ -131,7 +145,7 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
   color: black;
 }
 
-header .menucarrinho .linkmenucarrinho .material-symbols-outlined {
+.menucarrinho .linkmenucarrinho .material-symbols-outlined {
   font-size: 24px;
   margin-right: 5px;
 }
@@ -150,6 +164,20 @@ header .menucarrinho .linkmenucarrinho .material-symbols-outlined {
 
 .contadoriconecarrinho > span {
   font-size: var(--tamanhofontecontadorcarrinho);
+}
+
+.linkmenucarrinho span {
+  vertical-align: middle;
+}
+
+.material-symbols-outlined span {
+  vertical-align: middle;
+}
+
+.contadoriconecarrinho span {
+  vertical-align: middle;
+  text-align: center;
+  font-family: var(--corbalaocontadorcarrinho);
 }
 
 /*
@@ -205,6 +233,7 @@ footer {
 footer * {
   font-size: 14px;
   font-family: var(--fontefooter);
+  box-sizing: border-box;
 }
 
 footer nav {
@@ -269,6 +298,9 @@ footer address {
   padding: 12px;
   text-align: center;
   font-weight: bold;
+}
+
+footer address * {
   font-size: 16px;
   font-family: var(--fontefooteraddress);
 }
