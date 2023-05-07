@@ -69,6 +69,7 @@ ul.breadcrumb li a {color: #69b1e0;}
   border-radius: 10px;
 }
 
+.filtrodepartamentos > ul,
 .filtroeditora > ul,
 .filtroautor > ul,
 .filtroano > ul {
@@ -181,10 +182,11 @@ ul.breadcrumb li a {color: #69b1e0;}
   width: 250px;
   height: 70px;
   margin: 5px 0;
+  padding: 5px;
 }
 
 .livro .titulolivroflex h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: justify; /* propriedade muito importante para melhorar o aspecto visual do título no corpo da div */
 }
 
@@ -218,7 +220,7 @@ ul.breadcrumb li a {color: #69b1e0;}
 /* 
   eu criei esse botão para o frete, mas desisti 
 */
-.custom-button {
+.livros .custom-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,14 +237,44 @@ ul.breadcrumb li a {color: #69b1e0;}
   text-decoration: none;
 }
 
-.material-icons-outlined {
+.livros .material-icons-outlined {
   font-size: 1.2rem;
 }
 
-.custom-button:hover {
+.livros .custom-button:hover {
   background-color: #376F94;
 }
 
-.custom-button:hover .material-icons-outlined {
+.livros .custom-button:hover .material-icons-outlined {
   color: #F3CB45;
 }
+
+.livros .paginacaocentralizado {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.livros .paginacao {
+  display: inline-block;
+}
+
+.livros .paginacao a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.4s;
+  /* border: 1px solid #ddd; */
+  border: 1px solid #69b1e0;
+  margin: 0 4px;
+  border-radius: 10px;
+}
+
+.livros .paginacao a.active {
+  background-color: #69b1e0;
+  color: white;
+  border: 1px solid #69b1e0;
+}
+
+/* .livros .paginacao a:hover:not(.active) {background-color: #ddd;} */
+.livros .paginacao a:hover:not(.active) {background-color: #f1f7ff;}
