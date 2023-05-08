@@ -56,7 +56,7 @@ fieldset {
   border: none;
 }
 
-fieldset label {
+fieldset .labels {
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -73,10 +73,11 @@ fieldset div.checkboxbotaoflex {
   margin-top: 15px;
 }
 
-/* fieldset div.checkboxlabelflex {
+fieldset .checkboxlabelflex {
   display: flex;
-  justify-content: center;
-} */
+  align-items: center;
+  gap: 5px;
+}
 
 fieldset input[type="text"], input[type="email"], input[type="password"] {
     padding: 5px;
@@ -119,11 +120,11 @@ fieldset input[type="submit"].submit-criarconta:hover {
 /* checkbox acessarpagina */
 fieldset input[type="checkbox"] {
   all: unset;
-  border: 1px solid black;
-  width: 13px;
-  height: 13px;
+  border: 2px solid black;
+  width: 14px;
+  height: 14px;
   display: inline-block; /* deixa o checkbox ao lado do label */
-  vertical-align: text-top; /* alinha ao centro com o label */
+  vertical-align: middle; /* alinha ao centro com o label */
 }
 
 fieldset input[type="checkbox"]:checked {

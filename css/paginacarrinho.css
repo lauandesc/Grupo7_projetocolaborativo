@@ -98,12 +98,12 @@ section.main div.carrinho {
 
 section.main div.gridcarrinho {
   display: grid;
-  grid-template-columns: 430px auto auto;
+  grid-template-columns: 410px auto auto;
   gap: 5px;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  padding: 10px;
+  margin: 20px 0px;
+  padding: 10px 20px;
   border-radius: 10px;
   height: 150px;
   border: 1px solid #69b1e0;
@@ -190,7 +190,6 @@ section.main div.gridcarrinho div.descricaoproduto {
 }
 
 section.main div.gridcarrinho div.descricaoproduto img {
-  position: relative;
   height: 120px;
 }
 

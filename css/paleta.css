@@ -1,0 +1,15 @@
+:root {
+    --backgroundprimeiroheader: #F3CB45;
+    --backgroundsegundoheader: #69b1e0;
+    --corbotoesmenusegundoheader: #F3CB45;
+    --cormenuusuario: #D5B022;
+    --corbalaocontadorcarrinho: #e08180;
+    --corbackgroundfooter: #69b1e0;
+    --corbackgroundcampodebuscaprimeiroheader: white;
+    --corlinhaseparadoraprimeirosegundoheader: black;
+    --corlinhaverticalnomeio: #69b1e0;
+    --corbotãoacessarconta: #69b1e0;
+    --corbotãoacessarcontahover: #277EB6;
+    --corbotãocrieconta: #626465;
+    --corbotãocriecontahover: #3f4244;
+}

@@ -35,7 +35,6 @@ Copiar isso para a página css individual, façam as alterações devidas.
   /* --corbackgroundfooter: #e1d243; */
   /* --corbackgroundfooter: #69b1e0; */
   --corbackgroundfooter: #69b1e0;
-  --corfooteraddress: #4C4B16;
   --tamanhofontecontadorcarrinho: 0.9rem;
   --tamanhofontebotoesmenuheader: 1rem;
   --borderradius: 10px;
@@ -153,7 +152,7 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
 .material-symbols-outlined .contadoriconecarrinho {
   position: absolute;
   font-family: var(--fontemenucarrinho);
-  background-color: #e08180;
+  background-color: var(--corbalaocontadorcarrinho);
   color: white;
   font-weight: bold;
   padding: 2px 6px;
@@ -177,7 +176,7 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
 .contadoriconecarrinho span {
   vertical-align: middle;
   text-align: center;
-  font-family: var(--corbalaocontadorcarrinho);
+  /* font-family: var(--corbalaocontadorcarrinho); */
 }
 
 /*
