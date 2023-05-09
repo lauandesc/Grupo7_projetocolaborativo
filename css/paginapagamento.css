@@ -106,7 +106,7 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 50%;
-  border: 2px solid #69b1e0;
+  border: 1px solid black;
   width: 20px;
   height: 20px;
 }
@@ -219,6 +219,11 @@ input[type="radio"]:checked {
   border: 1px solid #69b1e0;
   border-radius: 10px;
 }
+
+/* tabindex da div
+.cartao .dadoscartao:focus {
+  outline: 2px solid #277EB6;
+} */
 
 .cartao .dadoscartao input {
   width: 100%;

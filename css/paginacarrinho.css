@@ -164,6 +164,7 @@ section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input {
 }
 
 section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input:focus {
+  border: 1px solid var(--corbordacampoquantidade);
   outline: 1px solid var(--corbordacampoquantidadefocus);
 }
 
@@ -251,9 +252,9 @@ section.main div.complementocarrinho .cupom .campocupom {
 
 /* remoção do sublinhado que destaca a borda do campo */
 /* isso é chamado de outline de focus (:focus) */
-section.main div.complementocarrinho div.frete > input,
-section.main div.complementocarrinho div.cupom > input {
-  outline: none;
+section.main div.complementocarrinho div.frete input:focus,
+section.main div.complementocarrinho div.cupom input:focus {
+  outline: 2px solid #69b1e0;
 }
 
 .frete input[type=button],
