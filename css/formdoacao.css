@@ -215,3 +215,6 @@ select {
 .whatsapp img {
   width: 40px;
 }
+.whatsapp img:hover {
+  width: 45px;
+}
