@@ -70,8 +70,9 @@ background - #E0DF53
 */
 
 section.main {
+  width: 1200px;
   margin: 0 auto;
-  padding: 2% 20%;
+  padding: 2% 50px;
   font-family: var(--fontemain);
   /* font-family: 'Times New Roman', Times, serif; */
 }

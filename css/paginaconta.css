@@ -25,7 +25,7 @@ body div.main {
   display: flex;
   justify-content: center;
   color: black;
-  /* width: 1300px; */
+  width: 1200px;
   margin: 100px auto; /* o valor auto deixou o main no centro da página */
 }
 

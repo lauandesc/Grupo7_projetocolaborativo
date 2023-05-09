@@ -15,7 +15,8 @@
 
 #main {
   margin: 0 auto;
-  padding: 0 10%;
+  width: 1200px;
+  padding: 0 50px;
   font-family: var(--fontemain);
 }
 
