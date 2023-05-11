@@ -119,8 +119,11 @@ section.main div.gridcarrinho div.quantidadeproduto p {
 
 section.main div.gridcarrinho div.quantidadeproduto p a {
   text-decoration-line: none;
-  /* color: #6b6b6b; */
   color: #6b6b6b;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto p a:hover {
+  text-decoration-line: underline;
 }
 
 section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade {
@@ -270,6 +273,7 @@ section.main div.complementocarrinho div.cupom input:focus {
   border: none;
   box-shadow: none;
   outline: none;
+  cursor: pointer;
 }
 
 .frete input[type=button]:hover,
@@ -278,6 +282,7 @@ section.main div.complementocarrinho div.cupom input:focus {
   background-color: var(--corbotaofretecupomhover);
   color: white;
   transition: 0.4s;
+  
 }
 
 section.main div.totalcarrinho {

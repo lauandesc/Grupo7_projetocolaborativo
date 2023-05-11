@@ -121,7 +121,7 @@ ul.breadcrumb li a {color: #69b1e0;}
   grid-template-columns: 1fr 1fr 1fr; /* unidade flexível que representa uma fração do espaço disponível no container .livros */
   grid-auto-rows: 460px; /* https://www.youtube.com/watch?v=R_dqkhX7WbU&t=780s */
   grid-auto-columns: 257px;
-  gap: 10px;
+  gap: 6px;
 }
 
 .gridlivros > div {
