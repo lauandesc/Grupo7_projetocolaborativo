@@ -106,7 +106,7 @@ section.main div.gridcarrinho {
   margin: 20px 0px;
   padding: 10px 20px;
   border-radius: 10px;
-  height: 150px;
+  height: 200px;
   border: 1px solid #69b1e0;
   background-color: #f1f7ff;
   /* box-shadow: 0px 0px 45px -30px #6b6b6b; */
@@ -189,17 +189,29 @@ investigar depois a mensagem
   -moz-appearance: textfield;
 }
 
-section.main div.gridcarrinho div.descricaoproduto {
+.main .gridcarrinho .descricaoproduto {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-section.main div.gridcarrinho div.descricaoproduto img {
+.descricaoproduto .fundobrancodaimagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.descricaoproduto .fundobrancodaimagem img {
   height: 120px;
 }
 
-section.main div.gridcarrinho div.descricaotitulo {
-  margin-left: 20px;
+.main .gridcarrinho .descricaotitulo {
+  width: 100%;
 }
 
 section.main div.gridcarrinho div.descricaotitulo p {
