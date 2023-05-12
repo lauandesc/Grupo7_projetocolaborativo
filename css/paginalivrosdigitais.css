@@ -70,8 +70,6 @@ ul.breadcrumb li a {color: #69b1e0;}
   border-radius: 10px;
 }
 
-/* ============= barra de rolagem personalizada ============= */
-
 .filtrodepartamentos > ul,
 .filtroeditora > ul,
 .filtroautor > ul,
@@ -82,13 +80,16 @@ ul.breadcrumb li a {color: #69b1e0;}
   margin-bottom: 20px;
 }
 
+/* ============= barra de rolagem personalizada ============= */
+
 .filtrodepartamentos > ul::-webkit-scrollbar,
 .filtroeditora > ul::-webkit-scrollbar,
 .filtroautor > ul::-webkit-scrollbar,
 .filtroano > ul::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
+/* essa é a pista */
 .filtrodepartamentos > ul::-webkit-scrollbar-track,
 .filtroeditora > ul::-webkit-scrollbar-track,
 .filtroautor > ul::-webkit-scrollbar-track,
@@ -96,6 +97,7 @@ ul.breadcrumb li a {color: #69b1e0;}
   background-color: #f0efef;
 }
 
+/* essa é a barra */
 .filtrodepartamentos > ul::-webkit-scrollbar-thumb,
 .filtroeditora > ul::-webkit-scrollbar-thumb,
 .filtroautor > ul::-webkit-scrollbar-thumb,
@@ -182,7 +184,19 @@ ul.breadcrumb li a {color: #69b1e0;}
   width: 100%;
 }
 
+.livro .tagepub {
+  position: relative;
+  left: 0;
+  top: 1%;
+  width: 100%;
+}
+
 .livro .tagpromocao > img {
+  position: absolute;
+  width: 95px;
+}
+
+.livro .tagepub > img {
   position: absolute;
   width: 95px;
 }
