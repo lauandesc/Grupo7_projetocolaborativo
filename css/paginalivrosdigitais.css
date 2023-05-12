@@ -82,6 +82,7 @@ ul.breadcrumb li a {color: #69b1e0;}
 
 /* ============= barra de rolagem personalizada ============= */
 
+/* essa é a barra de rolagem */
 .filtrodepartamentos > ul::-webkit-scrollbar,
 .filtroeditora > ul::-webkit-scrollbar,
 .filtroautor > ul::-webkit-scrollbar,
