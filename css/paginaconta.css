@@ -6,6 +6,9 @@
 }
 
 :root {
+  --roboto: "Roboto", sans-serif;
+  --gravitasone: 'Gravitas One', cursive;
+  --fontemain: var(--roboto);
   --corlinhaverticalnomeio: #69b1e0;
   --corbotãoacessarconta: #69b1e0;
   --corbotãoacessarcontahover: #277EB6;
@@ -25,8 +28,9 @@ body div.main {
   display: flex;
   justify-content: center;
   color: black;
-  /* width: 1300px; */
+  width: 1200px;
   margin: 100px auto; /* o valor auto deixou o main no centro da página */
+  font-family: var(--fontemain);
 }
 
 body h2 {
@@ -56,14 +60,14 @@ fieldset {
   border: none;
 }
 
-fieldset label {
+fieldset .labels {
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 fieldset small {
     margin-top: 5px;
-    font-size: small;
+    font-size: 12px;
 }
 
 fieldset div.checkboxbotaoflex {
@@ -73,15 +77,45 @@ fieldset div.checkboxbotaoflex {
   margin-top: 15px;
 }
 
-/* fieldset div.checkboxlabelflex {
+fieldset .checkboxlabelflex {
   display: flex;
-  justify-content: center;
-} */
+  align-items: center;
+  gap: 5px;
+}
+
+fieldset .checkboxlabelflex label {
+  font-size: 14px;
+}
 
 fieldset input[type="text"], input[type="email"], input[type="password"] {
     padding: 5px;
-    border-radius: 5px;
-    /* border: thin 1px; */
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+fieldset .tratamentovisibilidade {
+  position: relative;
+}
+
+fieldset .tratamentovisibilidade input[type="password"] {
+  width: 100%;
+}
+
+fieldset .tratamentovisibilidade .material-symbols-outlined {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+fieldset input[type="text"]:focus,
+fieldset input[type="email"]:focus,
+fieldset input[type="password"]:focus {
+  /* border: black; */
+  border: 2px solid #277EB6;
+  outline: 2px solid #277EB6;
 }
 
 /* botão acessar sua conta */
@@ -93,7 +127,7 @@ fieldset input[type="submit"] {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -120,14 +154,16 @@ fieldset input[type="submit"].submit-criarconta:hover {
 fieldset input[type="checkbox"] {
   all: unset;
   border: 1px solid black;
-  width: 13px;
-  height: 13px;
+  font-size: 15px;
+  width: 14px;
+  height: 14px;
   display: inline-block; /* deixa o checkbox ao lado do label */
-  vertical-align: text-top; /* alinha ao centro com o label */
+  vertical-align: middle; /* alinha ao centro com o label */
 }
 
 fieldset input[type="checkbox"]:checked {
-  background-color: #2D9BF0;
+  background-color: #69b1e0;
+  /* border: 2px solid #69b1e0; */
 }
 
 /* checkbox totalmente reestilizado fim */

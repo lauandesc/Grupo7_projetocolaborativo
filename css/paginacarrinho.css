@@ -70,8 +70,9 @@ background - #E0DF53
 */
 
 section.main {
+  width: 1200px;
   margin: 0 auto;
-  padding: 2% 20%;
+  padding: 2% 50px;
   font-family: var(--fontemain);
   /* font-family: 'Times New Roman', Times, serif; */
 }
@@ -98,12 +99,12 @@ section.main div.carrinho {
 
 section.main div.gridcarrinho {
   display: grid;
-  grid-template-columns: 430px auto auto;
+  grid-template-columns: 410px auto auto;
   gap: 5px;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  padding: 10px;
+  margin: 20px 0px;
+  padding: 10px 20px;
   border-radius: 10px;
   height: 150px;
   border: 1px solid #69b1e0;
@@ -118,8 +119,11 @@ section.main div.gridcarrinho div.quantidadeproduto p {
 
 section.main div.gridcarrinho div.quantidadeproduto p a {
   text-decoration-line: none;
-  /* color: #6b6b6b; */
   color: #6b6b6b;
+}
+
+section.main div.gridcarrinho div.quantidadeproduto p a:hover {
+  text-decoration-line: underline;
 }
 
 section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade {
@@ -164,6 +168,7 @@ section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input {
 }
 
 section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade input:focus {
+  border: 1px solid var(--corbordacampoquantidade);
   outline: 1px solid var(--corbordacampoquantidadefocus);
 }
 
@@ -190,7 +195,6 @@ section.main div.gridcarrinho div.descricaoproduto {
 }
 
 section.main div.gridcarrinho div.descricaoproduto img {
-  position: relative;
   height: 120px;
 }
 
@@ -252,9 +256,9 @@ section.main div.complementocarrinho .cupom .campocupom {
 
 /* remoção do sublinhado que destaca a borda do campo */
 /* isso é chamado de outline de focus (:focus) */
-section.main div.complementocarrinho div.frete > input,
-section.main div.complementocarrinho div.cupom > input {
-  outline: none;
+section.main div.complementocarrinho div.frete input:focus,
+section.main div.complementocarrinho div.cupom input:focus {
+  outline: 2px solid #69b1e0;
 }
 
 .frete input[type=button],
@@ -269,6 +273,7 @@ section.main div.complementocarrinho div.cupom > input {
   border: none;
   box-shadow: none;
   outline: none;
+  cursor: pointer;
 }
 
 .frete input[type=button]:hover,
@@ -277,6 +282,7 @@ section.main div.complementocarrinho div.cupom > input {
   background-color: var(--corbotaofretecupomhover);
   color: white;
   transition: 0.4s;
+  
 }
 
 section.main div.totalcarrinho {

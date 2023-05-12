@@ -205,3 +205,16 @@ fieldset.fbotao {
 select {
   cursor: pointer;
 }
+
+.whatsapp {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+}
+
+.whatsapp img {
+  width: 40px;
+}
+.whatsapp img:hover {
+  width: 45px;
+}
