@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+:root {
+  --roboto: "Roboto", sans-serif;
+  --gravitasone: 'Gravitas One', cursive;
+  --fontemain: var(--roboto);
+  --corlinhaverticalnomeio: #69b1e0;
+  --corbotãoacessarconta: #69b1e0;
+  --corbotãoacessarcontahover: #277EB6;
+  --corbotãocrieconta: #626465;
+  --corbotãocriecontahover: #3f4244;
+}
+
+/* 
+    acima estão as configurações da página inteira  
+*/
+
+/* 
+    o main começa aqui 
+*/
+
+body div.main {
+  display: flex;
+  justify-content: center;
+  color: black;
+  width: 1200px;
+  margin: 100px auto; /* o valor auto deixou o main no centro da página */
+  font-family: var(--fontemain);
+}
+
+body h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+body div.linhaverticalnomeio {
+  height: 25vh;
+  /* background-color: #69b1e1; */
+  background-color: var(--corlinhaverticalnomeio);
+  padding: 0.5px;
+  margin: 90px 4vw;
+}
+
+body section {
+  padding: 30px 40px;
+  /* background-color: aliceblue; */
+  width: 540px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px #C2C4C2;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+fieldset .labels {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+fieldset small {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+fieldset div.checkboxbotaoflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+fieldset .checkboxlabelflex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+fieldset .checkboxlabelflex label {
+  font-size: 14px;
+}
+
+fieldset input[type="text"], input[type="email"], input[type="password"] {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+fieldset .tratamentovisibilidade {
+  position: relative;
+}
+
+fieldset .tratamentovisibilidade input[type="password"] {
+  width: 100%;
+}
+
+fieldset .tratamentovisibilidade .material-symbols-outlined {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+fieldset input[type="text"]:focus,
+fieldset input[type="email"]:focus,
+fieldset input[type="password"]:focus {
+  /* border: black; */
+  border: 2px solid #277EB6;
+  outline: 2px solid #277EB6;
+}
+
+/* botão acessar sua conta */
+
+fieldset input[type="submit"] {
+  /* background-color: #2D9BF0; */
+  background-color: var(--corbotãoacessarconta);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+fieldset input[type="submit"]:hover {
+  /* background-color: #0f78c8; */
+  background-color: var(--corbotãoacessarcontahover);
+  transition-duration: 0.4s;
+}
+
+/* botão crie sua conta */
+/* checkbox criarconta  e o botão criarconta recebem a mesma cor */
+fieldset input[type="submit"].submit-criarconta, 
+input[type="checkbox"].chkbox-criarconta:checked {
+  background-color: var(--corbotãocrieconta);
+}
+
+fieldset input[type="submit"].submit-criarconta:hover {
+  background-color: var(--corbotãocriecontahover);
+  transition-duration: 0.4s;
+}
+
+/* checkbox totalmente reestilizado inicio */
+/* checkbox acessarpagina */
+fieldset input[type="checkbox"] {
+  all: unset;
+  border: 1px solid black;
+  font-size: 15px;
+  width: 14px;
+  height: 14px;
+  display: inline-block; /* deixa o checkbox ao lado do label */
+  vertical-align: middle; /* alinha ao centro com o label */
+}
+
+fieldset input[type="checkbox"]:checked {
+  background-color: #69b1e0;
+  /* border: 2px solid #69b1e0; */
+}
+
+/* checkbox totalmente reestilizado fim */
+
+/* 
+  responsividade
+  https://youtu.be/pt1ztJcHoFQ?t=205 
+*/
+
+@media screen and (max-width: 1024px) {
+
+  header div.buscador {
+    margin: 0;
+  }
+
+  header div.buscador input {
+    font-size: 0.6rem;
+  }
+
+  header div.segundaheader nav ul li {
+    padding: 2vh;
+  }
+
+  footer nav dl {
+    padding: 1vh 1vw;
+  }
+
+  footer nav dl dt, dd {
+    font-size: 0.7rem;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header div.segundaheader nav ul li {
+    padding: 1vh;
+  }
+
+  fieldset small {
+    font-size: 0.6rem;
+  }
+
+  fieldset label {
+    font-size: 0.8rem;
+  }
+}
