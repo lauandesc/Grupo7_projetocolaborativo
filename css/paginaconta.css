@@ -6,6 +6,9 @@
 }
 
 :root {
+  --roboto: "Roboto", sans-serif;
+  --gravitasone: 'Gravitas One', cursive;
+  --fontemain: var(--roboto);
   --corlinhaverticalnomeio: #69b1e0;
   --corbotãoacessarconta: #69b1e0;
   --corbotãoacessarcontahover: #277EB6;
@@ -27,6 +30,7 @@ body div.main {
   color: black;
   width: 1200px;
   margin: 100px auto; /* o valor auto deixou o main no centro da página */
+  font-family: var(--fontemain);
 }
 
 body h2 {
@@ -63,7 +67,7 @@ fieldset .labels {
 
 fieldset small {
     margin-top: 5px;
-    font-size: small;
+    font-size: 12px;
 }
 
 fieldset div.checkboxbotaoflex {
@@ -79,10 +83,31 @@ fieldset .checkboxlabelflex {
   gap: 5px;
 }
 
+fieldset .checkboxlabelflex label {
+  font-size: 14px;
+}
+
 fieldset input[type="text"], input[type="email"], input[type="password"] {
     padding: 5px;
     border-radius: 10px;
     border: 2px solid black;
+}
+
+fieldset .tratamentovisibilidade {
+  position: relative;
+}
+
+fieldset .tratamentovisibilidade input[type="password"] {
+  width: 100%;
+}
+
+fieldset .tratamentovisibilidade .material-symbols-outlined {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 fieldset input[type="text"]:focus,
