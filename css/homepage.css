@@ -17,7 +17,7 @@ main{
     }
 h2{
     background-color: #E1D243;
-    margin: 10px 0 0 50px;
+    margin: 40px 0 0 50px;
     padding: 5px;
     border-radius: 1px;
     font-family: 'Fredoka', sans-serif;
@@ -33,7 +33,7 @@ section div ul{
         width: 500px;
         height: 300px;
         padding: 50px;
-        margin: 0 0 0 50px;
+        margin: 0 0 30px 50px;
         justify-content: space-between;
         overflow: hidden;
         overflow-y: scroll;
@@ -58,7 +58,7 @@ section div ul{
     height: 420px;
     width: 800px;
     overflow: hidden;
-    margin: 10px 0 0 250px;
+    margin: 40px 0 0 250px;
     border-radius: 10px;
     
 }
