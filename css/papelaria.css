@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  :root {
+    --corbackground: #f1f7ff;
+    --corbrancaoffwhite: #f8f5bb;
+    --corazul: #69b1e0;
+    --corazulhover: #277EB6;
+    --fontesizeh1: 2.5rem;
+    --fontesizeh2: 1.5rem;
+  }
+  
+  /* Configurações da página inteira */
+  
+  /* main */
+  
+  main {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 35px 50px;
+  }
