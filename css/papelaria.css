@@ -342,16 +342,34 @@ h1 {
   opacity: 1;
 }
 
-.cartao #textoazul {
+/* .cartao #textoazul {
   background-color: #69b1e0;
+  color: white;
+  font-size: 0.8rem;
+  padding: 8px 45px;
+  border-radius: 10px;
+} */
+
+/* .cartao #textoamarelo {
+  background-color: #F3CB45;
+  color: white;
+  font-size: 0.8rem;
+  padding: 8px 45px;
+  border-radius: 10px;
+} */
+
+#textoamarelo a {
+  text-decoration: none;
+  background-color: #F3CB45;
   color: white;
   font-size: 0.8rem;
   padding: 8px 45px;
   border-radius: 10px;
 }
 
-.cartao #textoamarelo {
-  background-color: #F3CB45;
+#textoazul a {
+  text-decoration: none;
+  background-color: #69b1e0;
   color: white;
   font-size: 0.8rem;
   padding: 8px 45px;
@@ -400,7 +418,6 @@ h1 {
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar,
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar,
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar {
-  /* width: 4px; */
   height: 6px;
 }
   
@@ -420,22 +437,27 @@ h1 {
   display: none;
 }
   
-/* essa é a barra */
+/* essa é a barra dos azuis */
 .carrosseldinamico #cadernos::-webkit-scrollbar-thumb,
 .carrosseldinamico #cadernos::-webkit-scrollbar-thumb,
 .carrosseldinamico #cadernos::-webkit-scrollbar-thumb,
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb,
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb,
-.carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb,
+.carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb {
+  /* background-color: var(--cordabarraderolagemcarrossel); */
+  background-color: #F3CB45;
+  border-radius: 10px;
+}
+
+/* essa é a barra dos amarelos */
 .carrosseldinamico #escrita::-webkit-scrollbar-thumb,
 .carrosseldinamico #escrita::-webkit-scrollbar-thumb,
 .carrosseldinamico #escrita::-webkit-scrollbar-thumb,
 .carrosseldinamico #bolsas::-webkit-scrollbar-thumb,
 .carrosseldinamico #bolsas::-webkit-scrollbar-thumb,
 .carrosseldinamico #bolsas::-webkit-scrollbar-thumb {
-  /* background-color: #cbcbca; */
-  /* background-color: #383C3F; */
-  background-color: var(--cordabarraderolagemcarrossel);
+  /* background-color: var(--cordabarraderolagemcarrossel); */
+  background-color: #69b1e0;
   border-radius: 10px;
 }
 
