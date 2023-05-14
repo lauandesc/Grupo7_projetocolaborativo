@@ -6,6 +6,8 @@
 }
 
 :root {
+  --roboto: "Roboto", sans-serif;
+  --fontemain: var(--roboto);
   --corbackgroundsecoes: #f1f7ff;
   --corbotaopagamento: #69b1e0;
   --corbotaopagamentohover: #277EB6;
@@ -21,6 +23,7 @@
   width: 1200px;
   margin: 0 auto;
   padding: 35px 50px;
+  font-family: var(--fontemain);
 }
 
 .main h1 {
@@ -53,7 +56,7 @@
 .main .sticky .endereco {
   background-color: #f1f7ff;
   border: 1px solid #69b1e0;
-  height: 190px;
+  height: 195px;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -140,6 +143,10 @@ input[type="radio"]:checked {
   /* gap: 120px; */
   height: 100%;
   width: 100%;
+}
+
+.resumoflex p {
+  font-size: 1.2rem;
 }
 
 .resumoflex .colunalabels > div, .resumoflex .colunaprecos > div {
