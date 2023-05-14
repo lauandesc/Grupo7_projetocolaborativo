@@ -18,8 +18,9 @@ html {
   --corazul: #69b1e0;
   --corazulhover: #277EB6;
   --cordabarraderolagemcarrossel: #8b969e;
-  --corcartaoamarelo: #fffcf4;
-  --corcartaoazul: #f4fbff;
+  /* --corcartaoamarelo: #fffcf4; */
+  --corcartaoamarelo: #fffdf7;
+  --corcartaoazul: #f8fcff;
   --corfontepreco: #997F2B;
   --fontesizepreco: 1.3rem;
   --fontesizeh1: 2.5rem;
