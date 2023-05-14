@@ -181,8 +181,18 @@ input[type="radio"]:checked {
   /* background-color: antiquewhite; */
 }
 
+.descricaoprodutogrid .fundobrancodaimagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  width: 110px;
+  border-radius: 10px;
+  background-color: white;
+}
+
 .main .produto .descricaoprodutogrid img {
-  width: 80px;
+  height: 120px;
   vertical-align: middle;
 }
 

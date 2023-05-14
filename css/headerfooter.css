@@ -18,6 +18,7 @@ Copiar isso para a página css individual, façam as alterações devidas.
   --gravitasone: "Gravitas One", cursive;
   --opensans: "Open Sans", sans-serif;
   --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
   --fonteheadermenu: var(--fredoka);
   --fontefooter: var(--opensans);
   --fontefooteraddress: var(--roboto);
@@ -34,7 +35,7 @@ Copiar isso para a página css individual, façam as alterações devidas.
   /* --corbackgroundfooter: #ADA134; */
   /* --corbackgroundfooter: #e1d243; */
   --corbackgroundfooter: #69b1e0;
-  --tamanhofontecontadorcarrinho: 0.9rem;
+  --tamanhofontecontadorcarrinho: 15px; /* experimentar dar zoom depois */
   --tamanhofontebotoesmenuheader: 1rem;
   --borderradius: 10px;
 }
@@ -143,9 +144,14 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
   color: black;
 }
 
+/* .menucarrinho .linkmenucarrinho .material-symbols-outlined {
+  font-size: 24px;
+  margin-right: 5px;
+} */
 .menucarrinho .linkmenucarrinho .material-symbols-outlined {
   font-size: 24px;
   margin-right: 5px;
+  position: relative;
 }
 
 .material-symbols-outlined .contadoriconecarrinho {
@@ -156,8 +162,10 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
   font-weight: bold;
   padding: 2px 6px;
   border-radius: var(--borderradius);
-  margin-left: -10px;
-  margin-top: -10px;
+  /* margin-left: -10px;
+  margin-top: -10px; */
+  right: -10px;
+  top: -10px;
 }
 
 .contadoriconecarrinho > span {
@@ -175,7 +183,7 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
 .contadoriconecarrinho span {
   vertical-align: middle;
   text-align: center;
-  /* font-family: var(--corbalaocontadorcarrinho); */
+  font-family: var(--fontemenucarrinho);
 }
 
 /*
