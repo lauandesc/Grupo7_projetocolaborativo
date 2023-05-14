@@ -37,7 +37,8 @@ background - #E0DF53
   /* --botoesmenu: #fef445; */
   --roboto: "Roboto", sans-serif;
   --gravitasone: 'Gravitas One', cursive;
-  --fontemain: var(--roboto);
+  --poppins: "Poppins", sans-serif;
+  --fontemain: var(--poppins);
   --botoesmenu: #E0DF53;
   --corfundovalortotal: #f1f7ff;
   /* --corbotaoquantidade: #cbcecf; */

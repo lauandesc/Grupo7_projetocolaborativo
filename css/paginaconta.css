@@ -8,7 +8,8 @@
 :root {
   --roboto: "Roboto", sans-serif;
   --gravitasone: 'Gravitas One', cursive;
-  --fontemain: var(--roboto);
+  --poppins: "Poppins", sans-serif;
+  --fontemain: var(--poppins);
   --corlinhaverticalnomeio: #69b1e0;
   --corbotãoacessarconta: #69b1e0;
   --corbotãoacessarcontahover: #277EB6;

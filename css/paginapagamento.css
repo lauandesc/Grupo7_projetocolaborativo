@@ -7,7 +7,9 @@
 
 :root {
   --roboto: "Roboto", sans-serif;
-  --fontemain: var(--roboto);
+  --poppins: "Poppins", sans-serif;
+  --fontemain: var(--poppins);
+  /* --fontemain: var(--roboto); */
   --corbackgroundsecoes: #f1f7ff;
   --corbotaopagamento: #69b1e0;
   --corbotaopagamentohover: #277EB6;
@@ -323,13 +325,13 @@ input[type="radio"]:checked {
   transition-duration: 0.4s;
 }
 
-
+/* 
 @media screen and (max-width: 1875px) {
   .main {
     margin: 0 auto;
     padding: 30px 5%;
   }
-}
+} */
 /* @media screen and (max-width: 1440px) {
   .main {
     margin: 0 auto;

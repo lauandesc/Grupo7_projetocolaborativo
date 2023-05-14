@@ -7,7 +7,8 @@
 
 :root {
   --roboto: "Roboto", sans-serif;
-  --fontemain: var(--roboto);
+  --poppins: "Poppins", sans-serif;
+  --fontemain: var(--poppins);
   --tamanhofontefiltro: 0.9rem;
 }
 
@@ -148,7 +149,7 @@ ul.breadcrumb li a {color: #69b1e0;}
 .gridlivros {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* unidade flexível que representa uma fração do espaço disponível no container .livros */
-  grid-auto-rows: 460px; /* https://www.youtube.com/watch?v=R_dqkhX7WbU&t=780s */
+  grid-auto-rows: 435px; /* https://www.youtube.com/watch?v=R_dqkhX7WbU&t=780s */
   grid-auto-columns: 257px;
   gap: 6px;
 }
@@ -208,7 +209,7 @@ ul.breadcrumb li a {color: #69b1e0;}
   align-items: center;
   height: 200px;
   width: 200px;
-  margin: 20px 0;
+  margin: 20px 0 5px 0;
   /* border: 1px solid salmon; */
   background-color: white;
   border-radius: 10px;
