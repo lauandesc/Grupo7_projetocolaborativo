@@ -30,7 +30,9 @@ Copiar isso para a página css individual, façam as alterações devidas.
   --corbotoesmenuheader: #F3CB45;
   --corfontebotoesmenuheader: black;
   --cormenuusuario: #D5B022;
-  --corbalaocontadorcarrinho: #e08180;
+  /* --corbalaocontadorcarrinho: #e08180; */
+  /* --corbalaocontadorcarrinho: #ef6351; */
+  --corbalaocontadorcarrinho: #ef767a;
   /* --corlinhafooter: #12CDD4; */
   /* --corbackgroundfooter: #ADA134; */
   /* --corbackgroundfooter: #e1d243; */
