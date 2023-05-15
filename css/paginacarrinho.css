@@ -50,6 +50,7 @@ background - #E0DF53
   /* --corbordacampoquantidade: #ccc; */
   --corbordacampoquantidade: #69b1e0;
   --corbordacampoquantidadefocus: #277EB6;
+  --corfontepreco: #997F2B;
   --corfontelabelfretecupom: #6b6b6b;
   --corbotaofretecupom: #69b1e0;
   --corbotaofretecupomhover: #277EB6;
@@ -75,7 +76,6 @@ section.main {
   margin: 0 auto;
   padding: 2% 50px;
   font-family: var(--fontemain);
-  /* font-family: 'Times New Roman', Times, serif; */
 }
 
 section.main h1 {
@@ -135,18 +135,15 @@ section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade {
 }
 
 section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: var(--corbotaoquantidade);
-  /* border: 1px solid #cbcecf; */
   border-radius: 4px;
-  /* font-size: 12px; */
+  font-size: 14px;
   font-weight: bold;
-  /* line-height: 20px; */
   color: var(--corfontebotaoquantidade);
   text-decoration: none;
   margin: 0 5px;
@@ -212,47 +209,168 @@ section.main div.gridcarrinho div.descricaotitulo p {
 }
 
 section.main div.complementocarrinho {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   justify-content: space-between;
+  /* align-items: flex-start; */
+  height: 120px;
+  gap: 10px;
+}
+
+.complementocarrinho .carrossel {
+  flex: 0 1 50%; /* altura: 40% da altura total do container */
+  height: 180px;
+  margin-top: 10px;
+  /* border: 1px solid salmon; */
+}
+
+.complementocarrinho .carrossel {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.complementocarrinho .frete {
+  flex: 0 0 30%; /* altura: 30% da altura total do container */
+  /* border: 1px solid blue; */
+}
+.complementocarrinho .cupom {
+  flex: 0 0 20%; /* altura: 30% da altura total do container */
+}
+
+/* =========== Carrossel ============== */
+
+.carrossel .containermae {
+  display: flex;
+  width: 420px;
+  height: 100%;
+  border-radius: 10px;
+  overflow-x: hidden;
+  /* border: 5px solid #69b1e0; */
+  /* background-color: #dcdcdc;  */
+  /* cinza de fundo atrás dos cartoes */
+}
+
+.carrossel .containermae:hover {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.containermae .cartao {
+  flex: 0 0 auto; /* evitar que os cartões sejam redimensionados */
+  height: 150px;
+  margin: 10px;
+  width: 390px;
+  border-radius: 10px;
+  background-color: #f1f7ff;
+  border: 1px solid #69b1e0;
+  /* você pode definir o comprimento aqui ou no valor do auto */
+  display: flex;
+  gap: 20px;
+}
+
+.cartao .imagemcartao {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
-  margin: 20px 0;
-  height: 80px;
+  width: 135px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
 }
 
-section.main div.complementocarrinho .frete {
-  display: block;
+.cartao .imagemcartao img {
+  height: 90%;
 }
 
-section.main div.complementocarrinho .frete p {
+.cartao .descricaocartao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.descricaocartao h5 {
+  font-size: 0.8rem;
+}
+
+/* criar caixas para cada paragrafo (incluindo o título) depois, porque o título pode ter muitas palavras */
+
+.descricaocartao .precoanterior{
+  text-decoration: line-through;
+  position: absolute;
+  bottom: 70px;
+  left: 40%;
+  transform: translate(-40%);
+}
+
+.descricaocartao .precoatual {
+  position: absolute;
+  bottom: 40px;
+  left: 40%;
+  transform: translate(-40%);
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--corfontepreco);
+}
+
+.descricaocartao .material-symbols-outlined {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #69b1e0;
+}
+
+.descricaocartao .material-symbols-outlined:hover {
+  color: #997F2B;
+}
+
+/* ============= barra de rolagem personalizada ============= */
+  
+/* essa é a barra de rolagem */
+.carrossel #scroll::-webkit-scrollbar {
+  height: 6px;
+}
+  
+/* essa é a pista */
+.carrossel #scroll::-webkit-scrollbar-track {
+  display: none;
+}
+  
+/* essa é a barra dos azuis */
+.carrossel #scroll::-webkit-scrollbar-thumb {
+  background-color: #626465;
+  border-radius: 10px;
+}
+
+/* ============= fim barra de rolagem personalizada ============= */
+
+/* ============ fim carrossel ============== */
+
+.complementocarrinho .frete p {
   color: var(--corfontelabelfretecupom);
   font-size: var(--fontetextolabelfretecupom);
   margin-bottom: 5px;
 }
 
-section.main div.complementocarrinho .frete .campofrete {
+.complementocarrinho .frete .campofrete {
   border-radius: 10px;
-  width: 7vw;
+  width: 115px;
   height: 35px;
   padding: 10px;
   font-size: 0.8rem;
   border: 1px solid #69b1e0;
 }
 
-section.main div.complementocarrinho .cupom {
-  display: block;
-}
-
-section.main div.complementocarrinho .cupom p {
+.complementocarrinho .cupom p {
   color: var(--corfontelabelfretecupom);
   font-size: var(--fontetextolabelfretecupom);
   margin-bottom: 5px;
 }
 
-section.main div.complementocarrinho .cupom .campocupom {
+.complementocarrinho .cupom .campocupom {
   border-radius: 10px;
-  width: 7vw;
+  width: 90px;
   height: 35px;
   padding: 10px;
   font-size: 0.8rem;
@@ -261,8 +379,8 @@ section.main div.complementocarrinho .cupom .campocupom {
 
 /* remoção do sublinhado que destaca a borda do campo */
 /* isso é chamado de outline de focus (:focus) */
-section.main div.complementocarrinho div.frete input:focus,
-section.main div.complementocarrinho div.cupom input:focus {
+.complementocarrinho .frete input:focus,
+.complementocarrinho .cupom input:focus {
   outline: 2px solid #69b1e0;
 }
 
@@ -297,6 +415,7 @@ section.main div.totalcarrinho {
   gap: 40px;
   height: 100%;
   width: 100%;
+  margin: 20px 0 0 0;
 }
 
 section.main div.tabelatotalcarrinho {

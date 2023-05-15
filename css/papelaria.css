@@ -445,7 +445,10 @@ h1 {
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb,
 .carrosseldinamico #outrosmateriais::-webkit-scrollbar-thumb {
   /* background-color: var(--cordabarraderolagemcarrossel); */
-  background-color: #F3CB45;
+  /* background-color: #F3CB45; */
+  /* background-color: #e08180; */
+  background-color: #626465;
+  /* background-color: #e15554; */
   border-radius: 10px;
 }
 
@@ -457,7 +460,10 @@ h1 {
 .carrosseldinamico #bolsas::-webkit-scrollbar-thumb,
 .carrosseldinamico #bolsas::-webkit-scrollbar-thumb {
   /* background-color: var(--cordabarraderolagemcarrossel); */
-  background-color: #69b1e0;
+  /* background-color: #69b1e0; */
+  /* background-color: #e08180; */
+  background-color: #626465;
+  /* background-color: #e15554; */
   border-radius: 10px;
 }
 
