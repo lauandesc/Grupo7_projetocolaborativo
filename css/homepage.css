@@ -9,6 +9,7 @@
   
 main{
         display: flex;
+    
     }
     main a{
         text-decoration: none;
@@ -31,7 +32,7 @@ section div ul{
         flex-direction: column;
         background-color: #69B1E0;
         width: 500px;
-        height: 300px;
+        height: 370px;
         padding: 50px;
         margin: 0 0 30px 50px;
         justify-content: space-between;
@@ -53,57 +54,90 @@ section div ul{
     
 /* slides slides slides slides slides slides slides slides slides slides slides  */    
 
-.conteiner{
-    display: flex;
-    height: 420px;
-    width: 800px;
+section.slider{
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
     overflow: hidden;
-    margin: 40px 0 0 250px;
-    border-radius: 10px;
-    
+   
 }
 
-.navegacao{
+.slider-content{
+    width: 400%;
+    height: auto;
+    margin: 35px 0 0 0;
     display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-.botoes{
-    display: flex;
-    padding: 5px;
-    border-radius: 20px;
-    display: flex;
-    width: 6px;
-    height: 6px;
-    border: solid yellow;
-    margin: 380px 0 0 100px;
-    cursor: pointer;
-    transition: 0.5s;
-    
+
 }
 
-.botoes:hover{
-    background-color: aqua;
-}
-
-section div input{
+.slider-content input{
     display: none;
 }
 
-.slides{
+.slide-box{
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+.slide-box img{
+    width: 65%;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin: 24% 0 0 0; 
     display: flex;
-    width: 100px;
+    justify-content:center;
 }
 
-.slide{
-    width: 800px;
-    align-items: center;
+.nav-manual .manual-btn, .nav-auto div{
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-#slide1:checked ~ .primeiro{
-    margin-left: 0;
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
 }
 
-#slide2:checked ~ .primeiro{
-    margin-left: -800%;
+.nav-manual .manual-btn:hover{
+background-color: yellow;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: #E1D243;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: #E1D243;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #E1D243;
+}
+
+#radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: #E1D243;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -35%;
+}
+
+/*#radio3:checked ~ .primeiro{
+    margin-left: -75%;
+}
+
+#radio4:checked ~ .primeiro{
+    margin-left: -100%;
 }

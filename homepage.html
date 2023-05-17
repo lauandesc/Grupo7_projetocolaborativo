@@ -10,6 +10,7 @@
     />
   <link rel="stylesheet" href="./css/homepage.css">
   <link rel="stylesheet" href="./css/headerfooter.css">
+  <script src="./JS/home.js" defer></script>
   <title>LivrariaBook</title>
   </head>
 <body>
@@ -99,43 +100,45 @@
       </div>
     </section>
    
-    <section>
-      <div class="conteiner">
-        <div class="slides">
-          <input type="radio" name="slide" id="slide1">
-          <input type="radio" name="slide" id="slide2">
-          <input type="radio" name="slide" id="slide3">
-          <input type="radio" name="slide" id="slide4">
-         
-          
-          <div class="slide primeiro">
-            <img src="img_livraria/livro 1.jpg" alt=" criança lendo">
-
+    <section class = "slider">
+      <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+          <input type="radio" name="btn-radio" id="radio4">
+      
+          <div class="slide-box primeiro">
+            <a href="#"><img class="selected" src="img_livraria/livro 1.jpg" alt=" criança lendo"></a>
           </div>
 
-          <div class="slide">
-            <img src="img_livraria/livro 2.jpg" alt=" mulher na livraria">
-            
+          <div class="slide-box">
+            <a href="#"><img src="img_livraria/livro 2.jpg" alt=" mulher na livraria"></a>
           </div>
 
-          <div class="slide">
-            <img src="img_livraria/livro 3.jpg" alt="literatura brasileira">
+          <div class="slide-box">
+            <a href="#"><img src="img_livraria/livro 3.jpg" alt="literatura brasileira"></a>
           </div>
 
-          <div class="slide">
-            <img src="img_livraria/livro 4.png" alt="Quem somos nós?">
-            
+          <div class="slide-box">
+            <a href="#"><img src="img_livraria/livro 4.jpeg" alt="Quem somos nós?"></a>
           </div>
-                                        
-        </div>
-        <div class="navegacao">
-          <label class="botoes" for="slide1"></label>
-          <label class="botoes" for="slide2"></label>
-          <label class="botoes" for="slide3"></label>
-          <label class="botoes" for="slide4"></label>
+                                           
+        <div class="nav-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
         </div>
 
-      </div>
+        <div class="nav-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>     
+
+      
     </section>
 
   </main>
