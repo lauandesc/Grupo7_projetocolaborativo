@@ -3,12 +3,19 @@
     
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+   
 }
 
 /* PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPAL PRINCIPALPRINCIPAL */
   
 main{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     
     }
     main a{
@@ -57,7 +64,7 @@ section div ul{
 section.slider{
     margin: 0 0 0 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0;
     overflow: hidden;
    
@@ -84,6 +91,7 @@ section.slider{
 
 .slide-box img{
     width: 65%;
+    
 }
 
 .nav-manual, .nav-auto{
