@@ -74,13 +74,11 @@ background - #E0DF53
 section.main {
   width: 1200px;
   margin: 0 auto;
-  padding: 2% 50px;
+  padding: 35px 50px;
   font-family: var(--fontemain);
 }
 
 section.main h1 {
-  position: relative; /* relativo à main */
-  top: 0; /* encostado no topo */
   margin-bottom: 10px;
   font-size: var(--fontesizeh1);
 }
@@ -138,8 +136,8 @@ section.main div.gridcarrinho div.quantidadeproduto .botoesquantidade a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  width: 19px;
+  height: 19px;
   background-color: var(--corbotaoquantidade);
   border-radius: 4px;
   font-size: 14px;
