@@ -224,6 +224,10 @@ header .primeiraheader .menucarrinho .linkmenucarrinho {
   font-family: var(--fonteheadermenu);
 }
 
+.segundaheader nav ul li:hover{
+  background-color: white;
+}
+
 /*
   </header>
 */

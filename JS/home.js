@@ -15,3 +15,12 @@ function proximaImg(){
     document.getElementById('radio' +cont).checked = true
 
 }
+
+let myAudio = document.querySelector('audio')
+let playli = document.getElementById('playli')
+console.log(playli, myAudio)
+
+
+playli.addEventListener('mouseover', ()=>{
+    myAudio.play()
+})
