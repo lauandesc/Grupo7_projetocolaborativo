@@ -21,8 +21,12 @@ let playli = document.getElementsByClassName('playli')
 console.log(playli)
 
 for (i = 0; i < playli.length; i++){
-   console.log(i)
+    playli.addEventListener('mouseover', ()=>{
+        myAudio.play()
+    })
+
 }
+
 
 
 
