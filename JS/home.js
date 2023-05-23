@@ -23,8 +23,10 @@ console.log(playli)
 for (i = 0; i < playli.length; i++){
     playli.addEventListener('mouseover', ()=>{
         myAudio.play()
-    })
 
+    });
+    
+   
 }
 
 
