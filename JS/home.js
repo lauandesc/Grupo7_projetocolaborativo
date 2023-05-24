@@ -18,16 +18,43 @@ function proximaImg(){
 
 let myAudio = document.querySelector('audio')
 let playli = document.getElementsByClassName('playli')
-console.log(playli)
+
 
 for (i = 0; i < playli.length; i++){
-    playli.addEventListener('mouseover', ()=>{
-        myAudio.play()
+        playli.addEventListener(`"mouseover", ${playli[i]}, () =>{
+            myAudio.play()
+        
+        }`)}
+      
 
-    });
+
+
+
+// let arrayli = [
+//     {li: Biografias},
+//     {li: Ciência Política},
+//     {li: Científicos ou de não-ficçao},
+//     {li: Comunicação},
+//     {li: Direito},
+//     {li: História do Brasil},
+//     {li: Historia em quadrinho},
+//     {li: Literatura Estrangeira},
+//     {li: Infanto-Juvenis},
+//     {li: Medicina},
+//     {li: Mangá},
+//     {li: Psicologia},
+//     {li: Religião},
+// ]
+
+    
+    
     
    
-}
+    
+   
+
+
+
 
 
 
