@@ -18,14 +18,18 @@ function proximaImg(){
 
 let myAudio = document.querySelector('audio')
 let playli = document.getElementsByClassName('playli')
+console.log(myAudio,  playli)
+
+for (i = 0; i <playli.length; i++){
+    playli[i].addEventListener("mouseover", ()=>{
+        myAudio.play()
+    })}
+
+    
 
 
-for (i = 0; i < playli.length; i++){
-        playli.addEventListener(`"mouseover", ${playli[i]}, () =>{
-            myAudio.play()
-        
-        }`)}
-      
+
+
 
 
 
