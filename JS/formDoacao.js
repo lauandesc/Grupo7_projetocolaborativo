@@ -149,7 +149,7 @@ function isEmail(email) {
     email
   );
 }
-
+// Adicionado Modal Dialog
 const modal = document.querySelector("dialog");
 const buttonClose = document.querySelector("dialog button");
 
