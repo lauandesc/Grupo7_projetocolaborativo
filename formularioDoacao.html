@@ -90,102 +90,159 @@
       </div>
 
       <!-- Início do formulário -->
-      <form id="formAlinharCentro">
-        <fieldset class="grpnome">
-          <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-          <div class="campo">
-            <label for="nome"><strong>Nome do doador</strong></label>
-            <input type="text" name="nome" id="nome" required />
-          </div>
-        </fieldset>
+      <form class="form" id="form">
+        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+        <div class="form-control">
+          <label for="username"><strong>Nome do doador</strong></label>
+          <input type="text" id="username" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="email"><strong>E-mail</strong></label>
+          <input type="email" id="email" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
 
-        <fieldset class="grpTelQtde">
-          <!-- Campo do telefone com legenda "telefone" e css de classe "campo" -->
-          <div class="campo">
-            <label for="telefone"><strong>Telefone</strong></label>
-            <input type="text" name="telefone" id="telefone" required />
-          </div>
-          <!-- Campo de quantidade com legenda "quantidade" e css de classe "campo" -->
-          <div class="campo">
-            <label for="qtde"><strong>Quantidade</strong></label>
-            <input type="text" name="qtde" id="qtde" required />
-          </div>
-        </fieldset>
-        <!-- Campo de email com-->
-        <fieldset class="grpemail">
-          <div class="campo">
-            <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required />
-          </div>
-        </fieldset>
-        <!-- Campo radio com 2 opções de botões selecionáveis (radio button) e css de classe "campo" -->
-        <fieldset class="grptipo">
-          <div class="campo">
+        <div class="form-control">
+          <label for="telefone"><strong>Telefone</strong></label>
+          <input type="text" id="telefone" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="quantidade"><strong>Quantidade</strong></label>
+          <input type="number" id="quantidade" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-control-inline">
+          <div class="grptipoflex">
             <label><strong>Tipos:</strong></label>
-            <label>
-              <input
-                type="radio"
-                name="tipos"
-                id="livro"
-                value="tlivro"
-                checked
-              />Livros
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="tipos"
-                id="revista"
-                value="trevista"
-              />Revista
-            </label>
+            <span>Livros</span>
+            <input type="radio" name="tipos" id="livro" value="livro" />
+            <span>Revista</span>
+            <input type="radio" name="tipos" id="revista" value="revista" />
           </div>
-        </fieldset>
-        <!-- Campo de conservacao com 3 opções para escolha (select option) e css de classe "campo" -->
-        <fieldset class="grpconserv">
-          <div class="campo">
+
+          <div class="grpconservflex">
             <label for="conserv"><strong>Conservação</strong></label>
-            <select id="conserv" required>
-              <option selected disabled value="">Selecione</option>
-              <option>Novo</option>
-              <option>Usado</option>
-              <option>Seminovo</option>
+            <select id="conserv">
+              <option value="">Selecione</option>
+              <option value="opcao1">Novo</option>
+              <option value="opcao2">Usado</option>
+              <option value="opcao3">Seminovo</option>
             </select>
           </div>
-        </fieldset>
-        <fieldset class="grpAutEdiTitulo">
-          <!-- Campo do Titulo com legenda "titulo" e css de classe "campo" -->
-          <div class="campo">
-            <label for="ftitulo"><strong>Titulo</strong></label>
-            <input type="text" name="ftitulo" id="ftitulo" />
-          </div>
-          <!-- Campo do autor com legenda "autor" e css de classe "campo" -->
-          <div class="campo">
-            <label for="autor"><strong>Autor</strong></label>
-            <input type="text" name="autor" id="autor" />
-          </div>
-          <!-- Campo da editora com legenda "editora" e css de classe "campo" -->
-          <div class="campo">
-            <label for="editora"><strong>Editora</strong></label>
-            <input type="text" name="editora" id="editora" />
-          </div>
-        </fieldset>
-        <!-- Campo file para enviar arquivos e css de classe "campo" -->
-        <fieldset class="grpimgconserv">
-          <div class="campo">
-            <br />
-            <label for="estconservacao"
-              ><strong>Imagem do estado de conservação</strong></label
-            >
-            <input type="file" name="estconservacao" id="estconservacao" />
-          </div>
-        </fieldset>
-        <fieldset class="fbotao">
-          <!-- Botão para enviar o formulário -->
-          <button class="botao" type="submit" onsubmit="">Enviar</button>
-        </fieldset>
+        </div>
+
+        <div class="form-control">
+          <label for="ftitulo"><strong>Titulo</strong></label>
+          <input type="text" name="ftitulo" id="ftitulo" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="autor"><strong>Autor</strong></label>
+          <input type="text" name="autor" id="autor" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="editora"><strong>Editora</strong></label>
+          <input type="text" name="editora" id="editora" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="estconservacao"
+            ><strong>Imagem do estado de conservação</strong></label
+          >
+          <input type="file" name="estconservacao" id="estconservacao" />
+          <i class="img-success"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/success-icon.svg"
+              alt=""
+          /></i>
+          <i class="img-error"
+            ><img
+              src="./javascript-form-master/javascript-form-master/images/error-icon.svg"
+              alt=""
+          /></i>
+          <small>Error Message</small>
+        </div>
+        <button id="button" type="submit">ENVIAR</button>
       </form>
     </fieldset>
+    <dialog>
+      <p>Obrigado, em breve retornaremos o contato!!</p>
+      <button>Fechar</button>
+    </dialog>
     <div class="whatsapp">
       <a href="#"
         ><img
@@ -258,5 +315,6 @@
         Avenida São Paulo, 0000 São Paulo-SP, CEP: 00000-0000
       </address>
     </footer>
+    <script src="./JS/formDoacao.js"></script>
   </body>
 </html>
