@@ -1,3 +1,22 @@
+let arrayli = [
+    'Artes',
+    'Auto ajuda',
+    'Biografias',
+    'Política',
+    'Científicos ou de não-ficçao',
+    'Comunicação',
+    'Direito',
+    'História do Brasil',
+    'Historia em quadrinho',
+    'Literatura Estrangeira',
+    'Infanto-Juvenis',
+    'Medicina',
+    'Mangá',
+    'Psicologia',
+    'Religião',
+    ]
+
+// Função transição slide
 let radio = document.querySelector('.manual-btn')
 let cont = 1
 document.getElementById('radio1').checked = true
@@ -16,39 +35,33 @@ function proximaImg(){
 
 }
 
+    // Função adicionar li no DOM
+    for (i= 0; i < arrayli.length; i++){   
+        let elementoul = document.getElementById('playul')
+        let elementoli = document.createElement('li')
+        elementoli.classList.add('playli')
+        elementoli.innerHTML = `
+        <a href="#">${arrayli[i]}</a>
+        `
+        elementoul.appendChild(elementoli)
+     }
+
+// Função tocar audio sobre li
 let myAudio = document.querySelector('audio')
 let playli = document.getElementsByClassName('playli')
 console.log(myAudio,  playli)
 
 for (i = 0; i <playli.length; i++){
-    playli[i].addEventListener("mouseover", ()=>{
+    playli[i].addEventListener("click", ()=>{
         myAudio.play()
     })}
 
-    
 
 
+   
+   
+   
 
-
-
-
-
-
-// let arrayli = [
-//     {li: Biografias},
-//     {li: Ciência Política},
-//     {li: Científicos ou de não-ficçao},
-//     {li: Comunicação},
-//     {li: Direito},
-//     {li: História do Brasil},
-//     {li: Historia em quadrinho},
-//     {li: Literatura Estrangeira},
-//     {li: Infanto-Juvenis},
-//     {li: Medicina},
-//     {li: Mangá},
-//     {li: Psicologia},
-//     {li: Religião},
-// ]
 
     
     
