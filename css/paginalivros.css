@@ -70,11 +70,8 @@
     border: 5px solid #69b1e0;
     border-radius: 10px;
   }
-  
-  .filtrodepartamentos > ul,
-  .filtroeditora > ul,
-  .filtroautor > ul,
-  .filtroano > ul {
+
+  .tipofiltro > ul {
     overflow-y: scroll;
     height: 110px;
     margin-top: 5px;
@@ -84,26 +81,17 @@
   /* ============= barra de rolagem personalizada ============= */
   
   /* essa é a barra de rolagem */
-  .filtrodepartamentos > ul::-webkit-scrollbar,
-  .filtroeditora > ul::-webkit-scrollbar,
-  .filtroautor > ul::-webkit-scrollbar,
-  .filtroano > ul::-webkit-scrollbar {
+  .tipofiltro > ul::-webkit-scrollbar {
     width: 6px;
   }
   
   /* essa é a pista */
-  .filtrodepartamentos > ul::-webkit-scrollbar-track,
-  .filtroeditora > ul::-webkit-scrollbar-track,
-  .filtroautor > ul::-webkit-scrollbar-track,
-  .filtroano > ul::-webkit-scrollbar-track {
+  .tipofiltro > ul::-webkit-scrollbar-track {
     background-color: #f0efef;
   }
   
   /* essa é a barra */
-  .filtrodepartamentos > ul::-webkit-scrollbar-thumb,
-  .filtroeditora > ul::-webkit-scrollbar-thumb,
-  .filtroautor > ul::-webkit-scrollbar-thumb,
-  .filtroano > ul::-webkit-scrollbar-thumb {
+  .tipofiltro > ul::-webkit-scrollbar-thumb {
     background-color: #cbcbca;
     border-radius: 10px;
   }
@@ -112,12 +100,14 @@
   
   .filtros ul li {
     list-style: none;
+    margin-left: 15px;
   }
   
   .filtros ul li a {
     text-decoration: none;
     color: black;
     font-size: var(--tamanhofontefiltro);
+    margin-left: 5px;
   }
   
   .filtros ul li a:hover {
