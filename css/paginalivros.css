@@ -70,11 +70,16 @@
     border: 5px solid #69b1e0;
     border-radius: 10px;
   }
+<<<<<<< HEAD
   
   .filtrodepartamentos > ul,
   .filtroeditora > ul,
   .filtroautor > ul,
   .filtroano > ul {
+=======
+
+  .tipofiltro > ul {
+>>>>>>> dev
     overflow-y: scroll;
     height: 110px;
     margin-top: 5px;
@@ -84,26 +89,38 @@
   /* ============= barra de rolagem personalizada ============= */
   
   /* essa é a barra de rolagem */
+<<<<<<< HEAD
   .filtrodepartamentos > ul::-webkit-scrollbar,
   .filtroeditora > ul::-webkit-scrollbar,
   .filtroautor > ul::-webkit-scrollbar,
   .filtroano > ul::-webkit-scrollbar {
+=======
+  .tipofiltro > ul::-webkit-scrollbar {
+>>>>>>> dev
     width: 6px;
   }
   
   /* essa é a pista */
+<<<<<<< HEAD
   .filtrodepartamentos > ul::-webkit-scrollbar-track,
   .filtroeditora > ul::-webkit-scrollbar-track,
   .filtroautor > ul::-webkit-scrollbar-track,
   .filtroano > ul::-webkit-scrollbar-track {
+=======
+  .tipofiltro > ul::-webkit-scrollbar-track {
+>>>>>>> dev
     background-color: #f0efef;
   }
   
   /* essa é a barra */
+<<<<<<< HEAD
   .filtrodepartamentos > ul::-webkit-scrollbar-thumb,
   .filtroeditora > ul::-webkit-scrollbar-thumb,
   .filtroautor > ul::-webkit-scrollbar-thumb,
   .filtroano > ul::-webkit-scrollbar-thumb {
+=======
+  .tipofiltro > ul::-webkit-scrollbar-thumb {
+>>>>>>> dev
     background-color: #cbcbca;
     border-radius: 10px;
   }
@@ -112,12 +129,20 @@
   
   .filtros ul li {
     list-style: none;
+<<<<<<< HEAD
+=======
+    margin-left: 15px;
+>>>>>>> dev
   }
   
   .filtros ul li a {
     text-decoration: none;
     color: black;
     font-size: var(--tamanhofontefiltro);
+<<<<<<< HEAD
+=======
+    margin-left: 5px;
+>>>>>>> dev
   }
   
   .filtros ul li a:hover {

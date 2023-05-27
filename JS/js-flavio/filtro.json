@@ -1,0 +1,200 @@
+[
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Auto-Ajuda",
+        "idinput": "da01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Biografia",
+        "idinput": "db01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Contos",
+        "idinput": "dc01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Culinária",
+        "idinput": "dc02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Esportes",
+        "idinput": "de01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Mangás",
+        "idinput": "dm01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Religião",
+        "idinput": "dr01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Psicologia",
+        "idinput": "dp01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Planejamento",
+        "idinput": "dp02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Departamentos",
+        "filtro": "Ficção",
+        "idinput": "df01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Bertrand Brasil",
+        "idinput": "eb01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Compainha das Letras",
+        "idinput": "ec01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Grande Área",
+        "idinput": "eg01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Intrínseca",
+        "idinput": "ei01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Harper Collins",
+        "idinput": "eh01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Penguim",
+        "idinput": "ep01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Agatha Christie",
+        "idinput": "aa01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Charles Dickens",
+        "idinput": "ac01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "George R.R. Martin",
+        "idinput": "ag01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Jane Austen",
+        "idinput": "aj01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "J.K. Rowling",
+        "idinput": "aj02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Matt Haig",
+        "idinput": "am01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Martí Perarnau",
+        "idinput": "am02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Nassim Nicholas Taleb",
+        "idinput": "an01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2023",
+        "idinput": "2023-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2022",
+        "idinput": "2022-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2021",
+        "idinput": "2021-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2020",
+        "idinput": "2020-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2019",
+        "idinput": "2019-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2018",
+        "idinput": "2018-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2017",
+        "idinput": "2017-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2016",
+        "idinput": "2016-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Ano",
+        "filtro": "2015",
+        "idinput": "2015-input"
+    }
+]
