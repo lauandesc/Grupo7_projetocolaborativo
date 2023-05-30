@@ -25,7 +25,7 @@
 
 // ========================== FILTROS =========================== //
 
-function filtro() {
+function renderizacaoFiltro() {
   // Capturar a referência da section onde serão inseridas as listas
   const section = document.querySelector(".filtros");
 
@@ -34,13 +34,13 @@ function filtro() {
   window.addEventListener("load", function () {
     console.log("A página foi totalmente carregada.");
 
-    fetch("./JS/js-flavio/filtro.json")
+    fetch("./json/filtro.json")
       // .then((response) => response.json())
       .then(function (response) {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("A resposta da rede não foi OK.");
+        throw new Error("Falha na requisição de filtro.json.");
       })
       .then((json) => {
         //esse json pode se chamar dados, qualquer coisa.
@@ -69,7 +69,7 @@ function filtro() {
           // adicionado ao array correspondente ao valor de nometipofiltro.
 
           // console.log(listasPorTipo);
-          console.log(listasPorTipo[nometipofiltro]);
+          // console.log(listasPorTipo[nometipofiltro]);
         });
 
         // Object.keys(listasPorTipo).forEach((nometipofiltro)
@@ -108,31 +108,27 @@ function filtro() {
           const titulo = document.createElement("h3");
           titulo.textContent = nometipofiltro;
 
-          // Criar uma ul para armazenar os itens da lista
+          // Cria uma ul para armazenar os itens da lista
           const ul = document.createElement("ul");
 
-          // Iterar sobre os elementos da lista e criar os itens da ul
+          // Iterar sobre os elementos da lista e cria os itens da ul
           lista.forEach((elemento) => {
             const li = document.createElement("li");
 
-            // Criar o input
             const input = document.createElement("input");
             input.type = "checkbox";
             input.id = elemento.idinput;
             input.name = elemento.idinput;
             input.value = elemento.idinput;
 
-            // Criar o link (tag <a>)
             const link = document.createElement("a");
             link.href = "#";
             link.textContent = elemento.filtro;
             // link.innerText = elemento.filtro;
 
-            // Adicionar o input e o link ao item da lista
             li.appendChild(input);
             li.appendChild(link);
 
-            // Adicionar o item da lista à ul
             ul.appendChild(li);
           });
 
@@ -145,29 +141,29 @@ function filtro() {
         });
 
         //=============== EVENTO DE ESCUTA DO CHECKBOX =======================//
-        json.forEach((elemento) => {
-          // console.log(elemento.idinput);
+        // json.forEach((elemento) => {
+        // console.log(elemento.idinput);
 
-          // Seleciona o elemento checkbox pelo Id
-          let checkbox = document.getElementById(elemento.idinput);
-          // let checkboxes = document.querySelectorAll("input[type=checkbox]");
+        // Seleciona o elemento checkbox pelo Id
+        // let checkbox = document.getElementById(elemento.idinput);
+        // let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-          // console.log(checkboxes);
-          // Adiciona o eventListener para o evento 'change'
-          checkbox.addEventListener("change", function () {
-            // Código a ser executado quando o estado do checkbox mudar
-            let gridlivros = document.querySelector(".gridlivros");
-            if (checkbox.checked) {
-              console.log("O checkbox está marcado.");
-              // console.log(checkbox.checked);
-              gridlivros.style.display = "none";
-            } else {
-              console.log("O checkbox está desmarcado.");
-              // console.log(checkbox.value);
-              gridlivros.style.display = "grid";
-            }
-          });
-        });
+        // console.log(checkboxes);
+        // Adiciona o eventListener para o evento 'change'
+        // checkbox.addEventListener("change", function () {
+        // Código a ser executado quando o estado do checkbox mudar
+        //   let gridlivros = document.querySelector(".gridlivros");
+        //   if (checkbox.checked) {
+        //     console.log("O checkbox está marcado.");
+        // console.log(checkbox.checked);
+        //     gridlivros.style.display = "none";
+        //   } else {
+        //     console.log("O checkbox está desmarcado.");
+        // console.log(checkbox.value);
+        //     gridlivros.style.display = "grid";
+        //   }
+        // });
+        // });
       })
       .catch((error) => {
         // Lidar com erros de requisição
@@ -179,19 +175,19 @@ function filtro() {
 
 // ========================== LIVROS =========================== //
 
-function livros() {
+function renderizacaoLivros() {
   const divGrid = document.querySelector(".gridlivros");
   const livrosporpagina = 9;
 
   window.addEventListener("load", function () {
     console.log("A página foi totalmente carregada para esse aqui também.");
-    //   fetch("./JS/js-flavio/paginalivros.json")
-    fetch("./JS/js-flavio/paginalivros.json")
+    //   fetch("./json/paginalivros.json")
+    fetch("./json/paginalivros.json")
       .then(function (response) {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("A resposta da rede não foi OK.");
+        throw new Error("Falha na requisição de paginalivros.json.");
       })
       .then((json) => {
         //==== capturar a página atual =====//
@@ -280,5 +276,135 @@ function livros() {
   });
 }
 
-filtro();
-livros();
+// ========================== FILTRANDOLIVROS =========================== //
+
+function filtrandoLivros() {
+  window.addEventListener("load", function () {
+    console.log("A página carregou aqui também.");
+
+    //preciso capturar a paginacao aqui pois o filtro remove a paginação. Resolver isso num futuro não tão distante.
+    const paginacaocentralizado = document.querySelector(".paginacaocentralizado");
+
+    const filtro = "./json/filtro.json";
+    const livros = "./json/paginalivros.json";
+
+    Promise.all([fetch(filtro), fetch(livros)])
+      .then(function (responses) {
+        return Promise.all(
+          responses.map(function (response) {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error("Falha na requisição:", response.status);
+            }
+          })
+        );
+      })
+      .then(function (data) {
+        const filtro = data[0];
+        const livros = data[1];
+
+        const divGridPrincipal = document.querySelector(".gridlivros");
+        const section = document.querySelector(".livros");
+        const checkboxes = document.querySelectorAll(
+          ".tipofiltro input[type='checkbox']"
+        );
+
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            divGridPrincipal.style.display = "none";
+
+            // Limpar a seção antes de adicionar os livros filtrados
+            section.innerHTML = "";
+
+            const gridLivrosFiltrados = document.createElement("div");
+            gridLivrosFiltrados.classList.add("gridlivros");
+
+            checkboxes.forEach((checkbox) => {
+              if (checkbox.checked) {
+                const filtroSelecionado = filtro.find(
+                  (item) => item.idinput === checkbox.id
+                );
+                if (filtroSelecionado) {
+                  livros.forEach((livro) => {
+                    if (
+                      filtroSelecionado.filtro === livro.categoria ||
+                      filtroSelecionado.filtro === livro.editora ||
+                      filtroSelecionado.filtro === livro.autor ||
+                      filtroSelecionado.filtro === livro.ano
+                    ) {
+                      const livroDiv = document.createElement("div");
+                      livroDiv.classList.add("livro");
+
+                      livroDiv.innerHTML = `
+                        <div class="imagemlivroflex">
+                          <img src="${livro.img}" alt="${livro.alt}">
+                        </div>
+                        <div class="titulolivroflex">
+                          <h4>${livro.titulo}</h4>
+                        </div>
+                        <div class="precoflex">
+                          <p class="precoanterior">${livro.precoanterior}</p>
+                          <p class="precoatual">${livro.precoatual}</p>
+                          <p class="precoparcelado">${livro.precoparcelado}</p>
+                        </div>
+                        <div>
+                          <button class="custom-button">
+                            <i class="material-icons-outlined">shopping_cart</i>
+                            Adicionar
+                          </button>
+                        </div>
+                      `;
+
+                      gridLivrosFiltrados.appendChild(livroDiv);
+                    }
+                  });
+                }
+              } else {
+                // Verificar se todos os checkboxes estão desmarcados
+                const chBoxes = document.querySelectorAll(
+                  ".tipofiltro input[type='checkbox']"
+                );
+                let allUnchecked = true;
+                chBoxes.forEach((checkbox) => {
+                  if (checkbox.checked) {
+                    allUnchecked = false;
+                    return;
+                  }
+                });
+
+                console.log(allUnchecked);
+                if (allUnchecked) {
+
+                  // location.reload();
+
+                  // paginacaocentralizado.style.display = "block";
+                  console.log(paginacaocentralizado)
+
+                  gridLivrosFiltrados.remove();
+
+                  divGridPrincipal.style.display = "grid";
+                  // section.insertBefore(divGridPrincipal, section.firstChild);
+
+                  section.appendChild(divGridPrincipal);
+                  section.appendChild(paginacaocentralizado);
+                }
+              }
+            });
+
+            section.appendChild(gridLivrosFiltrados);
+
+            // esse console mostra todas as capturas feitas de checkbox
+            // console.log(gridLivrosFiltrados);
+          });
+        });
+      })
+      .catch(function (error) {
+        console.error("Erro:", error);
+      });
+  });
+}
+
+renderizacaoFiltro();
+renderizacaoLivros();
+filtrandoLivros();

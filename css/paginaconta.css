@@ -48,7 +48,7 @@ body div.linhaverticalnomeio {
 }
 
 body section {
-  padding: 30px 40px;
+  padding: 30px 45px;
   /* background-color: aliceblue; */
   width: 540px;
   border-radius: 10px;
@@ -61,10 +61,89 @@ fieldset {
   border: none;
 }
 
-fieldset .labels {
+.criarconta .labels {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+.acessarconta .labels {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#labelnomecompleto {
+  position: relative;
+}
+
+#labelemailcadastro {
+  position: relative;
+}
+
+#labelsenhacadastro {
+  position: relative;
+}
+
+/* ============ INíCIO VALIDAÇÃO DOS CAMPOS COM JAVASCRIPT ============== */
+
+.validador-popup::after {
+  content: "*Campo Obrigatório";
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color: #db5a42;
+  font-size: 0.8rem;
+  display: block;
+}
+
+#validador-username {
+  position: relative;
+}
+
+#validador-email {
+  position: relative;
+}
+
+#username-negativo {
+  position: absolute;
+  top: 7px;
+  right: -20px;
+}
+
+#email-negativo {
+  position: absolute;
+  top: 7px;
+  right: -20px;
+}
+
+#username-positivo {
+  position: absolute;
+  top: 7px;
+  right: -35px;
+}
+
+#email-positivo {
+  position: absolute;
+  top: 7px;
+  right: -35px;
+}
+
+#validador-senha {
+  position: relative;
+}
+
+#senha-positivo {
+  position: absolute;
+  top: 7px;
+  right: -35px;
+}
+
+#senha-negativo {
+  position: absolute;
+  top: 7px;
+  right: -20px;
+}
+
+/* ============ FIM VALIDAÇÃO DOS CAMPOS COM JAVASCRIPT ============== */
 
 fieldset small {
     margin-top: 5px;
@@ -92,6 +171,7 @@ fieldset input[type="text"], input[type="email"], input[type="password"] {
     padding: 5px;
     border-radius: 10px;
     border: 2px solid black;
+    width: 100%;
 }
 
 fieldset .tratamentovisibilidade {
@@ -168,6 +248,61 @@ fieldset input[type="checkbox"]:checked {
 }
 
 /* checkbox totalmente reestilizado fim */
+
+/* ============ INÍCIO FORÇA DA SENHA ============== */
+
+.caixacinza {
+  height: 50px;
+  width: 100%;
+  background-color: #E6E6E6;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.caixacinza p {
+  display: block;
+  font-size: 0.8rem;
+}
+
+#forcasenha {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 5px;
+  color: red;
+}
+
+.forcasenhaflex {
+  display: flex;
+  /* align-items: center; */
+  margin: 10px 0 0 0;
+  gap: 5px;
+}
+
+.fraco {
+  display: block;
+  height: 6px;
+  width: 20%;
+  border: 1px solid red;
+  background-color: red;
+}
+
+.medio {
+  display: block;
+  height: 8px;
+  width: 30%;
+  border: 1px solid #FAC70F;
+  background-color: #FAC70F;
+}
+
+.forte {
+  display: block;
+  height: 10px;
+  width: 48%;
+  border: 1px solid green;
+  background-color: green;
+}
+
+/* ============ FIM FORÇA DA SENHA ============== */
 
 /* 
   responsividade
