@@ -8,43 +8,103 @@ const editora = document.getElementById("editora");
 const estconservacao = document.getElementById("estconservacao");
 const email = document.getElementById("email");
 const button = document.querySelector("button");
+const dialog = document.getElementsByTagName("dialog");
+const botaodialog = document.getElementById("botao-dialog");
+const fundotransparente = document.getElementById("fundotransparente");
+
+// ============ Array que vai coletar todas as validações dos 10 campos ========== //
+let arrayValidador = [];
+let arrayFalsos = [];
 
 function validarSelect() {
-  var select = document.getElementById("conserv");
-  var opcaoSelecionada = select.options[select.selectedIndex].value;
+  let caixaconservacao = document.querySelector(".caixa-conservacao");
+  let conservacaoimgsuccess = document.querySelector(
+    ".conservacao-img-success"
+  );
+  let conservacaoimgerror = document.querySelector(".conservacao-img-error");
+  let conservacaomsgerror = document.querySelector(".conservacao-msg-error");
 
-  if (opcaoSelecionada === "") {
-    alert("Selecione o estado de conservação!");
-    return false;
+  let select = document.getElementById("conserv");
+
+  if (select.value == "") {
+    // arrayFalsos.push("[arrayFalos] Select: Vazio");
+    arrayFalsos.push("[Select: Vazio]");
+    caixaconservacao.style.border = "3px solid #db5a5a";
+    conservacaoimgerror.style.display = "block";
+    conservacaomsgerror.style.display = "block";
+    conservacaomsgerror.style.color = "#db5a5a";
+    conservacaomsgerror.innerText = "Selecione uma opção";
+    conservacaoimgsuccess.style.display = "none";
+    // console.log(arrayFalsos); // =======================>>>>>>>>>>>> console - arrayFalsos
+  } else if (select.value == "opcao1") {
+    arrayValidador.push("[Select: Novo]");
+    caixaconservacao.style.border = "3px solid #4eca64";
+    conservacaoimgsuccess.style.display = "block";
+    conservacaoimgerror.style.display = "none";
+    conservacaomsgerror.style.display = "none";
+    // console.log(arrayValidador); // =======================>>>>>>>>>>>> console - arrayValidador
+  } else if (select.value == "opcao2") {
+    arrayValidador.push("[Select: Usado]");
+    caixaconservacao.style.border = "3px solid #4eca64";
+    conservacaoimgsuccess.style.display = "block";
+    conservacaoimgerror.style.display = "none";
+    conservacaomsgerror.style.display = "none";
+    // console.log(arrayValidador); // =======================>>>>>>>>>>>> console - arrayValidador
+  } else {
+    arrayValidador.push("[Select: Seminovo]");
+    caixaconservacao.style.border = "3px solid #4eca64";
+    conservacaoimgsuccess.style.display = "block";
+    conservacaoimgerror.style.display = "none";
+    conservacaomsgerror.style.display = "none";
+    // console.log(arrayValidador); // =======================>>>>>>>>>>>> console - arrayValidador
   }
 }
 
-function validarCampo() {
-  var opcoes = document.getElementsByName("tipos");
-  var selecionado = false;
+function validarTipos() {
+  let caixatipos = document.querySelector(".caixa-tipos");
+  let tiposimgsuccess = document.querySelector(".tipos-img-success");
+  let tiposimgerror = document.querySelector(".tipos-img-error");
+  let tiposmsgerror = document.querySelector(".tipos-msg-error");
 
-  for (var i = 0; i < opcoes.length; i++) {
-    if (opcoes[i].checked) {
-      selecionado = true;
+  let tipos = document.getElementsByName("tipos");
+  flag = false;
+  let variavelTemporária = "";
+
+  for (var i = 0; i < tipos.length; i++) {
+    if (tipos[i].checked) {
+      flag = true;
+      variavelTemporária = tipos[i].value;
       break;
     }
   }
 
-  if (selecionado) {
-    /*alert("Campo de seleção de rádio está marcado!");*/
+  if (flag) {
+    if (variavelTemporária == "livro") {
+      arrayValidador.push("[Tipo: Livro]");
+      caixatipos.style.border = "3px solid #4eca64";
+      tiposimgsuccess.style.display = "block";
+      tiposimgerror.style.display = "none";
+      tiposmsgerror.style.display = "none";
+      // console.log(arrayValidador); // =======================>>>>>>>>>>>> console - arrayValidador
+    } else {
+      arrayValidador.push("[Tipo: Revista]");
+      caixatipos.style.border = "3px solid #4eca64";
+      tiposimgsuccess.style.display = "block";
+      tiposimgerror.style.display = "none";
+      tiposmsgerror.style.display = "none";
+      // console.log(arrayValidador); // =======================>>>>>>>>>>>> console - arrayValidador
+    }
   } else {
-    alert("Campo tipos não está selecionado!");
+    // arrayFalsos.push("[arrayFalos] Tipo: Vazio");
+    arrayFalsos.push("[Tipo: Vazio]");
+    caixatipos.style.border = "3px solid #db5a5a";
+    tiposimgerror.style.display = "block";
+    tiposmsgerror.style.display = "block";
+    tiposmsgerror.innerText = "Selecione uma opção";
+    tiposmsgerror.style.color = "#db5a5a";
+    // console.log(arrayFalsos); // =======================>>>>>>>>>>>> console - arrayFalsos
   }
 }
-
-button.addEventListener("click", validarCampo);
-button.addEventListener("click", validarSelect);
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  checkInputs();
-});
 
 function checkInputs() {
   const usernameValue = username.value.trim();
@@ -60,72 +120,88 @@ function checkInputs() {
     // mostrar erro
     // add classe
     setErrorFor(username, "Preencha esse campo");
+    arrayFalsos.push("[Username: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(username);
+    arrayValidador.push("[Username: Preenhcido]");
   }
   if (emailValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(email, "Preencha esse campo");
+    arrayFalsos.push("[Email: Vazio]");
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Email inválido");
+    arrayFalsos.push("[Email: Inválido]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(email);
+    arrayValidador.push("[Email: Preenhcido]");
   }
   if (telefoneValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(telefone, "Preencha esse campo");
+    arrayFalsos.push("[Telefone: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(telefone);
+    arrayValidador.push("[Telefone: Preenhcido]");
   }
 
   if (quantidadeValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(quantidade, "Preencha esse campo");
+    arrayFalsos.push("[Quantidade: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(quantidade);
+    arrayValidador.push("[Quantidade: Preenhcida]");
   }
 
   if (tituloValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(titulo, "Preencha esse campo");
+    arrayFalsos.push("[Título: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(titulo);
+    arrayValidador.push("[Título: Preenhcido]");
   }
 
   if (autorValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(autor, "Preencha esse campo");
+    arrayFalsos.push("[Autor: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(autor);
+    arrayValidador.push("[Autor: Preenhcido]");
   }
 
   if (editoraValue === "") {
     // mostrar erro
     // add classe
     setErrorFor(editora, "Preencha esse campo");
+    arrayFalsos.push("[Editora: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(editora);
+    arrayValidador.push("[Editora: Preenhcido]");
   }
 
-  if (estconservacaoValue === "") {
+  if (estconservacaoValue == "") {
     // mostrar erro
-    // add classe
-    setErrorFor(estconservacao, "Preencha esse campo");
+    setErrorFor(estconservacao, "Adicione a foto");
+    arrayFalsos.push("[Conservação: Vazio]");
   } else {
     // adicionar a classe de sucesso
     setSuccessFor(estconservacao);
+    arrayValidador.push("[Conservação: Preenhcido]");
   }
 }
 
@@ -145,41 +221,94 @@ function setSuccessFor(input) {
 }
 
 function isEmail(email) {
-  return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(
+  return /^[A-Za-z0-9._%+-]{3,}@[a-z0-9-]{2,}\.[a-z]{2,}(?:\.[A-Za-z]{2})?$/.test(
     email
   );
 }
-// Adicionado Modal Dialog
-const modal = document.querySelector("dialog");
-const buttonClose = document.querySelector("dialog button");
 
-button.onclick = function () {
-  modal.showModal();
-};
+// ======================================== MANIPULANDO APENAS O SUBMIT ======================= //
+function botaoEnviar() {
+  button.addEventListener("click", function (e) {
+    // e.preventDefault();
 
-buttonClose.onclick = function () {
-  modal.close();
-};
+    validarTipos();
+    validarSelect();
+    checkInputs();
 
-// Selecione o formulário pelo ID
-var formulario = document.getElementById("form");
+    console.log("Falsos: " + arrayFalsos);
+    console.log("Válidos: " + arrayValidador);
 
-// Adicione um ouvinte de evento para o envio do formulário
-form.addEventListener("submit", function (event) {
-  // Verifique todos os campos do formulário
-  var campos = form.querySelectorAll("input");
-
-  for (var i = 0; i < campos.length; i++) {
-    if (!campos[i].value) {
-      // Se algum campo estiver vazio, exiba uma mensagem de erro e impeça o envio do formulário
-      event.preventDefault();
-      alert(
-        "Por favor, preencha todos os campos antes de enviar o formulário."
-      );
-      return;
+    if (arrayFalsos.length > 0) {
+      e.preventDefault();
+      alert("Revise as informações.");
+      console.log("Revise as informações.");
+    } else {
+      console.log("Obrigado pela doação!");
+      alert("Obrigado pela doação!");
     }
-  }
 
-  // Todos os campos estão preenchidos, o formulário pode ser enviado
-  alert("Formulário enviado com sucesso!");
-});
+    arrayFalsos = [];
+    arrayValidador = [];
+  });
+}
+
+// ======================================== MANIPULANDO O FORMULÁRIO ======================= //
+
+function envioFormulário() {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    validarTipos();
+    validarSelect();
+    checkInputs();
+
+    console.log("Falsos: " + arrayFalsos);
+    console.log("Válidos: " + arrayValidador);
+
+    if (arrayFalsos.length > 0) {
+
+      //esse botão de fechar mensagem já está com display none,
+      //mas adicionei aqui, você pode usá-lo pra aparecer trocando para "block"
+      botaoay = "nodialog.style.displne";
+      fundotransparente.style.display = "block";
+      dialog[0].innerText = "Revise as informações.";
+      dialog[0].classList.add("dialog"); //adiciona a classe css ao alerta, a classe já está com display:block
+
+      //temporizador de 4 segundos pra remover a janela transparente
+      setTimeout(function () {
+        dialog[0].classList.remove("dialog"); //remove a classe css ao alerta, a classe vai receber display:none
+        fundotransparente.style.display = "none";
+      }, 4000); //4 segundos
+
+      // alert("Revise as informações.");
+      console.log("Revise as informações.");
+    } else {
+      //esse botão de fechar mensagem já está com display none,
+      //mas adicionei aqui, você pode usá-lo pra aparecer trocando para "block"
+      botaodialog.style.display = "none";
+      fundotransparente.style.display = "block";
+      //importante colocar a mensagem aqui, pois quando há uma tentativa, o
+      //segundo envio mostraria a mensagem: "Revise as informações."
+      dialog[0].innerText = "Obrigado, em breve retornaremos o contato!!";
+
+      dialog[0].classList.add("dialog"); //adiciona a classe css ao alerta, a classe já está com display:block
+
+      console.log("Obrigado pela doação!");
+      // alert("Obrigado pela doação!");
+
+      //temporizador de 4 segundos pra remover a janela transparente
+      setTimeout(function () {
+        dialog[0].classList.remove("dialog"); //remove a classe css ao alerta, a classe vai receber display:none
+        fundotransparente.style.display = "none";
+        form.submit(); // ===========================>>>>>>>>>>>>>>>>>>> envio do formulário!
+      }, 4000); //4 segundos
+      
+      // form.reset(); // =====================>>>>>> caso queira resetar o formulário (completo ou não) após clicar no botão enviar
+    }
+
+    arrayFalsos = []; //resetando o array
+    arrayValidador = []; //resetando o array
+  });
+}
+
+envioFormulário();

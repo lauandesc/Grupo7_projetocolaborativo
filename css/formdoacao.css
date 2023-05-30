@@ -33,7 +33,6 @@
 /* Elementos de tag <fieldset> <form> do formulario*/
 fieldset.global form {
   display: block;
-  margin-left: 3%;
 }
 
 /* Elementos de tag <fieldset> global do formulario*/
@@ -58,15 +57,17 @@ fieldset.global {
 .whatsapp img {
   width: 40px;
 }
+
 .whatsapp img:hover {
   width: 45px;
 }
 
 .form {
-  padding: 0 40px;
+  padding: 0 60px;
 }
+
 .form-control {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   position: relative;
 }
 
@@ -90,27 +91,113 @@ fieldset.global {
   height: 40px;
 }
 
+/* ==================== INÍCIO estilização e javascript do RADIO e do SELECT ======================= */
+
 .form-control-inline {
-  width: 100%;
   display: flex;
-  height: 40px;
-}
-
-.grptipoflex span {
-  margin-left: 10px;
-}
-
-.grptipoflex label {
-  padding: 3px;
+  justify-content: flex-start;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
 }
 
 .grptipoflex {
-  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 245px;
+  height: 23px;
+  border-radius: 3px;
+  gap: 10px;
+  padding: 10px 0 0 0;
+}
+
+.grptipoflex input {
+  margin-right: 3px;
+  vertical-align: middle;
 }
 
 .grpconservflex {
-  margin: 0 25%;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 140px;
+  height: 50px;
 }
+
+/* estilização do select */
+#conserv {
+  height: 20px;
+  width: 100px;
+}
+
+.caixa-conservacao {
+  display: block;
+  position: relative;
+  /* border: 3px solid #4eca64; */
+  /* border: 3px solid #db5a5a; */
+  width: 150px;
+  height: 55px;
+  margin-left: 180px;
+  border-radius: 5px;
+}
+
+.conservacao-img-success {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+.conservacao-img-error {
+  display: none;
+  position: absolute;
+  right: 11px;
+  top: 14px;
+}
+
+.conservacao-msg-error {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  left: -3px;
+  bottom: -19px;
+}
+
+.caixa-tipos {
+  display: block;
+  position: relative;
+  width: 245px;
+  height: 40px;
+  /* border: 3px solid #4eca64; */
+  /* border: 3px solid #db5a5a; */
+  border-radius: 5px;
+}
+
+.tipos-img-success {
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+.tipos-img-error {
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: 11px;
+}
+
+.tipos-msg-error {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  left: -3px;
+  bottom: -19px;
+}
+
+/* ==================== FIM estilização do RADIO e do SELECT ======================= */
 
 .form-control.success input {
   border: 3px solid #4eca64;
@@ -142,7 +229,7 @@ fieldset.global {
 .form-control small {
   visibility: hidden;
   position: absolute;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 14px;
 }
 .form button {
@@ -165,17 +252,36 @@ fieldset.global {
   transition: 0.3s;
 }
 
-dialog {
-  background-color: #fff;
-  border: none;
-  padding: 20px;
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 50%;
-  left: 42%;
+#fundotransparente {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+  z-index: 9999; /* Z-index alto sobrepõe os outros elementos */
+  display: none;
 }
 
-dialog button {
+/* pra mostrar o botão, caso queira estilizar, basta retirar o . ".dialog" */
+.dialog {
+  display: block;
+  z-index: 10000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#botao-dialog {
+  display: none;
   background-color: #69b1e1;
   color: #fff;
   transition: 0.3s;

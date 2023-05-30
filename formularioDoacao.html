@@ -139,22 +139,48 @@
         </div>
 
         <div class="form-control-inline">
-          <div class="grptipoflex">
-            <label><strong>Tipos:</strong></label>
-            <span>Livros</span>
-            <input type="radio" name="tipos" id="livro" value="livro" />
-            <span>Revista</span>
-            <input type="radio" name="tipos" id="revista" value="revista" />
+          <div class="caixa-tipos">
+            <div class="grptipoflex">
+              <p>
+                <strong>Tipos:</strong>
+              </p>
+              <label for="livro">
+                <input type="radio" name="tipos" id="livro" value="livro" />Livros
+              </label>
+              <label for="revista">
+                <input
+                  type="radio"
+                  name="tipos"
+                  id="revista"
+                  value="revista"
+                />Revista
+              </label>
+            </div>
+            <i class="tipos-img-success"
+              ><img src="./img_livraria/form/success-icon.svg" alt=""
+            /></i>
+            <i class="tipos-img-error"
+              ><img src="./img_livraria/form/error-icon.svg" alt=""
+            /></i>
+            <small class="tipos-msg-error">Error Message</small>
           </div>
-
-          <div class="grpconservflex">
-            <label for="conserv"><strong>Conservação</strong></label>
-            <select id="conserv">
-              <option value="">Selecione</option>
-              <option value="opcao1">Novo</option>
-              <option value="opcao2">Usado</option>
-              <option value="opcao3">Seminovo</option>
-            </select>
+          <div class="caixa-conservacao">
+            <div class="grpconservflex">
+              <label for="conserv"><strong>Conservação</strong></label>
+              <select id="conserv">
+                <option value="">Selecione</option>
+                <option value="opcao1">Novo</option>
+                <option value="opcao2">Usado</option>
+                <option value="opcao3">Seminovo</option>
+              </select>
+            </div>
+            <i class="conservacao-img-success"
+              ><img src="./img_livraria/form/success-icon.svg" alt=""
+            /></i>
+            <i class="conservacao-img-error"
+              ><img src="./img_livraria/form/error-icon.svg" alt=""
+            /></i>
+            <small class="conservacao-msg-error">Error Message</small>
           </div>
         </div>
 
@@ -207,9 +233,10 @@
         <button id="button" type="submit">ENVIAR</button>
       </form>
     </fieldset>
+    <div id="fundotransparente"></div>
     <dialog>
-      <p>Obrigado, em breve retornaremos o contato!!</p>
-      <button>Fechar</button>
+      <p id="mensagem-dialog">Obrigado, em breve retornaremos o contato!!</p>
+      <button id="botao-dialog">Fechar</button>
     </dialog>
     <div class="whatsapp">
       <a href="#"
