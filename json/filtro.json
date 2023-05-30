@@ -74,8 +74,20 @@
     {
         "tipofiltro": "tipofiltro",
         "nometipofiltro": "Editora",
-        "filtro": "Grande Área",
+        "filtro": "Faro Editorial",
+        "idinput": "ef01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Galera",
         "idinput": "eg01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Grande Área",
+        "idinput": "eg02-input"
     },
     {
         "tipofiltro": "tipofiltro",
@@ -97,6 +109,24 @@
     },
     {
         "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Record",
+        "idinput": "er01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Senac",
+        "idinput": "es01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Editora",
+        "filtro": "Vida",
+        "idinput": "ev01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
         "nometipofiltro": "Autor",
         "filtro": "Agatha Christie",
         "idinput": "aa01-input"
@@ -104,14 +134,38 @@
     {
         "tipofiltro": "tipofiltro",
         "nometipofiltro": "Autor",
-        "filtro": "Charles Dickens",
+        "filtro": "Carla Madeira",
         "idinput": "ac01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Charlie Donlea",
+        "idinput": "ac02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Charles Dickens",
+        "idinput": "ac03-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Colleen Hoover",
+        "idinput": "ac04-input"
     },
     {
         "tipofiltro": "tipofiltro",
         "nometipofiltro": "Autor",
         "filtro": "George R.R. Martin",
         "idinput": "ag01-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "George S Clason",
+        "idinput": "ag02-input"
     },
     {
         "tipofiltro": "tipofiltro",
@@ -124,6 +178,12 @@
         "nometipofiltro": "Autor",
         "filtro": "J.K. Rowling",
         "idinput": "aj02-input"
+    },
+    {
+        "tipofiltro": "tipofiltro",
+        "nometipofiltro": "Autor",
+        "filtro": "Júnior Rostirola",
+        "idinput": "aj03-input"
     },
     {
         "tipofiltro": "tipofiltro",

@@ -23,9 +23,9 @@
         "precoparcelado":"à vista",
         "tagpromocao":"true",
         "categoria": "Contos",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
-        "ano":"2023"
+        "editora":"Bertrand Brasil",
+        "autor":"Matt Haig",
+        "ano":"2021"
     },
     {
         "codigolivro": "789",
@@ -37,8 +37,8 @@
         "precoparcelado":"2x de R$29,96",
         "tagpromocao":"true",
         "categoria": "Religião",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
+        "editora":"Editora Vida",
+        "autor":"Júnior Rostirola",
         "ano":"2023"
     },
     {
@@ -51,9 +51,9 @@
         "precoparcelado":"à vista",
         "tagpromocao":"true",
         "categoria": "Contos",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
-        "ano":"2023"
+        "editora":"Galera",
+        "autor":"Colleen Hoover",
+        "ano":"2022"
     },
     {
         "codigolivro": "131415",
@@ -64,10 +64,10 @@
         "precoatual": "R$24,19",
         "precoparcelado":"à vista",
         "tagpromocao":"false",
-        "categoria": "Biografia",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
-        "ano":"2023"
+        "categoria": "Planejamento",
+        "editora":"Harper Collins",
+        "autor":"George S Clason",
+        "ano":"2017"
     },
     {
         "codigolivro": "161718",
@@ -78,9 +78,9 @@
         "precoatual": "R$190,00",
         "precoparcelado":"3x de R$63,33",
         "tagpromocao":"false",
-        "categoria": "Biografia",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
+        "categoria": "Culinária",
+        "editora":"Senac",
+        "autor":"Rita Lobo",
         "ano":"2023"
     },
     {
@@ -92,7 +92,7 @@
         "precoatual": "R$25,90",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Auto-Ajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -106,7 +106,7 @@
         "precoatual": "R$41,02",
         "precoparcelado":"à vista",
         "tagpromocao":"false",
-        "categoria": "Biografia",
+        "categoria": "Auto-Ajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -120,10 +120,10 @@
         "precoatual": "R$41,90",
         "precoparcelado":"à vista",
         "tagpromocao":"false",
-        "categoria": "Biografia",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
-        "ano":"2023"
+        "categoria": "Conto",
+        "editora":"Record",
+        "autor":"Carla Madeira",
+        "ano":"2021"
     },
     {
         "codigolivro": "282930",
@@ -134,7 +134,7 @@
         "precoatual": "R$44,90",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Auto-Ajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -148,7 +148,7 @@
         "precoatual": "R$1,00",
         "precoparcelado":"10x de R$0,10",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Esportes",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -162,7 +162,7 @@
         "precoatual": "R$60,90",
         "precoparcelado":"2x de R$25,50",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Auto-Ajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -176,7 +176,7 @@
         "precoatual": "R$39,90",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Psicologia",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -190,7 +190,7 @@
         "precoatual": "R$11,70",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Biografia",
+        "categoria": "Ficção",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -218,7 +218,7 @@
         "precoatual": "R$37,40",
         "precoparcelado":"à vista",
         "tagpromocao":"false",
-        "categoria": "Biografia",
+        "categoria": "Ficção",
         "editora":"Globolivros",
         "autor":"Rita Lee",
         "ano":"2023"
@@ -232,10 +232,10 @@
         "precoatual": "R$11,99",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Biografia",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
-        "ano":"2023"
+        "categoria": "Conto",
+        "editora":"Faro Editorial",
+        "autor":"Charlie Donlea",
+        "ano":"2017"
     },
     {
         "codigolivro": "495051",
@@ -246,9 +246,9 @@
         "precoatual": "R$51,92",
         "precoparcelado":"2x de R$32,45",
         "tagpromocao":"true",
-        "categoria": "Biografia",
-        "editora":"Globolivros",
-        "autor":"Rita Lee",
+        "categoria": "Mangás",
+        "editora":"MPEG",
+        "autor":"Makoto Raiku",
         "ano":"2023"
     }
 ]
