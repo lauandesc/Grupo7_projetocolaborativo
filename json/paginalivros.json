@@ -2,7 +2,7 @@
     {
         "codigolivro": "123",
         "titulo": "Rita Lee: Outra autobiografia",
-        "img": "./img_livraria/imagensdelivros/ritalee1.jpeg",
+        "img": "/img/imagensdelivros/ritalee1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$64,90",
@@ -16,7 +16,7 @@
     {
         "codigolivro": "456",
         "titulo": "A Biblioteca da Meia-Noite",
-        "img":"./img_livraria/imagensdelivros/A Biblioteca da Meia-Noite 1.jpeg",
+        "img":"/img/imagensdelivros/A Biblioteca da Meia-Noite 1.jpeg",
         "alt":"",
         "precoanterior": "R$54,90",
         "precoatual": "R$37,40",
@@ -30,7 +30,7 @@
     {
         "codigolivro": "789",
         "titulo": "Café com Deus Pai: Porções Diárias de Renovação",
-        "img":"./img_livraria/imagensdelivros/cafe com deus 1.jpeg",
+        "img":"/img/imagensdelivros/cafe com deus 1.jpeg",
         "alt":"",
         "precoanterior": "R$89,90",
         "precoatual": "R$59,93",
@@ -44,7 +44,7 @@
     {
         "codigolivro": "101112",
         "titulo": "É assim que começa (Vol. 2 É assim que acaba)",
-        "img":"./img_livraria/imagensdelivros/eassimquecomeca1.jpeg",
+        "img":"/img/imagensdelivros/eassimquecomeca1.jpeg",
         "alt":"",
         "precoanterior": "R$54,90",
         "precoatual": "R$38,40",
@@ -58,7 +58,7 @@
     {
         "codigolivro": "131415",
         "titulo": "O homem mais rico da Babilônia",
-        "img":"./img_livraria/imagensdelivros/babilonia1.jpeg",
+        "img":"/img/imagensdelivros/babilonia1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$24,19",
@@ -72,7 +72,7 @@
     {
         "codigolivro": "161718",
         "titulo": "Panelinha receitas que funcionam",
-        "img":"./img_livraria/imagensdelivros/panelinha1.jpeg",
+        "img":"/img/imagensdelivros/panelinha1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$190,00",
@@ -86,7 +86,7 @@
     {
         "codigolivro": "192021",
         "titulo": "Mais esperto que o Diabo: O mistério revelado da liberdade e do sucesso",
-        "img":"./img_livraria/imagensdelivros/espertoqueodiabo1.jpeg",
+        "img":"/img/imagensdelivros/espertoqueodiabo1.jpeg",
         "alt":"",
         "precoanterior": "R$49,90",
         "precoatual": "R$25,90",
@@ -100,7 +100,7 @@
     {
         "codigolivro": "222324",
         "titulo": "Como fazer amigos e influenciar pessoas",
-        "img":"./img_livraria/imagensdelivros/fazeramigos1.jpeg",
+        "img":"/img/imagensdelivros/fazeramigos1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$41,02",
@@ -114,7 +114,7 @@
     {
         "codigolivro": "252627",
         "titulo": "Tudo é rio",
-        "img":"./img_livraria/imagensdelivros/tudoerio1.jpeg",
+        "img":"/img/imagensdelivros/tudoerio1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$41,90",
@@ -128,7 +128,7 @@
     {
         "codigolivro": "282930",
         "titulo": "Pai Rico, Pai Pobre - Edição de 20 anos atualizada e ampliada: O que os ricos ensinam a seus filhos sobre dinheiro",
-        "img":"./img_livraria/imagensdelivros/pairico1.jpeg",
+        "img":"/img/imagensdelivros/pairico1.jpeg",
         "alt":"",
         "precoanterior": "R$87,90",
         "precoatual": "R$44,90",
@@ -142,7 +142,7 @@
     {
         "codigolivro": "313233",
         "titulo": "Pep Guardiola: A Evolução",
-        "img":"./img_livraria/imagensdelivros/guardiolaevolucao1.jpg",
+        "img":"/img/imagensdelivros/guardiolaevolucao1.jpg",
         "alt":"",
         "precoanterior": "R$74,90",
         "precoatual": "R$1,00",
@@ -156,7 +156,7 @@
     {
         "codigolivro": "343536",
         "titulo": "Hábitos atômicos: Um método fácil e comprovado de criar bons hábitos e se livrar dos maus.",
-        "img":"./img_livraria/imagensdelivros/habitos1.jpeg",
+        "img":"/img/imagensdelivros/habitos1.jpeg",
         "alt":"",
         "precoanterior": "R$51,00",
         "precoatual": "R$60,90",
@@ -170,7 +170,7 @@
     {
         "codigolivro": "373839",
         "titulo": "O livro que você gostaria que seus pais tivessem lido: (e seus filhos ficarão gratos por você ler)",
-        "img":"./img_livraria/imagensdelivros/paislido1.jpeg",
+        "img":"/img/imagensdelivros/paislido1.jpeg",
         "alt":"",
         "precoanterior": "R$54,90",
         "precoatual": "R$39,90",
@@ -184,7 +184,7 @@
     {
         "codigolivro": "404142",
         "titulo": "A revolução dos bichos: Um conto de fadas",
-        "img":"./img_livraria/imagensdelivros/bichos1.jpeg",
+        "img":"/img/imagensdelivros/bichos1.jpeg",
         "alt":"",
         "precoanterior": "R$19,90",
         "precoatual": "R$11,70",
@@ -198,7 +198,7 @@
     {
         "codigolivro": "404142",
         "titulo": "O que sobra",
-        "img":"./img_livraria/imagensdelivros/oquesobra1.jpeg",
+        "img":"/img/imagensdelivros/oquesobra1.jpeg",
         "alt":"",
         "precoanterior": "R$74,90",
         "precoatual": "R$49,90",
@@ -212,7 +212,7 @@
     {
         "codigolivro": "434445",
         "titulo": "A mandíbula de Caim (edição com páginas destacáveis)",
-        "img":"./img_livraria/imagensdelivros/caim1.jpeg",
+        "img":"/img/imagensdelivros/caim1.jpeg",
         "alt":"",
         "precoanterior": "",
         "precoatual": "R$37,40",
@@ -226,7 +226,7 @@
     {
         "codigolivro": "464748",
         "titulo": "A garota do lago",
-        "img":"./img_livraria/imagensdelivros/garotadolago1.jpeg",
+        "img":"/img/imagensdelivros/garotadolago1.jpeg",
         "alt":"",
         "precoanterior": "R$59,90",
         "precoatual": "R$11,99",
@@ -240,7 +240,7 @@
     {
         "codigolivro": "495051",
         "titulo": "Gash Bell!! - Volume 1",
-        "img":"./img_livraria/imagensdelivros/gash1.jpeg",
+        "img":"/img/imagensdelivros/gash1.jpeg",
         "alt":"",
         "precoanterior": "R$64,90",
         "precoatual": "R$51,92",

@@ -34,7 +34,7 @@ function renderizacaoFiltro() {
   window.addEventListener("load", function () {
     console.log("A página foi totalmente carregada.");
 
-    fetch("./json/filtro.json")
+    fetch("/json/filtro.json")
       // .then((response) => response.json())
       .then(function (response) {
         if (response.ok) {
@@ -182,7 +182,7 @@ function renderizacaoLivros() {
   window.addEventListener("load", function () {
     console.log("A página foi totalmente carregada para esse aqui também.");
     //   fetch("./json/paginalivros.json")
-    fetch("./json/paginalivros.json")
+    fetch("/json/paginalivros.json")
       .then(function (response) {
         if (response.ok) {
           return response.json();
@@ -254,7 +254,7 @@ function renderizacaoLivros() {
           const promocao = document.createElement("div");
           promocao.classList.add("tagpromocao");
           promocao.innerHTML = `
-          <img src="./img_livraria/imagensdelivros/promocao.png" alt="banner de promoção">
+          <img src="/img/imagensdelivros/promocao.png" alt="banner de promoção">
         `;
 
           if (json[i].tagpromocao == "true") {
@@ -285,8 +285,8 @@ function filtrandoLivros() {
     //preciso capturar a paginacao aqui pois o filtro remove a paginação. Resolver isso num futuro não tão distante.
     const paginacaocentralizado = document.querySelector(".paginacaocentralizado");
 
-    const filtro = "./json/filtro.json";
-    const livros = "./json/paginalivros.json";
+    const filtro = "/json/filtro.json";
+    const livros = "/json/paginalivros.json";
 
     Promise.all([fetch(filtro), fetch(livros)])
       .then(function (responses) {
