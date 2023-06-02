@@ -66,14 +66,14 @@ header .primeiraheader {
   align-items: center;
   gap: 50px;
   padding: 20px;
-  height: 110px;
+  height: 80px;
   background-color: var(--corprimeiraheader);
   vertical-align: middle;
 }
 
 /* classe da imagem */
 header .primeiraheader .imagembanner {
-  width: 250px;
+  width: 220px;
   vertical-align: middle; 
   /* 
     propriedade importante quando a imagem está dentro de uma tag <a> 
@@ -131,13 +131,13 @@ header .primeiraheader .usuarioflex {
   justify-content: center;
   align-items: center;
   background-color: var(--cormenuusuario);
-  width: 70px;
-  height: 65px;
+  width: 60px;
+  height: 55px;
   border-radius: 50%;
 }
 
 header .primeiraheader .usuarioflex img {
-  width: 30px;
+  width: 27px;
   vertical-align: middle;
 }
 
