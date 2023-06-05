@@ -4,7 +4,7 @@
 //
 //
 
-// ========== nome completo ============ //
+// ========== CRIE SUA CONTA ============ //
 
 const labelnomecompleto = document.getElementById("labelnomecompleto");
 const inputnomecompleto = document.getElementById("nomecompleto");
@@ -53,10 +53,11 @@ inputnomecompleto.addEventListener("input", () => {
   }
   function validarNome() {
     let validardigito = false;
+    
     const regex = /^[a-zA-ZÀ-ÿ]+$/; //expressão regular
 
     for (const nome of partesNome) {
-      if (nome.length < 2 || !regex.test(nome)) {
+      if (nome.length < 1 || !regex.test(nome)) {
         validardigito = true;
         break;
       }
@@ -256,5 +257,35 @@ visibilidade.addEventListener("click", function () {
   } else {
     inputsenhacadastro.type = "password";
     visibilidade.innerText = "visibility_off";
+  }
+});
+
+// ========== ACESSE SUA CONTA ============ //
+
+//email========
+const labelemailacesseconta = document.getElementById("labelemailacesseconta");
+const email = document.getElementById("email");
+
+email.addEventListener("input", (evento) => {
+  let valor = evento.target.value;
+  console.log(valor);
+  if(/^[A-Za-z0-9._%+-]{3,}@[a-z0-9-]{2,}\.[a-z]{2,}(?:\.[A-Za-z]{2})?$/.test(
+    valor
+  )) {
+    console.log("passou");
+  }
+});
+
+//senha=========
+const senha = document.getElementById("senha");
+const visibilidadeAcesseConta = document.getElementById("visibilidade-acesseconta");
+
+visibilidadeAcesseConta.addEventListener("click", function () {
+  if (senha.type === "password") {
+    senha.type = "text";
+    visibilidadeAcesseConta.innerText = "visibility";
+  } else {
+    senha.type = "password";
+    visibilidadeAcesseConta.innerText = "visibility_off";
   }
 });

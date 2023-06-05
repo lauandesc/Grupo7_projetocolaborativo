@@ -254,6 +254,13 @@ function botaoEnviar() {
 
 // ======================================== MANIPULANDO O FORMULÁRIO ======================= //
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 155, //155px do topo para baixo
+    behavior: 'smooth'
+  });
+}
+
 function envioFormulário() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -273,7 +280,7 @@ function envioFormulário() {
       fundotransparente.style.display = "block";
       dialog[0].innerText = "Revise as informações.";
       dialog[0].classList.add("dialog"); //adiciona a classe css ao alerta, a classe já está com display:block
-
+      scrollToTop();
       //temporizador de 4 segundos pra remover a janela transparente
       setTimeout(function () {
         dialog[0].classList.remove("dialog"); //remove a classe css ao alerta, a classe vai receber display:none
@@ -292,7 +299,7 @@ function envioFormulário() {
       dialog[0].innerText = "Obrigado, em breve retornaremos o contato!!";
 
       dialog[0].classList.add("dialog"); //adiciona a classe css ao alerta, a classe já está com display:block
-
+      scrollToTop();
       console.log("Obrigado pela doação!");
       // alert("Obrigado pela doação!");
 

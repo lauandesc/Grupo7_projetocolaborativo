@@ -147,7 +147,11 @@ input[type="radio"]:checked {
   width: 100%;
 }
 
-.resumoflex p {
+.colunalabels {
+  margin-top: 5px;
+}
+
+.colunaprecos p {
   font-size: 1.2rem;
 }
 

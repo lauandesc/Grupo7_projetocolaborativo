@@ -43,6 +43,7 @@ function renderizacaoFiltro() {
         throw new Error("Falha na requisição de filtro.json.");
       })
       .then((json) => {
+        console.log(json);
         //esse json pode se chamar dados, qualquer coisa.
         // Criar um objeto para armazenar os arrays separados por nometipofiltro
         const listasPorTipo = {};
@@ -89,7 +90,7 @@ function renderizacaoFiltro() {
             lista.sort((a, b) => {
               if (a.filtro < b.filtro) return -1;
               if (a.filtro > b.filtro) return 1;
-              return 0; //esse return 0 significa que não há distinção entre eles em termos de classificação.
+              return 0; //esse return 0 significa que não há distinção entre eles em termos de classificação
             });
           }
 
@@ -100,18 +101,15 @@ function renderizacaoFiltro() {
           // esse console log exibe a lista baseada em nometipofiltro
           // console.log(nometipofiltro);
 
-          // Criar uma div para cada lista
           const divLista = document.createElement("div");
-          divLista.classList.add("tipofiltro"); // Adicionar a classe 'tipofiltro'
+          divLista.classList.add("tipofiltro");
 
-          // Criar um título para a lista com base no nometipofiltro
+          //título para a lista com base no nometipofiltro
           const titulo = document.createElement("h3");
           titulo.textContent = nometipofiltro;
 
-          // Cria uma ul para armazenar os itens da lista
           const ul = document.createElement("ul");
 
-          // Iterar sobre os elementos da lista e cria os itens da ul
           lista.forEach((elemento) => {
             const li = document.createElement("li");
 
@@ -217,7 +215,19 @@ function renderizacaoLivros() {
           titulo.classList.add("titulolivroflex");
 
           const h4 = document.createElement("h4");
-          h4.innerText = json[i].titulo;
+
+          if (json[i].titulo.length > 40) {
+            let titulomenor = json[i].titulo.slice(0, 40)
+            if (titulomenor[39] == " ") {
+              titulomenor = titulomenor.slice(0, 39);
+            }
+            titulomenor += "...";
+            h4.innerText = titulomenor;
+          } else {
+            h4.innerText = json[i].titulo;
+          }
+          // let titulomenor = json[i].titulo;
+          // h4.innerText = titulomenor;
 
           titulo.appendChild(h4);
 
@@ -335,6 +345,17 @@ function filtrandoLivros() {
                     ) {
                       const livroDiv = document.createElement("div");
                       livroDiv.classList.add("livro");
+
+                      let titulomenor = "";
+          
+                      if (livro.titulo.length > 40) {
+                        titulomenor = livro.titulo.slice(0, 40); //slice - limita até 40 caracteres
+                        if (titulomenor[39] === " ") { //[39] é usado para acessar o caractere na posição 39 da string
+                          titulomenor = titulomenor.slice(0,39);
+                        }
+                        titulomenor += "...";
+                        livro.titulo = titulomenor;
+                      }
 
                       livroDiv.innerHTML = `
                         <div class="imagemlivroflex">

@@ -22,8 +22,12 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Gravitas+One&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="/css/paginacarrinho.css" />
     <link rel="stylesheet" href="/css/headerfooter.css" />
+
+    <script src="/js/paginacarrinho.js" defer></script>
+
     <title>Meu carrinho</title>
   </head>
   <body>
@@ -69,7 +73,7 @@
             <span class="material-symbols-outlined">
               shopping_cart
               <span class="contadoriconecarrinho">
-                <span>2</span>
+                <span id="item">2</span>
               </span>
             </span>
           </a>
@@ -91,65 +95,71 @@
     <section class="main">
       <h1>Carrinho</h1>
       <div class="carrinho">
-        <h2>Quantidade total: 2</h2>
-        <div class="gridcarrinho">
-          <div class="descricaoproduto">
-            <div class="fundobrancodaimagem">
-              <img
-                src="/img/livros sebo/11 - veudaverdade.png"
-                alt="Imagem da capa do livro escolhido para compra."
-              />
-            </div>
-            <div class="descricaotitulo">
-              <h3>Véu da Verdade</h3>
-              <p>Ano: 2005</p>
-              <p>Peso: 200g</p>
-              <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente não vai ter esse erro :) -->
-            </div>
-          </div>
-          <div class="quantidadeproduto">
-            <div class="botoesquantidade">
-              <a href="#" class="btn-menos">-</a>
-              <div class="quantidade-wrapper">
-                <input type="number" class="quantidade" value="1" min="1" />
+        <h2>
+          Quantidade item:
+          <span class="item" id="quantidadetotaltitulo">2</span>
+        </h2>
+        <div class="container">
+          <div id="vazio"><p>Carrinho vazio</p></div>
+          <div class="gridcarrinho">
+            <div class="descricaoproduto">
+              <div class="fundobrancodaimagem">
+                <img
+                  src="/img/livros sebo/11 - veudaverdade.png"
+                  alt="Imagem da capa do livro escolhido para compra."
+                />
               </div>
-              <a href="#" class="btn-mais">+</a>
-            </div>
-            <p><a href="#" class="removerlista">Remover este item</a></p>
-          </div>
-          <div>
-            <p>R$10,00</p>
-          </div>
-        </div>
-        <div class="gridcarrinho">
-          <div class="descricaoproduto">
-            <div class="fundobrancodaimagem">
-              <img
-                src="/img/tronos.jpg"
-                alt="Imagem da capa do livro escolhido para compra."
-              />
-            </div>
-            <div class="descricaotitulo">
-              <h3>
-                A Guerra dos Tronos: As Crônicas de Gelo e Fogo - Volume 1
-              </h3>
-              <p>Ano: 2019</p>
-              <p>Peso: 943g</p>
-              <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente vai ter esse erro :) -->
-            </div>
-          </div>
-          <div class="quantidadeproduto">
-            <div class="botoesquantidade">
-              <a href="#" class="botaomenos">-</a>
-              <div class="divquantidade">
-                <input type="number" class="quantidade" value="1" min="1" />
+              <div class="descricaotitulo">
+                <h3>Véu da Verdade</h3>
+                <p>Ano: 2005</p>
+                <p>Peso: 200g</p>
+                <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente não vai ter esse erro :) -->
               </div>
-              <a href="#" class="botaomais">+</a>
             </div>
-            <p><a href="#" class="removerlista">Remover este item</a></p>
+            <div class="quantidadeproduto">
+              <div class="botoesquantidade">
+                <a href="#" class="botaomenos">-</a>
+                <div class="divquantidade">
+                  <input type="number" class="quantidade" value="1" min="1" />
+                </div>
+                <a href="#" class="botaomais">+</a>
+              </div>
+              <p><a href="#" class="removerlista">Remover este item</a></p>
+            </div>
+            <div>
+              <p class="precoproduto">R$10,00</p>
+            </div>
           </div>
-          <div>
-            <p>R$47,99</p>
+          <div class="gridcarrinho">
+            <div class="descricaoproduto">
+              <div class="fundobrancodaimagem">
+                <img
+                  src="/img/tronos.jpg"
+                  alt="Imagem da capa do livro escolhido para compra."
+                />
+              </div>
+              <div class="descricaotitulo">
+                <h3>
+                  A Guerra dos Tronos: As Crônicas de Gelo e Fogo - Volume 1
+                </h3>
+                <p>Ano: 2019</p>
+                <p>Peso: 943g</p>
+                <!-- Erro evidente na maioria das livrarias que não adicionam o peso do livro. Aqui a gente vai ter esse erro :) -->
+              </div>
+            </div>
+            <div class="quantidadeproduto">
+              <div class="botoesquantidade">
+                <a href="#" class="botaomenos">-</a>
+                <div class="divquantidade">
+                  <input type="number" class="quantidade" value="1" min="1" />
+                </div>
+                <a href="#" class="botaomais">+</a>
+              </div>
+              <p><a href="#" class="removerlista">Remover este item</a></p>
+            </div>
+            <div>
+              <p class="precoproduto">R$47,99</p>
+            </div>
           </div>
         </div>
         <div class="complementocarrinho">
@@ -162,15 +172,16 @@
                 <div class="cartao">
                   <div class="imagemcartao">
                     <img
+                      class="imagem"
                       src="/img/imagensdelivros/gash1.jpeg"
                       alt="capa de imagem de livro de mangá"
                     />
                   </div>
                   <div class="descricaocartao">
-                    <h5>Gash Bell!! - Volume 1</h5>
+                    <h5 class="titulo">Gash Bell!! - Volume 1</h5>
                     <p class="precoanterior">R$64,90</p>
                     <p class="precoatual"><sup>R$</sup>51,92</p>
-                    <a href="#">
+                    <a class="adicionarmaisproduto" href="#">
                       <span class="material-symbols-outlined">
                         add_shopping_cart
                       </span>
@@ -180,21 +191,26 @@
                 <div class="cartao">
                   <div class="imagemcartao">
                     <img
+                      class="imagem"
                       src="/img/imagensdelivros/paislido1.jpeg"
                       alt="capa de imagem de livro de mangá"
                     />
                   </div>
                   <div class="descricaocartao">
-                    <h5>O livro que você gostaria que seus pais...</h5>
+                    <h5 class="titulo">
+                      O livro que você gostaria que seus pais...
+                    </h5>
                     <p class="precoanterior">R$54,90</p>
                     <p class="precoatual"><sup>R$</sup>39,90</p>
-                    <a href="#">
+                    <a class="adicionarmaisproduto" href="#">
                       <span class="material-symbols-outlined">
                         add_shopping_cart
                       </span>
                     </a>
                   </div>
                 </div>
+                <button class="botao-carrossel anterior">❮</button>
+                <button class="botao-carrossel proximo">❯</button>
               </div>
             </div>
           </div>
@@ -238,13 +254,13 @@
             </div>
             <div class="colunaprecos">
               <div>
-                <p>R$57,99</p>
+                <p id="subtotal">R$57,99</p>
               </div>
               <div>
-                <p>R$10,00</p>
+                <p id="entrega">R$10,00</p>
               </div>
               <div>
-                <p>R$67,99</p>
+                <p id="total">R$67,99</p>
               </div>
             </div>
           </div>

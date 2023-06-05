@@ -83,7 +83,7 @@ fieldset {
   position: relative;
 }
 
-/* ============ INíCIO VALIDAÇÃO DOS CAMPOS COM JAVASCRIPT ============== */
+/* ============ INíCIO VALIDAÇÃO DOS CAMPOS CRIE SUA CONTA COM JAVASCRIPT ============== */
 
 .validador-popup::after {
   content: "*Campo Obrigatório";
@@ -143,7 +143,7 @@ fieldset {
   right: -20px;
 }
 
-/* ============ FIM VALIDAÇÃO DOS CAMPOS COM JAVASCRIPT ============== */
+/* ============ FIM VALIDAÇÃO DOS CAMPOS CRIE SUA CONTA COM JAVASCRIPT ============== */
 
 fieldset small {
     margin-top: 5px;
@@ -303,6 +303,25 @@ fieldset input[type="checkbox"]:checked {
 }
 
 /* ============ FIM FORÇA DA SENHA ============== */
+
+.esqueci {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid chocolate; */
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.esqueci a {
+  text-decoration: none;
+  color: #626262;
+}
+
+.esqueci a:hover {
+  text-decoration: underline;
+}
+
 
 /* 
   responsividade

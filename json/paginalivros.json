@@ -11,7 +11,9 @@
         "categoria": "Biografia",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "456",
@@ -25,7 +27,9 @@
         "categoria": "Contos",
         "editora":"Bertrand Brasil",
         "autor":"Matt Haig",
-        "ano":"2021"
+        "ano":"2021",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "789",
@@ -39,7 +43,9 @@
         "categoria": "Religião",
         "editora":"Editora Vida",
         "autor":"Júnior Rostirola",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "101112",
@@ -53,7 +59,9 @@
         "categoria": "Contos",
         "editora":"Galera",
         "autor":"Colleen Hoover",
-        "ano":"2022"
+        "ano":"2022",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "131415",
@@ -67,7 +75,9 @@
         "categoria": "Planejamento",
         "editora":"Harper Collins",
         "autor":"George S Clason",
-        "ano":"2017"
+        "ano":"2017",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "161718",
@@ -81,7 +91,9 @@
         "categoria": "Culinária",
         "editora":"Senac",
         "autor":"Rita Lobo",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "192021",
@@ -92,10 +104,12 @@
         "precoatual": "R$25,90",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Auto-Ajuda",
+        "categoria": "Autoajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "222324",
@@ -106,10 +120,12 @@
         "precoatual": "R$41,02",
         "precoparcelado":"à vista",
         "tagpromocao":"false",
-        "categoria": "Auto-Ajuda",
+        "categoria": "Autoajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "252627",
@@ -123,7 +139,9 @@
         "categoria": "Conto",
         "editora":"Record",
         "autor":"Carla Madeira",
-        "ano":"2021"
+        "ano":"2021",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "282930",
@@ -134,10 +152,12 @@
         "precoatual": "R$44,90",
         "precoparcelado":"à vista",
         "tagpromocao":"true",
-        "categoria": "Auto-Ajuda",
+        "categoria": "Autoajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "313233",
@@ -151,7 +171,9 @@
         "categoria": "Esportes",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "343536",
@@ -162,10 +184,12 @@
         "precoatual": "R$60,90",
         "precoparcelado":"2x de R$25,50",
         "tagpromocao":"true",
-        "categoria": "Auto-Ajuda",
+        "categoria": "Autoajuda",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "373839",
@@ -179,7 +203,9 @@
         "categoria": "Psicologia",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "404142",
@@ -193,7 +219,9 @@
         "categoria": "Ficção",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "404142",
@@ -207,7 +235,9 @@
         "categoria": "Biografia",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "434445",
@@ -221,7 +251,9 @@
         "categoria": "Ficção",
         "editora":"Globolivros",
         "autor":"Rita Lee",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "464748",
@@ -235,7 +267,9 @@
         "categoria": "Conto",
         "editora":"Faro Editorial",
         "autor":"Charlie Donlea",
-        "ano":"2017"
+        "ano":"2017",
+        "peso":"",
+        "tipolivro":"novo"
     },
     {
         "codigolivro": "495051",
@@ -249,6 +283,40 @@
         "categoria": "Mangás",
         "editora":"MPEG",
         "autor":"Makoto Raiku",
-        "ano":"2023"
+        "ano":"2023",
+        "peso":"",
+        "tipolivro":"novo"
+    },
+    {
+        "codigolivro": "525354",
+        "titulo": "A Guerra dos Tronos: As Crônicas de Gelo e Fogo - Volume 1",
+        "img":"/img/tronos.jpg",
+        "alt":"",
+        "precoanterior": "",
+        "precoatual": "R$47,99",
+        "precoparcelado":"à vista",
+        "tagpromocao":"false",
+        "categoria": "Ficção",
+        "editora":"Suma",
+        "autor":"George R.R. Martin",
+        "ano":"2019",
+        "peso":"943g",
+        "tipolivro":"novo"
+    },
+    {
+        "codigolivro": "555657",
+        "titulo": "Véu da Verdade",
+        "img":"/img/livros sebo/11 - veudaverdade.png",
+        "alt":"",
+        "precoanterior": "",
+        "precoatual": "R$10,00",
+        "precoparcelado":"à vista",
+        "tagpromocao":"false",
+        "categoria": "Ficção",
+        "editora":"",
+        "autor":"",
+        "ano":"2005",
+        "peso":"200g",
+        "tipolivro":"usado"
     }
 ]
