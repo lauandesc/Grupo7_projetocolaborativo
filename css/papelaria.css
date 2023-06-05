@@ -469,6 +469,60 @@ h1 {
 
 /* ============= fim barra de rolagem personalizada ============= */
 
+/* ==================== estilização do carrossel com javascript INÍCIO =========== */
+
+.carrossel {
+  position: relative; /* ================ referência dos botões clicáveis ========= */
+}
+
+.botao-carrossel {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-55%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  /* color: #000; */
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* .botao-carrossel:hover {
+  background-color: rgba(39, 126, 182, 0.7); #277EB6
+} */
+
+.azul {
+  background-color: rgba(105, 177, 224, 0.7); /* #69b1e0 */
+  /* background-color: rgba(39, 126, 182, 1); #277EB6 */
+}
+
+.azul:hover {
+  background-color: rgba(39, 126, 182, 0.7); /* #277EB6 */
+  /* background-color: rgba(105, 177, 224, 0.7); #69b1e0 */
+}
+
+.amarelo {
+  background-color: rgba(243, 203, 69, 0.7); /* #F3CB45 */
+}
+
+.amarelo:hover {
+  background-color: rgba(240, 195, 48, 0.82); /* #F3CB45 */
+}
+
+.anterior {
+  /* border: 2px solid #69b1e0; */
+  left: -20px;
+}
+
+.proximo {
+  /* border: 2px solid chocolate; */
+  right: -20px;
+}
+
+/* ==================== estilização do carrossel com javascript FIM =========== */
+
 /* =============== Carrossel fixo =============== */
 
 .carrosselfixo {
