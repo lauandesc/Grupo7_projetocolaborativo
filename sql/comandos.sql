@@ -164,3 +164,9 @@ INSERT INTO livro_usado (fk_id_produto, condicao) VALUES
   (5, 'seminovo');
 
 --///////////////////////FIM DML
+
+
+INSERT INTO doacao_livro(fk_id_usuario, quantidade, tipo_doacao, conservacao, titulo, autor, editora, img_conservacao) VALUES
+(1, 3, 'Revista', 'Novo', 'Livro A', 'Autor y', 'Editora X', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fvetores-gratis%2Fvaca-bonita-sentada-ilustracao-do-icone-do-vetor-dos-desenhos-animados-natureza-animal-conceito-de-icone-isolado-premium-flat_138676-7823.jpg%3Fw%3D2000&tbnid=hfudzMKTTOqXTM&vet=12ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fvaquinha&docid=TVPWnWK6qtVSoM&w=2000&h=2000&q=img%20vaquinha%20site&ved=2ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ' ),
+(4, 5, 'Livro', 'Seminovo', 'Livro B', 'Autor X', 'Editora Nova', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fvetores-gratis%2Fvaca-bonita-sentada-ilustracao-do-icone-do-vetor-dos-desenhos-animados-natureza-animal-conceito-de-icone-isolado-premium-flat_138676-7823.jpg%3Fw%3D2000&tbnid=hfudzMKTTOqXTM&vet=12ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fvaquinha&docid=TVPWnWK6qtVSoM&w=2000&h=2000&q=img%20vaquinha%20site&ved=2ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ' ),
+(2, 1, 'Revista', 'Usado', 'Livro W', 'Autor H', 'Editora TESTE', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fvetores-gratis%2Fvaca-bonita-sentada-ilustracao-do-icone-do-vetor-dos-desenhos-animados-natureza-animal-conceito-de-icone-isolado-premium-flat_138676-7823.jpg%3Fw%3D2000&tbnid=hfudzMKTTOqXTM&vet=12ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fvaquinha&docid=TVPWnWK6qtVSoM&w=2000&h=2000&q=img%20vaquinha%20site&ved=2ahUKEwjMpqiu6sD_AhX9p5UCHYdyDX8QMygAegUIARC8AQ' )
