@@ -9,7 +9,8 @@ CREATE TABLE usuario (
   ID SERIAL PRIMARY KEY,
   nome_completo VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
-  senha VARCHAR(100) NOT NULL
+  senha VARCHAR(100) NOT NULL,
+  consentimento_informativos_promocoes BOOLEAN
 );
 
 CREATE TABLE telefone (
@@ -29,13 +30,13 @@ CREATE TABLE endereco (
   numero INT NOT NULL,
   cidade VARCHAR(100) NOT NULL,
   bairro VARCHAR(100) NOT NULL,
-  pais VARCHAR(100) NOT NULL,
-  cep VARCHAR(10) NOT NULL,
-  consentimento_informativos_promocoes BOOLEAN
+  uf VARCHAR(2) NOT NULL,
+  pais VARCHAR(50) NOT NULL,
+  cep VARCHAR(10) NOT NULL
 );
 
 --Para encurtar o projeto conceitual, retirei a papelaria.
---Importante observar que os livros digitais são iguais aos novos. Agora, se houve formatos de livros digitais
+--Importante observar que os livros digitais são iguais aos novos. Agora, se houver formatos de livros digitais
 --seria necessário criar uma entidade específica para esses livros digitais.
 --Outra questão importante é que se há tipo de livro capa dura, capa normal, box, etc. Então também seria necessário
 --criar uma nova entidade.
@@ -45,9 +46,16 @@ CREATE TABLE produto (
   ano INTEGER NOT NULL,
   peso FLOAT NOT NULL,
   preco FLOAT NOT NULL,
-  tipo_livro VARCHAR(20) NOT NULL, --novo, digital ou usado (se usado precisa verificar o estado de conservação)
+  tipo_livro VARCHAR(20) NOT NULL, --novo, digital ou usado (se usado há um atributo para o estado de conservação)
   editora VARCHAR(100) NOT NULL, --observando que não há papelaria :)
   autor VARCHAR(100) NOT NULL --observando que não há papelaria :)
+);
+
+CREATE TABLE livro_usado (
+  ID SERIAL PRIMARY KEY,
+  fk_id_produto INT NOT NULL,
+  CONSTRAINT fk_produto_usado FOREIGN KEY (fk_id_produto) REFERENCES produto (ID) ON DELETE CASCADE,
+  condicao VARCHAR(20) NOT NULL --condição do livro usado (novo, seminovo, usado)
 );
 
 CREATE TABLE carrinho (
@@ -55,7 +63,7 @@ CREATE TABLE carrinho (
   custo_frete FLOAT,
   cupom VARCHAR(50),
   fk_id_usuario INT NOT NULL,
-  CONSTRAINT fk_usuario FOREIGN KEY (fk_id_usuario) REFERENCES usuario (ID) ON DELETE CASCADE
+  CONSTRAINT fk_usuario_carrinho FOREIGN KEY (fk_id_usuario) REFERENCES usuario (ID) ON DELETE CASCADE
 );
 
 CREATE TABLE item_carrinho (
@@ -63,7 +71,7 @@ CREATE TABLE item_carrinho (
   fk_id_carrinho INT NOT NULL,
   CONSTRAINT fk_carrinho FOREIGN KEY (fk_id_carrinho) REFERENCES carrinho (ID) ON DELETE CASCADE,
   fk_id_produto INT NOT NULL,
-  CONSTRAINT fk_produto FOREIGN KEY (fk_id_produto) REFERENCES produto (ID) ON DELETE CASCADE,
+  CONSTRAINT fk_produto_item FOREIGN KEY (fk_id_produto) REFERENCES produto (ID) ON DELETE CASCADE,
   quantidade INTEGER
 );
 
@@ -77,24 +85,30 @@ CREATE TABLE pagamento (
   data_pagamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE livro_usado (
+CREATE TABLE doacao_livro (
   ID SERIAL PRIMARY KEY,
-  fk_id_produto INT NOT NULL,
-  CONSTRAINT fk_produto_usado FOREIGN KEY (fk_id_produto) REFERENCES produto (ID) ON DELETE CASCADE,
-  condicao VARCHAR(20) NOT NULL --condição do livro usado (novo, seminovo, usado)
-);
+  fk_id_usuario INT NOT NULL,
+  CONSTRAINT fk_dados_usuario FOREIGN KEY (fk_id_usuario) REFERENCES usuario (ID) ON DELETE CASCADE,
+  quantidade INT NOT NULL,
+  tipo_doacao VARCHAR(20) NOT NULL,
+  conservacao VARCHAR(60) NOT NULL,
+  titulo VARCHAR(200) NOT NULL,
+  autor VARCHAR(200) NOT NULL,
+  editora VARCHAR(200) NOT NULL,
+  img_conservacao VARCHAR(1000) NOT NULL,
+)
 
 --///////////////////////FIM DDL
 
 --///////////////////////COMEÇO DML
 
 --======================Tabela Usuario=============
-INSERT INTO usuario (nome_completo, email, senha) VALUES
-  ('João da Silva', 'joao@example.com', 'senha123'),
-  ('Maria Oliveira', 'maria@example.com', 'senha456'),
-  ('Pedro Santos', 'pedro@example.com', 'senha789'),
-  ('Ana Souza', 'ana@example.com', 'senha321'),
-  ('Carlos Fernandes', 'carlos@example.com', 'senha654');
+INSERT INTO usuario (nome_completo, email, senha, consentimento_informativos_promocoes) VALUES
+  ('João da Silva', 'joao@example.com', 'senha123', true),
+  ('Maria Oliveira', 'maria@example.com', 'senha456', false),
+  ('Pedro Santos', 'pedro@example.com', 'senha789', true),
+  ('Ana Souza', 'ana@example.com', 'senha321', true),
+  ('Carlos Fernandes', 'carlos@example.com', 'senha654', false);
 
 --======================Tabela Telefone=============
 INSERT INTO telefone (fk_id_usuario, ddi, ddd, numero) VALUES
@@ -105,12 +119,12 @@ INSERT INTO telefone (fk_id_usuario, ddi, ddd, numero) VALUES
   (5, '55', '51', '555555555');
 
 --======================Tabela Endereço=============
-INSERT INTO endereco (fk_id_usuario, logradouro, numero, cidade, bairro, pais, cep, consentimento_informativos_promocoes) VALUES
-  (1, 'Rua A', 123, 'São Paulo', 'Centro', 'Brasil', '01234-567', true),
-  (2, 'Avenida B', 456, 'Rio de Janeiro', 'Copacabana', 'Brasil', '98765-432', false),
-  (3, 'Rua C', 789, 'Belo Horizonte', 'Savassi', 'Brasil', '54321-876', true),
-  (4, 'Rua D', 1011, 'Curitiba', 'Batel', 'Brasil', '78965-432', true),
-  (5, 'Avenida E', 1213, 'Porto Alegre', 'Moinhos de Vento', 'Brasil', '14785-369', false);
+INSERT INTO endereco (fk_id_usuario, logradouro, numero, cidade, bairro, uf, pais, cep) VALUES
+  (1, 'Rua A', 123, 'São Paulo', 'Centro', 'SP', 'Brasil', '01234-567'),
+  (2, 'Avenida B', 456, 'Rio de Janeiro', 'RJ', 'Copacabana', 'Brasil', '98765-432'),
+  (3, 'Rua C', 789, 'Belo Horizonte', 'Savassi', 'MG', 'Brasil', '54321-876'),
+  (4, 'Rua D', 1011, 'Curitiba', 'Batel', 'PR', 'Brasil', '78965-432'),
+  (5, 'Avenida E', 1213, 'Porto Alegre', 'Moinhos de Vento', 'RS', 'Brasil', '14785-369');
 
 --======================Tabela Produto=============
 INSERT INTO produto (titulo_produto, ano, peso, preco, tipo_livro, editora, autor) VALUES
