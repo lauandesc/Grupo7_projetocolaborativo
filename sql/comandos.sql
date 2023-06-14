@@ -13,6 +13,12 @@ CREATE TABLE usuario (
   consentimento_informativos_promocoes BOOLEAN
 );
 
+CREATE TABLE newsletter (
+  ID SERIAL PRIMARY KEY,
+  nome_completo VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL
+);
+
 CREATE TABLE telefone (
   ID SERIAL PRIMARY KEY,
   fk_id_usuario INT NOT NULL,
@@ -110,6 +116,12 @@ INSERT INTO usuario (nome_completo, email, senha, consentimento_informativos_pro
   ('Ana Souza', 'ana@example.com', 'senha321', true),
   ('Carlos Fernandes', 'carlos@example.com', 'senha654', false);
 
+--======================Tabela Newsletter=============
+INSERT INTO newsletter (nome_completo, email) VALUES
+('Flávio Bezerra', 'flavio@email.com'),
+('Lauandes Conceição', 'lauandes@email.com'),
+('Rogério Bezerra', 'rogerio@email.com');
+
 --======================Tabela Telefone=============
 INSERT INTO telefone (fk_id_usuario, ddi, ddd, numero) VALUES
   (1, '55', '11', '999999999'),
@@ -174,17 +186,6 @@ INSERT INTO doacao_livro(fk_id_usuario, quantidade, tipo_doacao, conservacao, ti
 
 --///////////////////////FIM DML
 
---Deletando as tabelas
-DROP TABLE IF EXISTS item_carrinho CASCADE;
-DROP TABLE IF EXISTS livro_usado CASCADE;
-DROP TABLE IF EXISTS pagamento CASCADE;
-DROP TABLE IF EXISTS livro CASCADE;
-DROP TABLE IF EXISTS telefone CASCADE;
-DROP TABLE IF EXISTS endereco CASCADE;
-DROP TABLE IF EXISTS carrinho CASCADE;
-DROP TABLE IF EXISTS usuario CASCADE;
-DROP TABLE IF EXISTS doacao_livro CASCADE;
-
 --==============DQL na veia!
 SELECT * FROM livro
 
@@ -227,3 +228,14 @@ FROM usuario
 INNER JOIN doacao_livro ON usuario.id = doacao_livro.fk_id_usuario
 WHERE quantidade >3;
 
+--Deletando as tabelas
+DROP TABLE IF EXISTS item_carrinho CASCADE;
+DROP TABLE IF EXISTS livro_usado CASCADE;
+DROP TABLE IF EXISTS pagamento CASCADE;
+DROP TABLE IF EXISTS livro CASCADE;
+DROP TABLE IF EXISTS telefone CASCADE;
+DROP TABLE IF EXISTS endereco CASCADE;
+DROP TABLE IF EXISTS carrinho CASCADE;
+DROP TABLE IF EXISTS usuario CASCADE;
+DROP TABLE IF EXISTS doacao_livro CASCADE;
+DROP TABLE IF EXISTS newsletter CASCADE;
