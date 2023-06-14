@@ -211,3 +211,13 @@ INNER JOIN carrinho ON usuario.id = carrinho.fk_id_usuario
 INNER JOIN item_carrinho ON carrinho.id = item_carrinho.fk_id_carrinho
 INNER JOIN livro ON item_carrinho.fk_id_livro = livro.id
 WHERE usuario.nome_completo = 'Pedro Santos';
+
+SELECT usuario.nome_completo, doacao_livro.tipo_doacao, doacao_livro.conservacao, doacao_livro.titulo, doacao_livro.autor, doacao_livro.editora, doacao_livro.quantidade
+FROM usuario 
+INNER JOIN doacao_livro ON usuario.id = doacao_livro.fk_id_usuario
+WHERE tipo_doacao = 'Revista';
+
+SELECT usuario.nome_completo, doacao_livro.tipo_doacao, doacao_livro.conservacao, doacao_livro.titulo, doacao_livro.autor, doacao_livro.editora, doacao_livro.quantidade
+FROM usuario 
+INNER JOIN doacao_livro ON usuario.id = doacao_livro.fk_id_usuario
+WHERE tipo_doacao = 'Revista' AND doacao_livro.conservacao = 'Novo';
