@@ -44,11 +44,10 @@ function renderizacaoFiltro() {
       })
       .then((json) => {
         console.log(json);
-        //esse json pode se chamar dados, qualquer coisa.
-        // Criar um objeto para armazenar os arrays separados por nometipofiltro
+
         const listasPorTipo = {};
 
-        // Iterar sobre os elementos do JSON e separa em arrays com base no nometipofiltro
+        //O objetivo dessa iteração é separar em arrays com base no nometipofiltro
         json.forEach((elemento) => {
           const nometipofiltro = elemento.nometipofiltro;
           if (!listasPorTipo[nometipofiltro]) {
@@ -217,7 +216,7 @@ function renderizacaoLivros() {
           const h4 = document.createElement("h4");
 
           if (json[i].titulo.length > 40) {
-            let titulomenor = json[i].titulo.slice(0, 40)
+            let titulomenor = json[i].titulo.slice(0, 40);
             if (titulomenor[39] == " ") {
               titulomenor = titulomenor.slice(0, 39);
             }
@@ -293,7 +292,9 @@ function filtrandoLivros() {
     console.log("A página carregou aqui também.");
 
     //preciso capturar a paginacao aqui pois o filtro remove a paginação. Resolver isso num futuro não tão distante.
-    const paginacaocentralizado = document.querySelector(".paginacaocentralizado");
+    const paginacaocentralizado = document.querySelector(
+      ".paginacaocentralizado"
+    );
 
     const filtro = "/json/filtro.json";
     const livros = "/json/paginalivros.json";
@@ -324,7 +325,7 @@ function filtrandoLivros() {
           checkbox.addEventListener("change", function () {
             divGridPrincipal.style.display = "none";
 
-            // Limpar a seção antes de adicionar os livros filtrados
+            //Importante limpar a seção antes de adicionar os livros filtrados
             section.innerHTML = "";
 
             const gridLivrosFiltrados = document.createElement("div");
@@ -347,11 +348,12 @@ function filtrandoLivros() {
                       livroDiv.classList.add("livro");
 
                       let titulomenor = "";
-          
+
                       if (livro.titulo.length > 40) {
                         titulomenor = livro.titulo.slice(0, 40); //slice - limita até 40 caracteres
-                        if (titulomenor[39] === " ") { //[39] é usado para acessar o caractere na posição 39 da string
-                          titulomenor = titulomenor.slice(0,39);
+                        if (titulomenor[39] === " ") {
+                          //[39] é usado para acessar o caractere na posição 39 da string
+                          titulomenor = titulomenor.slice(0, 39);
                         }
                         titulomenor += "...";
                         livro.titulo = titulomenor;
@@ -396,11 +398,10 @@ function filtrandoLivros() {
 
                 console.log(allUnchecked);
                 if (allUnchecked) {
-
                   // location.reload();
 
                   // paginacaocentralizado.style.display = "block";
-                  console.log(paginacaocentralizado)
+                  console.log(paginacaocentralizado);
 
                   gridLivrosFiltrados.remove();
 
